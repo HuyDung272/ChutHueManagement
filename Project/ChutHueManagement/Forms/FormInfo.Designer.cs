@@ -46,6 +46,8 @@
             // 
             // txtNameRestaurant
             // 
+            this.txtNameRestaurant.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameRestaurant.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -57,7 +59,7 @@
             this.txtNameRestaurant.Location = new System.Drawing.Point(112, 12);
             this.txtNameRestaurant.Name = "txtNameRestaurant";
             this.txtNameRestaurant.PreventEnterBeep = true;
-            this.txtNameRestaurant.Size = new System.Drawing.Size(583, 20);
+            this.txtNameRestaurant.Size = new System.Drawing.Size(580, 20);
             this.txtNameRestaurant.TabIndex = 2;
             // 
             // FormInfo
@@ -65,7 +67,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(707, 419);
+            this.ClientSize = new System.Drawing.Size(704, 419);
             this.Controls.Add(this.txtNameRestaurant);
             this.Controls.Add(this.lb_NameRestaurant);
             this.Name = "FormInfo";

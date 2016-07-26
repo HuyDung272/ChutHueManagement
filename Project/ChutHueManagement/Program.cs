@@ -16,7 +16,7 @@ namespace ChutHueManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.FormInfo());
+            Application.Run(new Forms.FormPrimary());
         }
     }
 }
