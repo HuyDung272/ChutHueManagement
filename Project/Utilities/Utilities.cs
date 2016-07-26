@@ -18,7 +18,7 @@ namespace ChutHueManagement.Utilities
         {
             for (int i = 0; i < col.Count; i++)
             {
-                if (col[i].Name.CompareTo("FormChinh") == 0)
+                if (col[i].Name.CompareTo("FormPrimary") == 0)
                 {
                     continue;
                 }

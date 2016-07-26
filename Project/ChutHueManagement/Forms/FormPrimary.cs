@@ -24,11 +24,18 @@ namespace ChutHueManagement.Forms
 
         private void buttonItem19_Click(object sender, EventArgs e)
         {
-            
+            if ((Application.OpenForms["FormInfo"] as FormInfo) == null)
+            {
                 FormInfo frm = new FormInfo();
                 frm.MdiParent = this;
                 frm.Show();
                 frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormInfo");
+
+            
             
         }
     }
