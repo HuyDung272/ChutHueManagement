@@ -1,1 +1,1 @@
-Exec MainMenu_Update 3, 'Do an 123', 1, "Test Them Menu 1111"
+Exec MainMenu_GetAll
