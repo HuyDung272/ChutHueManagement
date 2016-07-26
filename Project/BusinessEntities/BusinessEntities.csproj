@@ -43,6 +43,8 @@
     <Compile Include="AccountEntity.cs" />
     <Compile Include="FoodMenuEntity.cs" />
     <Compile Include="InfoEntity.cs" />
+    <Compile Include="InvoiceDetailsEntity.cs" />
+    <Compile Include="InvoiceEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

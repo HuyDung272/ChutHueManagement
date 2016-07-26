@@ -52,7 +52,8 @@ namespace ChutHueManagement.DataAccessLayer
                 throw new Exception(ex.Message, ex);
             }
         }
-        public DataTable GetFoodMenu()
+        
+        public DataTable GetAll()
         {
             try
             {
