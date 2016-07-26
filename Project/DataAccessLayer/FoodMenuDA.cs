@@ -83,5 +83,6 @@ namespace ChutHueManagement.DataAccessLayer
             }
             return list;
         }
+
     }
 }
