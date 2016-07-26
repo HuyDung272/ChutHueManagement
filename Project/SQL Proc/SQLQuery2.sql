@@ -5,13 +5,12 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE [dbo].[Info_GetInfo]
+CREATE PROCEDURE [dbo].[FoodMenu_GetFoodMenu]
 AS
 BEGIN
 	BEGIN TRY
 		Select * 
-		From RestaurantInfo
-		Where ID = 1
+		From FoodMenu
 	END Try
 	BEGIN CATCH
 		DECLARE @ErrorMessage NVARCHAR(2000)
