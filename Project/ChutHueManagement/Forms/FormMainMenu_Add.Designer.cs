@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu_Add));
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txt_NameMainMenu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txt_Description = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -35,6 +36,7 @@
             this.btn_Add = new DevComponents.DotNetBar.ButtonX();
             this.btn_Clear = new DevComponents.DotNetBar.ButtonX();
             this.btn_Exit = new DevComponents.DotNetBar.ButtonX();
+            this.lblUpdate = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // labelX1
@@ -43,7 +45,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(12, 12);
+            this.labelX1.Location = new System.Drawing.Point(12, 27);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 0;
@@ -59,7 +61,7 @@
             this.txt_NameMainMenu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txt_NameMainMenu.DisabledBackColor = System.Drawing.Color.White;
             this.txt_NameMainMenu.ForeColor = System.Drawing.Color.Black;
-            this.txt_NameMainMenu.Location = new System.Drawing.Point(105, 15);
+            this.txt_NameMainMenu.Location = new System.Drawing.Point(105, 30);
             this.txt_NameMainMenu.Name = "txt_NameMainMenu";
             this.txt_NameMainMenu.PreventEnterBeep = true;
             this.txt_NameMainMenu.Size = new System.Drawing.Size(176, 20);
@@ -75,11 +77,11 @@
             this.txt_Description.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txt_Description.DisabledBackColor = System.Drawing.Color.White;
             this.txt_Description.ForeColor = System.Drawing.Color.Black;
-            this.txt_Description.Location = new System.Drawing.Point(105, 44);
+            this.txt_Description.Location = new System.Drawing.Point(105, 57);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.PreventEnterBeep = true;
-            this.txt_Description.Size = new System.Drawing.Size(176, 109);
+            this.txt_Description.Size = new System.Drawing.Size(176, 104);
             this.txt_Description.TabIndex = 3;
             // 
             // labelX2
@@ -88,7 +90,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(12, 41);
+            this.labelX2.Location = new System.Drawing.Point(12, 54);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 2;
@@ -130,11 +132,24 @@
             this.btn_Exit.Text = "Thoát";
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // lblUpdate
+            // 
+            // 
+            // 
+            // 
+            this.lblUpdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblUpdate.Location = new System.Drawing.Point(7, 3);
+            this.lblUpdate.Name = "lblUpdate";
+            this.lblUpdate.Size = new System.Drawing.Size(274, 23);
+            this.lblUpdate.TabIndex = 0;
+            this.lblUpdate.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
             // FormMainMenu_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 202);
+            this.Controls.Add(this.lblUpdate);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.btn_Add);
@@ -142,6 +157,7 @@
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.txt_NameMainMenu);
             this.Controls.Add(this.labelX1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(309, 241);
             this.MinimizeBox = false;
@@ -163,5 +179,6 @@
         private DevComponents.DotNetBar.ButtonX btn_Add;
         private DevComponents.DotNetBar.ButtonX btn_Clear;
         private DevComponents.DotNetBar.ButtonX btn_Exit;
+        private DevComponents.DotNetBar.LabelX lblUpdate;
     }
 }

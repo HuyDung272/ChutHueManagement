@@ -51,6 +51,7 @@ namespace ChutHueManagement.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             InfoEntity entity = GetEntity();
             if (InfoManager.UpDate(entity))
             {

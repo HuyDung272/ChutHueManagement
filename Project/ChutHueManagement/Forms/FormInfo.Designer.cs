@@ -45,17 +45,17 @@
             // 
             // lb_NameRestaurant
             // 
-            this.lb_NameRestaurant.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lb_NameRestaurant.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.lb_NameRestaurant.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lb_NameRestaurant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NameRestaurant.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lb_NameRestaurant.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_NameRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_NameRestaurant.Location = new System.Drawing.Point(27, 14);
             this.lb_NameRestaurant.Name = "lb_NameRestaurant";
             this.lb_NameRestaurant.Size = new System.Drawing.Size(133, 23);
-            this.lb_NameRestaurant.TabIndex = 1;
+            this.lb_NameRestaurant.TabIndex = 0;
             this.lb_NameRestaurant.Text = "Tên quán ăn";
             // 
             // txtNameRestaurant
@@ -69,27 +69,27 @@
             this.txtNameRestaurant.Border.Class = "TextBoxBorder";
             this.txtNameRestaurant.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtNameRestaurant.DisabledBackColor = System.Drawing.Color.White;
-            this.txtNameRestaurant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameRestaurant.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameRestaurant.ForeColor = System.Drawing.Color.Black;
             this.txtNameRestaurant.Location = new System.Drawing.Point(186, 12);
             this.txtNameRestaurant.Name = "txtNameRestaurant";
             this.txtNameRestaurant.PreventEnterBeep = true;
             this.txtNameRestaurant.Size = new System.Drawing.Size(615, 29);
-            this.txtNameRestaurant.TabIndex = 2;
+            this.txtNameRestaurant.TabIndex = 1;
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelX1.Location = new System.Drawing.Point(27, 67);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(133, 23);
-            this.labelX1.TabIndex = 1;
+            this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Địa chỉ";
             // 
             // txtAddress
@@ -103,7 +103,7 @@
             this.txtAddress.Border.Class = "TextBoxBorder";
             this.txtAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtAddress.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.Location = new System.Drawing.Point(186, 65);
             this.txtAddress.Name = "txtAddress";
@@ -113,17 +113,17 @@
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelX2.Location = new System.Drawing.Point(27, 120);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(133, 23);
-            this.labelX2.TabIndex = 1;
+            this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Điện thoại bàn";
             // 
             // txtPhoneNumber
@@ -137,27 +137,27 @@
             this.txtPhoneNumber.Border.Class = "TextBoxBorder";
             this.txtPhoneNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPhoneNumber.DisabledBackColor = System.Drawing.Color.White;
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.txtPhoneNumber.Location = new System.Drawing.Point(186, 118);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PreventEnterBeep = true;
             this.txtPhoneNumber.Size = new System.Drawing.Size(615, 29);
-            this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TabIndex = 3;
             // 
             // labelX3
             // 
-            this.labelX3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelX3.Location = new System.Drawing.Point(27, 171);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(155, 27);
-            this.labelX3.TabIndex = 1;
+            this.labelX3.TabIndex = 0;
             this.labelX3.Text = "Điện thoại di động";
             // 
             // txtCellPhone
@@ -171,27 +171,27 @@
             this.txtCellPhone.Border.Class = "TextBoxBorder";
             this.txtCellPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtCellPhone.DisabledBackColor = System.Drawing.Color.White;
-            this.txtCellPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCellPhone.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCellPhone.ForeColor = System.Drawing.Color.Black;
             this.txtCellPhone.Location = new System.Drawing.Point(186, 171);
             this.txtCellPhone.Name = "txtCellPhone";
             this.txtCellPhone.PreventEnterBeep = true;
             this.txtCellPhone.Size = new System.Drawing.Size(615, 29);
-            this.txtCellPhone.TabIndex = 2;
+            this.txtCellPhone.TabIndex = 4;
             // 
             // labelX4
             // 
-            this.labelX4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelX4.Location = new System.Drawing.Point(27, 224);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(155, 27);
-            this.labelX4.TabIndex = 1;
+            this.labelX4.TabIndex = 0;
             this.labelX4.Text = "Email";
             // 
             // txtEmail
@@ -205,27 +205,27 @@
             this.txtEmail.Border.Class = "TextBoxBorder";
             this.txtEmail.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtEmail.DisabledBackColor = System.Drawing.Color.White;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(186, 224);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PreventEnterBeep = true;
             this.txtEmail.Size = new System.Drawing.Size(615, 29);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 5;
             // 
             // labelX5
             // 
-            this.labelX5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelX5.Location = new System.Drawing.Point(27, 281);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(155, 27);
-            this.labelX5.TabIndex = 1;
+            this.labelX5.TabIndex = 0;
             this.labelX5.Text = "Mô tả";
             // 
             // txtDescription
@@ -240,25 +240,26 @@
             this.txtDescription.Border.Class = "TextBoxBorder";
             this.txtDescription.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDescription.DisabledBackColor = System.Drawing.Color.White;
-            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.Location = new System.Drawing.Point(186, 277);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreventEnterBeep = true;
-            this.txtDescription.Size = new System.Drawing.Size(615, 63);
-            this.txtDescription.TabIndex = 3;
+            this.txtDescription.Size = new System.Drawing.Size(615, 71);
+            this.txtDescription.TabIndex = 6;
             // 
             // btnSave
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(646, 365);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(155, 32);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 4;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -266,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(813, 419);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtDescription);
