@@ -13,7 +13,7 @@ namespace ChutHueManagement.BusinessEntities
         private string _tableName;
         private DateTime _date;
         private string _note;
-
+        private List<InvoiceDetailsEntity> _listDetail;
         public int ID
         {
             get
@@ -78,6 +78,20 @@ namespace ChutHueManagement.BusinessEntities
                 _note = value;
             }
         }
+
+        public List<InvoiceDetailsEntity> ListDetail
+        {
+            get
+            {
+                return _listDetail;
+            }
+
+            set
+            {
+                _listDetail = value;
+            }
+        }
+
         public InvoiceEntity()
         {
 

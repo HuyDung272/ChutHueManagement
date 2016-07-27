@@ -106,13 +106,12 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewLoad.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewLoad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewLoad.EnableHeadersVisualStyles = false;
-            this.dataGridViewLoad.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridViewLoad.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dataGridViewLoad.Location = new System.Drawing.Point(0, 50);
             this.dataGridViewLoad.Name = "dataGridViewLoad";
             this.dataGridViewLoad.ReadOnly = true;
@@ -126,7 +125,7 @@
             this.dataGridViewLoad.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewLoad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewLoad.Size = new System.Drawing.Size(902, 445);
-            this.dataGridViewLoad.TabIndex = 2;
+            this.dataGridViewLoad.TabIndex = 1;
             // 
             // FormMainMenu
             // 
@@ -139,7 +138,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMainMenu";
-            this.Text = "FormMainMenu";
+            this.Text = "`";
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
