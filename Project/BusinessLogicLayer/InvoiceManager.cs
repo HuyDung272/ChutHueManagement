@@ -9,7 +9,7 @@ using ChutHueManagement.BusinessEntities;
 using ChutHueManagement.DataAccessLayer;
 using System.Data;
 
-namespace BusinessLogicLayer
+namespace ChutHueManagement.BusinessLogicLayer
 {
     public class InvoiceManager
     {

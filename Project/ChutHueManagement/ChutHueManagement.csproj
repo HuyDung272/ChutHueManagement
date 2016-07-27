@@ -77,6 +77,18 @@
     <Compile Include="Forms\FormPrimary.Designer.cs">
       <DependentUpon>FormPrimary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTable.Designer.cs">
+      <DependentUpon>FormTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableSelected.Designer.cs">
+      <DependentUpon>TableSelected.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormInfo.resx">
@@ -90,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPrimary.resx">
       <DependentUpon>FormPrimary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTable.resx">
+      <DependentUpon>FormTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableSelected.resx">
+      <DependentUpon>TableSelected.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ban.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
