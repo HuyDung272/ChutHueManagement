@@ -14,7 +14,7 @@ using ChutHueManagement.BusinessEntities;
 
 namespace ChutHueManagement.Forms
 {
-    public partial class FormInfo : Form
+    public partial class FormInfo : DevComponents.DotNetBar.Metro.MetroForm
     {
         public FormInfo()
         {

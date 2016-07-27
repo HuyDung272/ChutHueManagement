@@ -12,17 +12,31 @@ using DevComponents.DotNetBar;
 
 namespace ChutHueManagement.Forms
 {
-    public partial class FormMainMenu_Add : Form
+    public partial class FormMainMenu_Add : DevComponents.DotNetBar.Metro.MetroForm
     {
 
         private string Textloi = string.Empty;
 
-        private MainMenu entity;
+        private MainMenuEntity entity;
 
         public FormMainMenu_Add()
         {
             InitializeComponent();
+            btn_Add.Text = "Thêm";
             this.Text = "Thêm mới Loại thực đơn";
+        }
+
+        public FormMainMenu_Add(MainMenuEntity entity)
+        {
+            InitializeComponent();
+            btn_Add.Text = "Cập nhật";
+            this.Text = "Cập nhật Loại thực đơn";
+            this.entity = entity;
+            this.lblUpdate.Text = "Cập nhật loại thực đơn: " + entity.NameEntryMenu;
+            this.lblUpdate.ForeColor = Color.Red;
+
+            txt_NameMainMenu.Text = entity.NameEntryMenu;
+            txt_Description.Text = entity.Description;
         }
 
         private void FormMainMenu_Add_Load(object sender, EventArgs e)
@@ -40,7 +54,6 @@ namespace ChutHueManagement.Forms
         {
             XoaTrang();
         }
-
 
         public bool CheckInput()
         {
@@ -66,7 +79,10 @@ namespace ChutHueManagement.Forms
             return entity;
         }
 
-
+        public void SetEntity(MainMenuEntity entity)
+        {
+            throw new NotImplementedException();
+        }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
@@ -85,20 +101,21 @@ namespace ChutHueManagement.Forms
                         MessageBox.Show(Textloi);
                     }
                 }
-                //else
-                //{
-                //    ModelMatHangEntity modelMatHangEntity = GetEntity();
-                //    modelMatHangEntity.MaModelMH = this.entity.MaModelMH;
-                //    if (ModelMatHangManager.UpDate(modelMatHangEntity, ref Textloi))
-                //    {
-                //        MessageBox.Show("Cập nhật thành công!");
-                //        DialogResult = DialogResult.OK;
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show(Textloi);
-                //    }
-                //}
+                else
+                {
+                    MainMenuEntity mainMenuEntity = GetEntity();
+                    mainMenuEntity.ID = this.entity.ID;
+                    mainMenuEntity.IsDelete = this.entity.IsDelete;
+                    if (MainMenuManager.UpDate(mainMenuEntity))
+                    {
+                        MessageBox.Show("Cập nhật thành công!");
+                        DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show(Textloi);
+                    }
+                }
             }
         }
     }

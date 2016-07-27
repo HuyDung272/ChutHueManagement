@@ -74,7 +74,7 @@
             this.txtNameRestaurant.Location = new System.Drawing.Point(186, 12);
             this.txtNameRestaurant.Name = "txtNameRestaurant";
             this.txtNameRestaurant.PreventEnterBeep = true;
-            this.txtNameRestaurant.Size = new System.Drawing.Size(615, 29);
+            this.txtNameRestaurant.Size = new System.Drawing.Size(925, 29);
             this.txtNameRestaurant.TabIndex = 1;
             // 
             // labelX1
@@ -108,7 +108,7 @@
             this.txtAddress.Location = new System.Drawing.Point(186, 65);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PreventEnterBeep = true;
-            this.txtAddress.Size = new System.Drawing.Size(615, 29);
+            this.txtAddress.Size = new System.Drawing.Size(925, 29);
             this.txtAddress.TabIndex = 2;
             // 
             // labelX2
@@ -142,7 +142,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(186, 118);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PreventEnterBeep = true;
-            this.txtPhoneNumber.Size = new System.Drawing.Size(615, 29);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(925, 29);
             this.txtPhoneNumber.TabIndex = 3;
             // 
             // labelX3
@@ -176,7 +176,7 @@
             this.txtCellPhone.Location = new System.Drawing.Point(186, 171);
             this.txtCellPhone.Name = "txtCellPhone";
             this.txtCellPhone.PreventEnterBeep = true;
-            this.txtCellPhone.Size = new System.Drawing.Size(615, 29);
+            this.txtCellPhone.Size = new System.Drawing.Size(925, 29);
             this.txtCellPhone.TabIndex = 4;
             // 
             // labelX4
@@ -210,7 +210,7 @@
             this.txtEmail.Location = new System.Drawing.Point(186, 224);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PreventEnterBeep = true;
-            this.txtEmail.Size = new System.Drawing.Size(615, 29);
+            this.txtEmail.Size = new System.Drawing.Size(925, 29);
             this.txtEmail.TabIndex = 5;
             // 
             // labelX5
@@ -246,7 +246,7 @@
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreventEnterBeep = true;
-            this.txtDescription.Size = new System.Drawing.Size(615, 71);
+            this.txtDescription.Size = new System.Drawing.Size(925, 179);
             this.txtDescription.TabIndex = 6;
             // 
             // btnSave
@@ -255,7 +255,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(646, 365);
+            this.btnSave.Location = new System.Drawing.Point(956, 473);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(155, 32);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -268,7 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(813, 419);
+            this.ClientSize = new System.Drawing.Size(1123, 527);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.labelX5);
@@ -282,6 +282,7 @@
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.txtNameRestaurant);
             this.Controls.Add(this.lb_NameRestaurant);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormInfo";

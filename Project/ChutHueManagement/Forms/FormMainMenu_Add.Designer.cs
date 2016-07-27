@@ -64,7 +64,7 @@
             this.txt_NameMainMenu.Location = new System.Drawing.Point(105, 30);
             this.txt_NameMainMenu.Name = "txt_NameMainMenu";
             this.txt_NameMainMenu.PreventEnterBeep = true;
-            this.txt_NameMainMenu.Size = new System.Drawing.Size(176, 20);
+            this.txt_NameMainMenu.Size = new System.Drawing.Size(173, 20);
             this.txt_NameMainMenu.TabIndex = 1;
             // 
             // txt_Description
@@ -81,7 +81,7 @@
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.PreventEnterBeep = true;
-            this.txt_Description.Size = new System.Drawing.Size(176, 104);
+            this.txt_Description.Size = new System.Drawing.Size(173, 94);
             this.txt_Description.TabIndex = 3;
             // 
             // labelX2
@@ -124,6 +124,7 @@
             // 
             this.btn_Exit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Exit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_Exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Exit.Location = new System.Drawing.Point(203, 167);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(75, 23);
@@ -138,6 +139,8 @@
             // 
             // 
             this.lblUpdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdate.ForeColor = System.Drawing.Color.Red;
             this.lblUpdate.Location = new System.Drawing.Point(7, 3);
             this.lblUpdate.Name = "lblUpdate";
             this.lblUpdate.Size = new System.Drawing.Size(274, 23);
@@ -157,6 +160,7 @@
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.txt_NameMainMenu);
             this.Controls.Add(this.labelX1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(309, 241);
