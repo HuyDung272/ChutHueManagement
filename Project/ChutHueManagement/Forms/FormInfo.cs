@@ -42,13 +42,11 @@ namespace ChutHueManagement.Forms
         void SetEntity(InfoEntity entity)
         {
             txtNameRestaurant.Text = entity.NameRestaurant;
-            //txt_diachi.Text = entity.DiaChi;
-            //txt_dienthoai.Text = entity.DienThoai;
-            //txt_fax.Text = entity.Fax;
-            //txt_masothue.Text = entity.MaSoThue;
-            //txt_email.Text = entity.Email;
-            //txt_website.Text = entity.Website;
-            //txt_mota.Text = entity.MoTa;
+            txtAddress.Text = entity.Address;
+            txtPhoneNumber.Text = entity.PhoneNumber;
+            txtCellPhone.Text = entity.CellNumber;
+            txtEmail.Text = entity.Email;
+            txtDescription.Text = entity.Description;
         }
     }
 }

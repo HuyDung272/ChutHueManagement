@@ -33,10 +33,7 @@ namespace ChutHueManagement.Forms
                 //this.Text = Title;
             }
             FormCollection a = Application.OpenForms;
-            Library_Controls.ShowMDI(a, "FormInfo");
-
-            
-            
+            Library_Controls.ShowMDI(a, "FormInfo");    
         }
     }
 }
