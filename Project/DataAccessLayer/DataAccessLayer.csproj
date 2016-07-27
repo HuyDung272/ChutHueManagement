@@ -43,6 +43,7 @@
     <Compile Include="AccountDA.cs" />
     <Compile Include="FoodMenuDA.cs" />
     <Compile Include="InfoDA.cs" />
+    <Compile Include="MainMenuDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
