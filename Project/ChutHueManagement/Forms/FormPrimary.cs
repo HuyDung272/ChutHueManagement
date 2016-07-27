@@ -22,7 +22,9 @@ namespace ChutHueManagement.Forms
 
         }
 
-        private void buttonItem19_Click(object sender, EventArgs e)
+        
+
+        private void btn_InfoRestaurant_Click(object sender, EventArgs e)
         {
             if ((Application.OpenForms["FormInfo"] as FormInfo) == null)
             {
@@ -33,7 +35,21 @@ namespace ChutHueManagement.Forms
                 //this.Text = Title;
             }
             FormCollection a = Application.OpenForms;
-            Library_Controls.ShowMDI(a, "FormInfo");    
+            Library_Controls.ShowMDI(a, "FormInfo");
+        }
+
+        private void btn_MainMenu_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["FormMainMenu"] as FormMainMenu) == null)
+            {
+                FormMainMenu frm = new FormMainMenu();
+                frm.MdiParent = this;
+                frm.Show();
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormMainMenu");
         }
     }
 }

@@ -45,12 +45,13 @@
             // 
             // lb_NameRestaurant
             // 
+            this.lb_NameRestaurant.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             // 
             // 
             // 
             this.lb_NameRestaurant.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_NameRestaurant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NameRestaurant.ForeColor = System.Drawing.Color.SlateGray;
+            this.lb_NameRestaurant.ForeColor = System.Drawing.Color.SteelBlue;
             this.lb_NameRestaurant.Location = new System.Drawing.Point(27, 14);
             this.lb_NameRestaurant.Name = "lb_NameRestaurant";
             this.lb_NameRestaurant.Size = new System.Drawing.Size(133, 23);
@@ -78,12 +79,13 @@
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.ForeColor = System.Drawing.Color.SlateGray;
+            this.labelX1.ForeColor = System.Drawing.Color.SteelBlue;
             this.labelX1.Location = new System.Drawing.Point(27, 67);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(133, 23);
@@ -111,13 +113,14 @@
             // 
             // labelX2
             // 
+            this.labelX2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.ForeColor = System.Drawing.Color.SlateGray;
-            this.labelX2.Location = new System.Drawing.Point(27, 115);
+            this.labelX2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX2.Location = new System.Drawing.Point(27, 120);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(133, 23);
             this.labelX2.TabIndex = 1;
@@ -136,7 +139,7 @@
             this.txtPhoneNumber.DisabledBackColor = System.Drawing.Color.White;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(186, 113);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(186, 118);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PreventEnterBeep = true;
             this.txtPhoneNumber.Size = new System.Drawing.Size(615, 29);
@@ -144,13 +147,14 @@
             // 
             // labelX3
             // 
+            this.labelX3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             // 
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.ForeColor = System.Drawing.Color.SlateGray;
-            this.labelX3.Location = new System.Drawing.Point(27, 168);
+            this.labelX3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX3.Location = new System.Drawing.Point(27, 171);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(155, 27);
             this.labelX3.TabIndex = 1;
@@ -169,7 +173,7 @@
             this.txtCellPhone.DisabledBackColor = System.Drawing.Color.White;
             this.txtCellPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCellPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtCellPhone.Location = new System.Drawing.Point(186, 166);
+            this.txtCellPhone.Location = new System.Drawing.Point(186, 171);
             this.txtCellPhone.Name = "txtCellPhone";
             this.txtCellPhone.PreventEnterBeep = true;
             this.txtCellPhone.Size = new System.Drawing.Size(615, 29);
@@ -177,13 +181,14 @@
             // 
             // labelX4
             // 
+            this.labelX4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             // 
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.ForeColor = System.Drawing.Color.SlateGray;
-            this.labelX4.Location = new System.Drawing.Point(27, 228);
+            this.labelX4.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelX4.Location = new System.Drawing.Point(27, 224);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(155, 27);
             this.labelX4.TabIndex = 1;
@@ -202,7 +207,7 @@
             this.txtEmail.DisabledBackColor = System.Drawing.Color.White;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(186, 226);
+            this.txtEmail.Location = new System.Drawing.Point(186, 224);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PreventEnterBeep = true;
             this.txtEmail.Size = new System.Drawing.Size(615, 29);
@@ -210,12 +215,13 @@
             // 
             // labelX5
             // 
+            this.labelX5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             // 
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.ForeColor = System.Drawing.Color.SlateGray;
+            this.labelX5.ForeColor = System.Drawing.Color.SteelBlue;
             this.labelX5.Location = new System.Drawing.Point(27, 281);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(155, 27);
@@ -236,7 +242,7 @@
             this.txtDescription.DisabledBackColor = System.Drawing.Color.White;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(186, 281);
+            this.txtDescription.Location = new System.Drawing.Point(186, 277);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreventEnterBeep = true;
