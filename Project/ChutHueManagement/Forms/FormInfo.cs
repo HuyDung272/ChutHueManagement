@@ -31,11 +31,11 @@ namespace ChutHueManagement.Forms
         {
             InfoEntity entity = new InfoEntity();
             entity.NameRestaurant = txtNameRestaurant.Text;
-            //entity.Address = txt_diachi.Text;
-            //entity.PhoneNumber = txt_dienthoai.Text;
-            //entity.CellNumber = txt_fax.Text;
-            //entity.Email = txt_email.Text;
-            //entity.Description = tx
+            entity.Address = txtAddress.Text;
+            entity.PhoneNumber = txtPhoneNumber.Text;
+            entity.CellNumber = txtCellPhone.Text;
+            entity.Email = txtEmail.Text;
+            entity.Description = txtDescription.Text;
             return entity;
         }
 
@@ -47,6 +47,21 @@ namespace ChutHueManagement.Forms
             txtCellPhone.Text = entity.CellNumber;
             txtEmail.Text = entity.Email;
             txtDescription.Text = entity.Description;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            InfoEntity entity = GetEntity();
+            if (InfoManager.UpDate(entity))
+            {
+                MessageBox.Show("Lưu Thành Công");
+            }
+            else
+            {
+                MessageBox.Show("Lưu Thất Bại");
+                InfoEntity entityold = InfoManager.ConvertToList(InfoManager.GetInfo())[0];
+                SetEntity(entityold);
+            }
         }
     }
 }

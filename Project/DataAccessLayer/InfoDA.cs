@@ -46,7 +46,7 @@ namespace ChutHueManagement.DataAccessLayer
                 pb.AddParameter("NameRestaurant", entity.NameRestaurant);
                 pb.AddParameter("Address", entity.Address);
                 pb.AddParameter("PhoneNumber", entity.PhoneNumber);
-                pb.AddParameter("CellNumber", entity.CellNumber);
+                pb.AddParameter("CellPhone", entity.CellNumber);
                 pb.AddParameter("Email", entity.Email);
                 pb.AddParameter("Description", entity.Description);
 
