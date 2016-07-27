@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,7 @@ namespace ChutHueManagement.Forms
 
         private void FormPrimary_Load(object sender, EventArgs e)
         {
-
+            toolStripStatusLabel_Time.Text = string.Format("Thời gian hệ thống: {0: h:mm:ss tt}", DateTime.Now);
         }
 
         
@@ -50,6 +50,11 @@ namespace ChutHueManagement.Forms
             }
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormMainMenu");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel_Time.Text = string.Format("Thời gian hệ thống: {0: h:mm:ss tt}", DateTime.Now);
         }
     }
 }

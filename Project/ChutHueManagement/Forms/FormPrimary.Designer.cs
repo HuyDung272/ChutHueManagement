@@ -34,6 +34,7 @@
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
             this.btn_ChangePass = new DevComponents.DotNetBar.ButtonItem();
+            this.btn_ChangePassword = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
             this.btn_InfoRestaurant = new DevComponents.DotNetBar.ButtonItem();
@@ -72,10 +73,12 @@
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.btn_ChangePassword = new DevComponents.DotNetBar.ButtonItem();
+            this.toolStripStatusLabel_Time = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -186,6 +189,15 @@
             // 
             this.btn_ChangePass.Name = "btn_ChangePass";
             this.btn_ChangePass.SubItemsExpandWidth = 14;
+            // 
+            // btn_ChangePassword
+            // 
+            this.btn_ChangePassword.FixedSize = new System.Drawing.Size(80, 80);
+            this.btn_ChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_ChangePassword.Image")));
+            this.btn_ChangePassword.ImageFixedSize = new System.Drawing.Size(48, 48);
+            this.btn_ChangePassword.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btn_ChangePassword.Name = "btn_ChangePassword";
+            this.btn_ChangePassword.SubItemsExpandWidth = 14;
             // 
             // ribbonBar3
             // 
@@ -660,20 +672,26 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel_Time});
             this.statusStrip1.Location = new System.Drawing.Point(5, 705);
             this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.statusStrip1.Size = new System.Drawing.Size(1282, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // btn_ChangePassword
+            // toolStripStatusLabel_Time
             // 
-            this.btn_ChangePassword.FixedSize = new System.Drawing.Size(80, 80);
-            this.btn_ChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_ChangePassword.Image")));
-            this.btn_ChangePassword.ImageFixedSize = new System.Drawing.Size(48, 48);
-            this.btn_ChangePassword.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btn_ChangePassword.Name = "btn_ChangePassword";
-            this.btn_ChangePassword.SubItemsExpandWidth = 14;
+            this.toolStripStatusLabel_Time.Name = "toolStripStatusLabel_Time";
+            this.toolStripStatusLabel_Time.Size = new System.Drawing.Size(34, 17);
+            this.toolStripStatusLabel_Time.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormPrimary
             // 
@@ -691,6 +709,8 @@
             this.ribbonControl1.PerformLayout();
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -741,5 +761,7 @@
         private DevComponents.DotNetBar.RibbonBar ribbonBar5;
         private DevComponents.DotNetBar.ButtonItem btn_ChangePass;
         private DevComponents.DotNetBar.ButtonItem btn_ChangePassword;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_Time;
     }
 }
