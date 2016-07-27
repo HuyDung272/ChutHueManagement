@@ -12,7 +12,7 @@ namespace ChutHueManagement.BusinessEntities
         private string _invoiceCode;
         private string _tableName;
         private DateTime _date;
-        private string _node;
+        private string _note;
 
         public int ID
         {
@@ -66,36 +66,36 @@ namespace ChutHueManagement.BusinessEntities
             }
         }
 
-        public string Node
+        public string Note
         {
             get
             {
-                return _node;
+                return _note;
             }
 
             set
             {
-                _node = value;
+                _note = value;
             }
         }
         public InvoiceEntity()
         {
 
         }
-        public InvoiceEntity(int id, string invoiceCode, string tableName, DateTime date, string node)
+        public InvoiceEntity(int id, string invoiceCode, string tableName, DateTime date, string note)
         {
             this._id = id;
             this._invoiceCode = invoiceCode;
             this._tableName = tableName;
             this._date = date;
-            this._node = node;
+            this._note = note;
         }
-        public InvoiceEntity(string invoiceCode, string tableName, DateTime date, string node)
+        public InvoiceEntity(string invoiceCode, string tableName, DateTime date, string note)
         {
             this._invoiceCode = invoiceCode;
             this._tableName = tableName;
             this._date = date;
-            this._node = node;
+            this._note = note;
         }
     }
 }

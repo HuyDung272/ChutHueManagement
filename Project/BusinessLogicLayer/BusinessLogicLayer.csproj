@@ -43,8 +43,12 @@
     <Compile Include="AccountManager.cs" />
     <Compile Include="FoodMenuManager.cs" />
     <Compile Include="InfoManager.cs" />
+    <Compile Include="InvoiceDetailsManager.cs" />
+    <Compile Include="InvoiceManager.cs" />
     <Compile Include="MainMenuManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantInfoManager.cs" />
+    <Compile Include="TablesManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
