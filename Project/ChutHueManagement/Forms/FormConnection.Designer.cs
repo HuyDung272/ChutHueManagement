@@ -165,7 +165,6 @@
             this.txt_passserver.PasswordChar = '*';
             this.txt_passserver.Size = new System.Drawing.Size(196, 20);
             this.txt_passserver.TabIndex = 12;
-            this.txt_passserver.Text = "abc@1234";
             // 
             // labelX8
             // 
@@ -195,7 +194,6 @@
             this.txt_userserver.Name = "txt_userserver";
             this.txt_userserver.Size = new System.Drawing.Size(196, 20);
             this.txt_userserver.TabIndex = 11;
-            this.txt_userserver.Text = "danda";
             // 
             // rd_SqlServerAuthentication
             // 
@@ -493,6 +491,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(420, 500);

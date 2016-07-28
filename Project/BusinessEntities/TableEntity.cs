@@ -46,7 +46,7 @@ namespace ChutHueManagement.BusinessEntities
             this._iD = iD;
             this._tableName = tableName;
         }
-        public TableEntity( string tableName)
+        public TableEntity(string tableName)
         {
             this._tableName = tableName;
         }

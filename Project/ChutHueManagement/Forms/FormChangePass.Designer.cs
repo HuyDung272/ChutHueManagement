@@ -92,10 +92,10 @@
             this.txt_OldPass.ForeColor = System.Drawing.Color.Black;
             this.txt_OldPass.Location = new System.Drawing.Point(123, 39);
             this.txt_OldPass.Name = "txt_OldPass";
+            this.txt_OldPass.PasswordChar = '*';
             this.txt_OldPass.PreventEnterBeep = true;
             this.txt_OldPass.Size = new System.Drawing.Size(282, 25);
             this.txt_OldPass.TabIndex = 2;
-            this.txt_OldPass.UseSystemPasswordChar = true;
             // 
             // txt_NewPass
             // 
@@ -112,10 +112,10 @@
             this.txt_NewPass.ForeColor = System.Drawing.Color.Black;
             this.txt_NewPass.Location = new System.Drawing.Point(123, 78);
             this.txt_NewPass.Name = "txt_NewPass";
+            this.txt_NewPass.PasswordChar = '*';
             this.txt_NewPass.PreventEnterBeep = true;
             this.txt_NewPass.Size = new System.Drawing.Size(282, 25);
             this.txt_NewPass.TabIndex = 4;
-            this.txt_NewPass.UseSystemPasswordChar = true;
             // 
             // labelX3
             // 
@@ -147,10 +147,10 @@
             this.txt_NewPass_2.ForeColor = System.Drawing.Color.Black;
             this.txt_NewPass_2.Location = new System.Drawing.Point(123, 117);
             this.txt_NewPass_2.Name = "txt_NewPass_2";
+            this.txt_NewPass_2.PasswordChar = '*';
             this.txt_NewPass_2.PreventEnterBeep = true;
             this.txt_NewPass_2.Size = new System.Drawing.Size(282, 25);
             this.txt_NewPass_2.TabIndex = 6;
-            this.txt_NewPass_2.UseSystemPasswordChar = true;
             // 
             // labelX5
             // 
