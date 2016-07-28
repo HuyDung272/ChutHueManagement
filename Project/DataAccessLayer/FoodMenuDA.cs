@@ -69,7 +69,22 @@ namespace ChutHueManagement.DataAccessLayer
             }
         }
 
-
+        public DataTable GetByID(int id)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("ID", id);
+                dt = DBFactory.Database.FillDataTable("FoodMenu_GetByID", pb.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
+            }
+        }
 
         public DataTable GetByIDMainMenu(int idMainMenu)
         {
