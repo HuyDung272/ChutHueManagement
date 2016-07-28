@@ -491,7 +491,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(420, 500);

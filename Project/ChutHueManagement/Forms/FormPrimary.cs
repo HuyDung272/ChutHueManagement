@@ -81,5 +81,57 @@ namespace ChutHueManagement.ChutHueManagement
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormChangePass");
         }
+
+        private void FormPrimary_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                var c = MessageBox.Show(@"Bạn có muốn thoát hay không !", @"Thông báo", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                if (c == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    notifyIcon1.Dispose();
+                    Environment.Exit(0);
+                    //this.Close();
+                }
+            }
+        }
+
+        private void FormPrimary_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                notifyIcon1.ShowBalloonTip(3000);
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void hiểnThịChươngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notifyIcon1_MouseDoubleClick(null, null);
+        }
+
+        private void thoátChươngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPrimary_FormClosing(this, new FormClosingEventArgs(CloseReason.UserClosing, false));
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất hay không", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Application.Restart();
+        }
+
     }
 }
