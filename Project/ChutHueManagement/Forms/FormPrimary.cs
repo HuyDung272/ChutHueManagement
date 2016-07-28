@@ -133,5 +133,20 @@ namespace ChutHueManagement.ChutHueManagement
                 Application.Restart();
         }
 
+        private void btn_FoodMenu_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["FormFoodMenu"] as FormFoodMenu) == null)
+            {
+                FormFoodMenu frm = new FormFoodMenu();
+                frm.MdiParent = this;
+                frm.Show();
+                //frm.WindowState = FormWindowState.Normal;
+                //frm.WindowState /
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormFoodMenu");
+        }
     }
 }

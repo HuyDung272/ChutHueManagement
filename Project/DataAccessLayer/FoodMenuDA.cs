@@ -52,7 +52,7 @@ namespace ChutHueManagement.DataAccessLayer
                 throw new Exception(ex.Message, ex);
             }
         }
-        
+
         public DataTable GetAll()
         {
             try
@@ -62,7 +62,26 @@ namespace ChutHueManagement.DataAccessLayer
                 dt = DBFactory.Database.FillDataTable("FoodMenu_GetFoodMenu");
                 return dt;
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
+
+
+        public DataTable GetByIDMainMenu(int idMainMenu)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("IDMainMenu", idMainMenu);
+                dt = DBFactory.Database.FillDataTable("FoodMenu_GetByIDMainMenu", pb.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
             {
                 Logger.Write(ex);
                 throw new Exception(ex.Message, ex);
@@ -71,12 +90,12 @@ namespace ChutHueManagement.DataAccessLayer
         public List<FoodMenuEntity> ConvertToList(DataTable dt)
         {
             List<FoodMenuEntity> list = new List<FoodMenuEntity>();
-            for(int i=0;i<dt.Rows.Count;i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                 int id = (int)dt.Rows[i][0];
                 string nameFood = dt.Rows[i][1].ToString();
-                int idMainMenu =(int) dt.Rows[i][2];
-                double price =(double) dt.Rows[i][3];
+                int idMainMenu = (int)dt.Rows[i][2];
+                double price = (double)dt.Rows[i][3];
                 bool isDelete = (bool)dt.Rows[i][4];
                 string description = dt.Rows[i][5].ToString();
                 FoodMenuEntity foodMenu = new FoodMenuEntity(id, nameFood, idMainMenu, price, isDelete, description);

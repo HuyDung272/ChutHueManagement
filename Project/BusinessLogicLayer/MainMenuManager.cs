@@ -90,7 +90,18 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
-
+        public static DataTable GetAllNotDelete()
+        {
+            try
+            {
+                return adapter.GetAllNotDelete();
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
 
 
         public static List<MainMenuEntity> ConvertToList(DataTable dt)

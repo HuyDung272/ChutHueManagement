@@ -70,6 +70,23 @@ namespace ChutHueManagement.DataAccessLayer
             }
         }
 
+        public DataTable GetAllNotDelete()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+
+                dt = DBFactory.Database.FillDataTable("MainMenu_GetAllNotDelete", pb.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
 
         public List<MainMenuEntity> ConvertToList(DataTable dt)
         {

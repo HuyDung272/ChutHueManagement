@@ -55,6 +55,20 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return null;
             }
         }
+
+        public static DataTable GetByIDMainMenu(int idMainMenu)
+        {
+            try
+            {
+                return adapter.GetByIDMainMenu(idMainMenu);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
         public static List<FoodMenuEntity> ConvertToList(DataTable dt)
         {
             try
