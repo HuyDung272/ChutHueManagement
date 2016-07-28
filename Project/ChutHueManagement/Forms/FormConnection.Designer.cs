@@ -329,6 +329,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.labelX9);
             this.groupBox1.Controls.Add(this.btn_Huy);
@@ -339,6 +340,7 @@
             this.groupBox1.Controls.Add(this.labelX3);
             this.groupBox1.Controls.Add(this.txt_username);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(0, 70);
             this.groupBox1.MaximumSize = new System.Drawing.Size(404, 95);
             this.groupBox1.MinimumSize = new System.Drawing.Size(404, 95);
@@ -498,7 +500,6 @@
             this.MinimumSize = new System.Drawing.Size(420, 160);
             this.Name = "FormConnection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng nhập hệ thống";
             this.Load += new System.EventHandler(this.FormConnectioncs_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

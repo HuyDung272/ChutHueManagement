@@ -56,5 +56,21 @@ namespace ChutHueManagement.Forms
         {
             toolStripStatusLabel_Time.Text = string.Format("Thời gian hệ thống: {0: h:mm:ss tt}", DateTime.Now);
         }
+
+        private void btn_ChangePassword_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["FormChangePass"] as FormChangePass) == null)
+            {
+                FormChangePass frm = new FormChangePass();
+                frm.MdiParent = this;
+                frm.Show();
+                frm.WindowState = FormWindowState.Normal;
+                //frm.WindowState /
+                //frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormChangePass");
+        }
     }
 }

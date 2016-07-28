@@ -42,7 +42,7 @@
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.Color.White;
+            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -89,7 +89,7 @@
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.Color.White;
+            this.labelX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -140,7 +140,7 @@
             // 
             // lblUpdate
             // 
-            this.lblUpdate.BackColor = System.Drawing.Color.White;
+            this.lblUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -156,7 +156,7 @@
             // radioBtn_IsDelete
             // 
             this.radioBtn_IsDelete.AutoSize = true;
-            this.radioBtn_IsDelete.BackColor = System.Drawing.Color.White;
+            this.radioBtn_IsDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.radioBtn_IsDelete.ForeColor = System.Drawing.Color.Black;
             this.radioBtn_IsDelete.Location = new System.Drawing.Point(7, 157);
             this.radioBtn_IsDelete.Name = "radioBtn_IsDelete";
