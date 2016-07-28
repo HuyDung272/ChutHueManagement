@@ -43,6 +43,19 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return false;
             }
         }
+        public static DataTable GetByID(int ID)
+        {
+
+            try
+            {
+                return adapter.GetByID(ID);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
         public static DataTable GetAll()
         {
             try

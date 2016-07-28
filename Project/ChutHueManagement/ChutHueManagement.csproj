@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AddEditInvoiceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEditInvoiceDetail.Designer.cs">
+      <DependentUpon>AddEditInvoiceDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,14 +107,12 @@
     <Compile Include="Forms\FormTable.Designer.cs">
       <DependentUpon>FormTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TableSelected.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TableSelected.Designer.cs">
-      <DependentUpon>TableSelected.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Table.cs" />
+    <EmbeddedResource Include="Forms\AddEditInvoiceDetail.resx">
+      <DependentUpon>AddEditInvoiceDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormChangePass.resx">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,9 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTable.resx">
       <DependentUpon>FormTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TableSelected.resx">
-      <DependentUpon>TableSelected.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -186,6 +187,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ban.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
