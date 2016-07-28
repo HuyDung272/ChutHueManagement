@@ -15,7 +15,7 @@ namespace ChutHueManagement.Forms
     public partial class FormMainMenu_Add : DevComponents.DotNetBar.Metro.MetroForm
     {
 
-        private string Textloi = string.Empty;
+        private string errorMessage = string.Empty;
 
         private MainMenuEntity entity;
 
@@ -24,6 +24,7 @@ namespace ChutHueManagement.Forms
             InitializeComponent();
             btn_Add.Text = "Thêm";
             this.Text = "Thêm mới Loại thực đơn";
+            this.radioBtn_IsDelete.Enabled = false;
         }
 
         public FormMainMenu_Add(MainMenuEntity entity)
@@ -37,6 +38,7 @@ namespace ChutHueManagement.Forms
 
             txt_NameMainMenu.Text = entity.NameEntryMenu;
             txt_Description.Text = entity.Description;
+            radioBtn_IsDelete.Checked = entity.IsDelete;
         }
 
         private void FormMainMenu_Add_Load(object sender, EventArgs e)
@@ -76,6 +78,7 @@ namespace ChutHueManagement.Forms
             MainMenuEntity entity = new MainMenuEntity();
             entity.NameEntryMenu = this.txt_NameMainMenu.Text;
             entity.Description = this.txt_Description.Text;
+            entity.IsDelete = this.radioBtn_IsDelete.Checked;
             return entity;
         }
 
@@ -91,29 +94,29 @@ namespace ChutHueManagement.Forms
                 if (entity == null)
                 {
                     MainMenuEntity mainMenuEntity = GetEntity();
-                    if (MainMenuManager.Insert(mainMenuEntity) > 0)
+                    if (MainMenuManager.Insert(mainMenuEntity, ref errorMessage) > 0)
                     {
                         MessageBox.Show("Thêm thành công");
                         DialogResult = DialogResult.OK;
                     }
                     else
                     {
-                        MessageBox.Show(Textloi);
+                        MessageBox.Show(errorMessage);
                     }
                 }
                 else
                 {
                     MainMenuEntity mainMenuEntity = GetEntity();
                     mainMenuEntity.ID = this.entity.ID;
-                    mainMenuEntity.IsDelete = this.entity.IsDelete;
-                    if (MainMenuManager.UpDate(mainMenuEntity))
+                    //mainMenuEntity.IsDelete = this.entity.IsDelete;
+                    if (MainMenuManager.UpDate(mainMenuEntity, ref errorMessage))
                     {
                         MessageBox.Show("Cập nhật thành công!");
                         DialogResult = DialogResult.OK;
                     }
                     else
                     {
-                        MessageBox.Show(Textloi);
+                        MessageBox.Show(errorMessage);
                     }
                 }
             }

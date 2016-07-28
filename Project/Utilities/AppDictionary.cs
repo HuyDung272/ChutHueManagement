@@ -13,7 +13,7 @@ namespace ChutHueManagement.Utilities
         {
             dic.Add("ID", "Mã");
             dic.Add("NameEntryMenu", "Loại thực đơn");
-            dic.Add("IsDelete", "Khóa");
+            dic.Add("IsDelete", "Tình trạng");
             dic.Add("Description", "Mô tả");
             
         }

@@ -38,6 +38,7 @@ namespace ChutHueManagement.DataAccessLayer
             try
             {
                 ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("ID", entity.ID);
                 pb.AddParameter("NameEntryMenu", entity.NameEntryMenu);
                 pb.AddParameter("IsDelete", entity.IsDelete);
                 pb.AddParameter("Description", entity.Description);
