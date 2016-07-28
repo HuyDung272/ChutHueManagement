@@ -12,7 +12,7 @@ using DevComponents.DotNetBar;
 using ChutHueManagement.BusinessLogicLayer;
 using ChutHueManagement.BusinessEntities;
 
-namespace ChutHueManagement.Forms
+namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormInfo : DevComponents.DotNetBar.Metro.MetroForm
     {

@@ -1,4 +1,4 @@
-﻿namespace ChutHueManagement.Forms
+﻿namespace ChutHueManagement.ChutHueManagement
 {
     partial class FormConnection
     {
@@ -65,7 +65,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.btn_Refresh);
             this.groupBox2.Controls.Add(this.btn_Lưu);
             this.groupBox2.Controls.Add(this.btn_testConnection);
@@ -138,7 +138,7 @@
             // 
             // labelX7
             // 
-            this.labelX7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX7.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -169,7 +169,7 @@
             // 
             // labelX8
             // 
-            this.labelX8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX8.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -200,7 +200,7 @@
             // rd_SqlServerAuthentication
             // 
             this.rd_SqlServerAuthentication.AutoSize = true;
-            this.rd_SqlServerAuthentication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rd_SqlServerAuthentication.BackColor = System.Drawing.Color.White;
             this.rd_SqlServerAuthentication.Checked = true;
             this.rd_SqlServerAuthentication.ForeColor = System.Drawing.Color.Black;
             this.rd_SqlServerAuthentication.Location = new System.Drawing.Point(105, 152);
@@ -215,7 +215,7 @@
             // rd_WindowsAuthentication
             // 
             this.rd_WindowsAuthentication.AutoSize = true;
-            this.rd_WindowsAuthentication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rd_WindowsAuthentication.BackColor = System.Drawing.Color.White;
             this.rd_WindowsAuthentication.ForeColor = System.Drawing.Color.Black;
             this.rd_WindowsAuthentication.Location = new System.Drawing.Point(105, 129);
             this.rd_WindowsAuthentication.Name = "rd_WindowsAuthentication";
@@ -242,7 +242,7 @@
             // 
             // labelX6
             // 
-            this.labelX6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX6.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -256,7 +256,7 @@
             // 
             // labelX5
             // 
-            this.labelX5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX5.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -270,7 +270,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.rd_Internet);
             this.groupBox3.Controls.Add(this.rd_Lan);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -285,7 +285,7 @@
             // rd_Internet
             // 
             this.rd_Internet.AutoSize = true;
-            this.rd_Internet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rd_Internet.BackColor = System.Drawing.Color.White;
             this.rd_Internet.ForeColor = System.Drawing.Color.Black;
             this.rd_Internet.Location = new System.Drawing.Point(242, 18);
             this.rd_Internet.Name = "rd_Internet";
@@ -298,7 +298,7 @@
             // rd_Lan
             // 
             this.rd_Lan.AutoSize = true;
-            this.rd_Lan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rd_Lan.BackColor = System.Drawing.Color.White;
             this.rd_Lan.Checked = true;
             this.rd_Lan.ForeColor = System.Drawing.Color.Black;
             this.rd_Lan.Location = new System.Drawing.Point(57, 19);
@@ -312,7 +312,7 @@
             // 
             // labelX4
             // 
-            this.labelX4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX4.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -329,7 +329,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.labelX9);
             this.groupBox1.Controls.Add(this.btn_Huy);
@@ -352,7 +352,7 @@
             // 
             // labelX9
             // 
-            this.labelX9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX9.BackColor = System.Drawing.Color.White;
             this.labelX9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("labelX9.BackgroundImage")));
             this.labelX9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             // 
@@ -404,7 +404,7 @@
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX2.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -434,7 +434,7 @@
             // 
             // labelX3
             // 
-            this.labelX3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX3.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -469,7 +469,7 @@
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX1.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 

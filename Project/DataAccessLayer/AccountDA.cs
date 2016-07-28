@@ -71,7 +71,26 @@ namespace ChutHueManagement.DataAccessLayer
                 throw new Exception(ex.Message);
             }
         }
-      
+
+        public DataTable LogIn(string UserName, string Pass)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("UserName", UserName);
+                pb.AddParameter("Password", Pass);
+
+                dt = DBFactory.Database.FillDataTable("Account_LogIn", pb.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
 
         /// <summary>
         /// ?????

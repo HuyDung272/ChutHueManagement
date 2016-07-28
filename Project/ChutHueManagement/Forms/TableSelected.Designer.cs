@@ -1,4 +1,4 @@
-﻿namespace ChutHueManagement.Forms
+﻿namespace ChutHueManagement.ChutHueManagement
 {
     partial class TableSelected
     {

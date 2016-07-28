@@ -10,7 +10,7 @@ using ChutHueManagement.BusinessLogicLayer;
 using ChutHueManagement.Utilities;
 using DevComponents.DotNetBar;
 
-namespace ChutHueManagement.Forms
+namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormMainMenu_Add : DevComponents.DotNetBar.Metro.MetroForm
     {
@@ -24,7 +24,8 @@ namespace ChutHueManagement.Forms
             InitializeComponent();
             btn_Add.Text = "Thêm";
             this.Text = "Thêm mới Loại thực đơn";
-            this.radioBtn_IsDelete.Enabled = false;
+            //this.radioBtn_IsDelete.Enabled = false;
+            this.cb_IsDelete.Enabled = false;
         }
 
         public FormMainMenu_Add(MainMenuEntity entity)
@@ -38,7 +39,8 @@ namespace ChutHueManagement.Forms
 
             txt_NameMainMenu.Text = entity.NameEntryMenu;
             txt_Description.Text = entity.Description;
-            radioBtn_IsDelete.Checked = entity.IsDelete;
+            //radioBtn_IsDelete.Checked = entity.IsDelete;
+            cb_IsDelete.Checked = entity.IsDelete;
         }
 
         private void FormMainMenu_Add_Load(object sender, EventArgs e)
@@ -78,7 +80,8 @@ namespace ChutHueManagement.Forms
             MainMenuEntity entity = new MainMenuEntity();
             entity.NameEntryMenu = this.txt_NameMainMenu.Text;
             entity.Description = this.txt_Description.Text;
-            entity.IsDelete = this.radioBtn_IsDelete.Checked;
+            entity.IsDelete = cb_IsDelete.Checked;
+            //entity.IsDelete = this.radioBtn_IsDelete.Checked;
             return entity;
         }
 

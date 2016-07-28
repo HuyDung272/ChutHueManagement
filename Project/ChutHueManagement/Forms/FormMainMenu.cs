@@ -10,7 +10,7 @@ using ChutHueManagement.BusinessLogicLayer;
 using ChutHueManagement.Utilities;
 
 
-namespace ChutHueManagement.Forms
+namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormMainMenu : DevComponents.DotNetBar.Metro.MetroForm
     {

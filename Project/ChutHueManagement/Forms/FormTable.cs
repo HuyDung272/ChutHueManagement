@@ -13,7 +13,7 @@ using DevComponents.DotNetBar.Controls;
 using ChutHueManagement.BusinessLogicLayer;
 using ChutHueManagement.BusinessEntities;
 
-namespace ChutHueManagement.Forms
+namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormTable : DevComponents.DotNetBar.Metro.MetroForm
     {

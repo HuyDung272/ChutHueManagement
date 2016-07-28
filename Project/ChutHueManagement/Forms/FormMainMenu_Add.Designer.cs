@@ -1,4 +1,4 @@
-﻿namespace ChutHueManagement.Forms
+﻿namespace ChutHueManagement.ChutHueManagement
 {
     partial class FormMainMenu_Add
     {
@@ -37,7 +37,7 @@
             this.btn_Clear = new DevComponents.DotNetBar.ButtonX();
             this.btn_Exit = new DevComponents.DotNetBar.ButtonX();
             this.lblUpdate = new DevComponents.DotNetBar.LabelX();
-            this.radioBtn_IsDelete = new System.Windows.Forms.RadioButton();
+            this.cb_IsDelete = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.SuspendLayout();
             // 
             // labelX1
@@ -153,25 +153,25 @@
             this.lblUpdate.TabIndex = 0;
             this.lblUpdate.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // radioBtn_IsDelete
+            // cb_IsDelete
             // 
-            this.radioBtn_IsDelete.AutoSize = true;
-            this.radioBtn_IsDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioBtn_IsDelete.ForeColor = System.Drawing.Color.Black;
-            this.radioBtn_IsDelete.Location = new System.Drawing.Point(7, 157);
-            this.radioBtn_IsDelete.Name = "radioBtn_IsDelete";
-            this.radioBtn_IsDelete.Size = new System.Drawing.Size(106, 17);
-            this.radioBtn_IsDelete.TabIndex = 7;
-            this.radioBtn_IsDelete.TabStop = true;
-            this.radioBtn_IsDelete.Text = "Tình trạng (khóa)";
-            this.radioBtn_IsDelete.UseVisualStyleBackColor = false;
+            // 
+            // 
+            // 
+            this.cb_IsDelete.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cb_IsDelete.Location = new System.Drawing.Point(7, 152);
+            this.cb_IsDelete.Name = "cb_IsDelete";
+            this.cb_IsDelete.Size = new System.Drawing.Size(111, 23);
+            this.cb_IsDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_IsDelete.TabIndex = 8;
+            this.cb_IsDelete.Text = "Tình trạng (Khóa)";
             // 
             // FormMainMenu_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 224);
-            this.Controls.Add(this.radioBtn_IsDelete);
+            this.Controls.Add(this.cb_IsDelete);
             this.Controls.Add(this.lblUpdate);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Clear);
@@ -183,14 +183,14 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(309, 263);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(309, 241);
+            this.MinimumSize = new System.Drawing.Size(309, 263);
             this.Name = "FormMainMenu_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormMainMenu_Add";
             this.Load += new System.EventHandler(this.FormMainMenu_Add_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -204,6 +204,6 @@
         private DevComponents.DotNetBar.ButtonX btn_Clear;
         private DevComponents.DotNetBar.ButtonX btn_Exit;
         private DevComponents.DotNetBar.LabelX lblUpdate;
-        private System.Windows.Forms.RadioButton radioBtn_IsDelete;
+        private DevComponents.DotNetBar.Controls.CheckBoxX cb_IsDelete;
     }
 }

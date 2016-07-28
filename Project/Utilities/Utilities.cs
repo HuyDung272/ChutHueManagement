@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using NLog;
+using System.Security.Cryptography;
 
 namespace ChutHueManagement.Utilities
 {
@@ -94,6 +95,18 @@ namespace ChutHueManagement.Utilities
 
     public class DataUtil
     {
+
+        public static string HashPassword(string password)
+        {
+            byte[] encodedPassword = new UTF8Encoding().GetBytes(password);
+
+            byte[] hash = ((HashAlgorithm)CryptoConfig.CreateFromName("MD5")).ComputeHash(encodedPassword);
+
+            string encoded = BitConverter.ToString(hash).Replace("-", string.Empty).ToLower();
+
+            return encoded;
+        }
+
         /// <summary>
         /// chỉ cho nhập số
         /// </summary>

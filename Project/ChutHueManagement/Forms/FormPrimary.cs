@@ -6,15 +6,24 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using ChutHueManagement.Utilities;
+using ChutHueManagement.BusinessEntities;
 using DevComponents.DotNetBar;
 
-namespace ChutHueManagement.Forms
+namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormPrimary : DevComponents.DotNetBar.RibbonForm
     {
+        public AccountEntity account { get; set; }
+
         public FormPrimary()
         {
             InitializeComponent();
+        }
+
+        public FormPrimary(AccountEntity account)
+        {
+            InitializeComponent();
+            this.account = account;
         }
 
         private void FormPrimary_Load(object sender, EventArgs e)
@@ -61,7 +70,7 @@ namespace ChutHueManagement.Forms
         {
             if ((Application.OpenForms["FormChangePass"] as FormChangePass) == null)
             {
-                FormChangePass frm = new FormChangePass();
+                FormChangePass frm = new FormChangePass(account);
                 frm.MdiParent = this;
                 frm.Show();
                 frm.WindowState = FormWindowState.Normal;

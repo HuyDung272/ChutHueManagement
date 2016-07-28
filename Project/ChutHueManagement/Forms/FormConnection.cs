@@ -14,15 +14,16 @@ using ChutHueManagement.BusinessLogicLayer;
 using ChutHueManagement.Utilities;
 using System.Threading;
 using System.Configuration;
-using DevComponents.DotNetBar;
 
-namespace ChutHueManagement.Forms
+using System.Security.Cryptography;
+
+namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormConnection : DevComponents.DotNetBar.Metro.MetroForm
     {
-        readonly string db = "Initial Catalog=CuaHangMayTinh;";
+        readonly string db = "Initial Catalog=ChutHueManagement;";
 
-        readonly string db1 = "database=CuaHangMayTinh;";
+        readonly string db1 = "database=ChutHueManagement;";
 
         bool dong;
 
@@ -39,7 +40,7 @@ namespace ChutHueManagement.Forms
         /// <summary>
         /// lưu thông tin của người đăng nhập
         /// </summary>
-        //public NhanVienEntity NhanVien = new NhanVienEntity();
+        public AccountEntity account = new AccountEntity();
 
         //public TaiKhoanEntity TaiKhoan;
 
@@ -47,6 +48,9 @@ namespace ChutHueManagement.Forms
         {
             InitializeComponent();
         }
+
+        
+        
 
         private void FormConnectioncs_Load(object sender, EventArgs e)
         {
@@ -90,7 +94,7 @@ namespace ChutHueManagement.Forms
             //Thread t = new Thread(() => (new Splash.Splash1("Đang tìm kiếm server")).ShowDialog());
             //t.Start();
             
-            //listserver = this.ConvertToList(SqlLocator.GetServers());
+            listserver = this.ConvertToList(SqlLocator.GetServers());
 
             //DataTable data = new DataTable();
             //data.Columns.Add("NameServer", typeof(string));
@@ -142,27 +146,30 @@ namespace ChutHueManagement.Forms
             }
         }
 
+       
+
         /// <summary>
         /// kiểm tra thông tin đăng nhập
         /// </summary>
         /// <returns></returns>
         private bool CheckLogin()
         {
-            //if (IsInput())
-            //{
-            //    var nv = NhanVienManager.DangNhap(txt_username.Text, txt_password.Text, ref Text);
-            //    try
-            //    {
-            //        NhanVien = NhanVienManager.ConvertToList(nv)[0];
-            //    }
-            //    catch (Exception)
-            //    {
-            //        MessageBox.Show(Text);
-            //        return false;
-            //    }
-            //    TaiKhoan = TaiKhoanManager.ConvertToList(TaiKhoanManager.Find_UserName(txt_username.Text))[0];
-            //    return true;
-            //}
+            if (IsInput())
+            {
+                string encodepass = DataUtil.HashPassword(DataUtil.HashPassword(txt_password.Text));
+                var nv = AccountManager.LogIn(txt_username.Text, encodepass, ref Text);
+                try
+                {
+                    account = AccountManager.ConvertToList(nv)[0];
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show(Text);
+                    return false;
+                }
+                //TaiKhoan = TaiKhoanManager.ConvertToList(TaiKhoanManager.Find_UserName(txt_username.Text))[0];
+                return true;
+            }
             return false;
         }
 
@@ -264,7 +271,7 @@ namespace ChutHueManagement.Forms
             if (rd_Internet.Checked)
             {
                 RemoveItemcb();
-                cb_MayChu.Items.Add("dandabook.no-ip.biz");
+                cb_MayChu.Items.Add("");
                 rd_SqlServerAuthentication.Checked = true;
                 rd_WindowsAuthentication.Enabled = false;
                 btn_Refresh.Enabled = false;

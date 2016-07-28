@@ -56,6 +56,33 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
+        public static DataTable LogIn(string UserName, string Password)
+        {
+            try
+            {
+                return adapter.LogIn(UserName, Password);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
+        public static DataTable LogIn(string UserName, string Password, ref string errormessage)
+        {
+            try
+            {
+                return adapter.LogIn(UserName, Password);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -111,14 +138,6 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="username"></param>
-        /// <param name="oldpass"></param>
-        /// <param name="newpass"></param>
-        /// <param name="errormessage"></param>
-        /// <returns></returns>
         public static bool ChangePass(string username, string oldpass, string newpass, ref string errormessage)
         {
             try
@@ -132,6 +151,16 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return false;
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="oldpass"></param>
+        /// <param name="newpass"></param>
+        /// <param name="errormessage"></param>
+        /// <returns></returns>
+        
         
         /// <summary>
         /// 
