@@ -150,6 +150,10 @@
       <Project>{93446760-d3c6-4604-b31a-991dc6e1d047}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Configurations\Configurations.csproj">
+      <Project>{dcd18f9d-de2a-4192-b910-060ba1a3f7b6}</Project>
+      <Name>Configurations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utilities\Utilities.csproj">
       <Project>{ee45ecfd-0b46-4dc2-b928-8694d4464b33}</Project>
       <Name>Utilities</Name>
