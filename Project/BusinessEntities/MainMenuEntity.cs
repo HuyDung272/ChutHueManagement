@@ -49,7 +49,7 @@ namespace ChutHueManagement.BusinessEntities
             _iD = 0;
             _nameEntryMenu = nameEntryMenu;
             _isDelete = isDelete;
-            _description = description;         
+            _description = description;
         }
      
         public MainMenuEntity(int iD, string nameEntryMenu, bool isDelete, string description)

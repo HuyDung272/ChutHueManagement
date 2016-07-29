@@ -24,6 +24,18 @@ namespace ChutHueManagement.ChutHueManagement
         {
             InitializeComponent();
             this.account = account;
+            if ((Application.OpenForms["FormTable"] as FormTable) == null)
+            {
+                FormTable frm = new FormTable();
+                frm.MdiParent = this;
+                frm.Show();
+                //frm.WindowState = FormWindowState.Normal;
+                //frm.WindowState /
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormTable");
         }
 
         private void FormPrimary_Load(object sender, EventArgs e)
@@ -106,7 +118,7 @@ namespace ChutHueManagement.ChutHueManagement
             if (WindowState == FormWindowState.Minimized)
             {
                 this.Hide();
-                notifyIcon1.ShowBalloonTip(3000);
+                notifyIcon1.ShowBalloonTip(1000);
             }
         }
 
@@ -147,6 +159,22 @@ namespace ChutHueManagement.ChutHueManagement
             }
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormFoodMenu");
+        }
+
+        private void btn_Invoice_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["FormTable"] as FormTable) == null)
+            {
+                FormTable frm = new FormTable();
+                frm.MdiParent = this;
+                frm.Show();
+                //frm.WindowState = FormWindowState.Normal;
+                //frm.WindowState /
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormTable");
         }
     }
 }

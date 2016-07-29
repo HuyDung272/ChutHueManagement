@@ -16,7 +16,7 @@ namespace ChutHueManagement.ChutHueManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new ChutHueManagement.FormPrimary());
+            //Application.Run(new ChutHueManagement.FormFoodMenu());
 
             FormConnection connection = new FormConnection();
             if (connection.ShowDialog() == DialogResult.OK)

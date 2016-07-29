@@ -31,6 +31,22 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return 0;
             }
         }
+
+        public static int Insert(FoodMenuEntity entity, ref string errormessage)
+        {
+            try
+            {
+                return adapter.Insert(entity);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
+
         public static bool UpDate(FoodMenuEntity entity)
         {
             try
@@ -39,6 +55,20 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
             catch (Exception ex)
             {
+                Logger.Write(ex);
+                return false;
+            }
+        }
+
+        public static bool UpDate(FoodMenuEntity entity, ref string errormessage)
+        {
+            try
+            {
+                return adapter.UpDate(entity);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
                 Logger.Write(ex);
                 return false;
             }

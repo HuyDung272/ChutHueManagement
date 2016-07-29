@@ -63,8 +63,8 @@ namespace ChutHueManagement.ChutHueManagement
         }
         private void toolStripBtn_Add_Click(object sender, EventArgs e)
         {
-            var modelmathangthem = new FormMainMenu_Add();
-            if (modelmathangthem.ShowDialog() == DialogResult.OK)
+            var formMainMenu_Add = new FormMainMenu_Add();
+            if (formMainMenu_Add.ShowDialog() == DialogResult.OK)
                 LoadListView();
         }
         private void FormMainMenu_Load(object sender, EventArgs e)
@@ -85,8 +85,8 @@ namespace ChutHueManagement.ChutHueManagement
                     IsDelete = (bool)row.Cells[2].Value,
                     Description = (string)row.Cells[3].Value,
                 };
-                FormMainMenu_Add khacHangThem = new FormMainMenu_Add(entity);
-                if (khacHangThem.ShowDialog() == DialogResult.OK)
+                FormMainMenu_Add formMainMenu_Add = new FormMainMenu_Add(entity);
+                if (formMainMenu_Add.ShowDialog() == DialogResult.OK)
                     LoadListView();
             }
         }
