@@ -208,6 +208,18 @@ namespace ChutHueManagement.ChutHueManagement
             Library_Controls.ShowMDI(a, "FormTable");
         }
 
-       
+        private void btn_Backup_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["FormBackup"] as FormBackup) == null)
+            {
+                FormBackup frm = new FormBackup();
+                frm.MdiParent = this;
+                frm.Show();
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormBackup");
+        }
     }
 }

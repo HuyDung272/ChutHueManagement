@@ -33,6 +33,48 @@ namespace ChutHueManagement.DataAccessLayer
                 return 0;
             }
         }
+
+        /// <summary>
+        /// Insert Details có transaction
+        /// </summary>
+        /// <param name="invoiceDetail"></param>
+        /// <param name="conn"></param>
+        /// <param name="tran"></param>
+        /// <returns></returns>
+        public  int InsertTS(InvoiceDetailsEntity invoiceDetail, DbConnector conn, System.Data.Common.DbTransaction tran)
+        {
+            try
+            {
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+
+                pb.AddParameter("IDInvoice", invoiceDetail.IDInvoice);
+                pb.AddParameter("IDFoodMenu", invoiceDetail.IDFoodMenu);
+                pb.AddParameter("Total", invoiceDetail.Total);
+                pb.AddParameter("PriceTotal", invoiceDetail.PriceTotal);
+                return (int)DBFactory.Database.ExecuteNonQuery("InvoiceDetails_Insert", pb.Parameters, conn, tran);
+               // return (int)DBFactory.Database.ExecuteNonQueryGetID("MatHang_Insert", pb.Parameters, conn, tran);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public  int InsertTS(InvoiceDetailsEntity invoiceDetail, DbConnector conn, System.Data.Common.DbTransaction tran, ref string errormessage)
+        {
+            try
+            {
+                return InsertTS(invoiceDetail, conn, tran);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                throw new Exception(ex.Message);
+            }
+        }
+
         public bool UpDate(InvoiceDetailsEntity invoiceDetail)
         {
             try
@@ -51,6 +93,7 @@ namespace ChutHueManagement.DataAccessLayer
                 return false;
             }
         }
+
         public DataTable GetByID(int iD)
         {
             try

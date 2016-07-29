@@ -31,6 +31,34 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return 0;
             }
         }
+
+        public static int InsertTS(InvoiceDetailsEntity entity, DbConnector conn, System.Data.Common.DbTransaction tran)
+        {
+            try
+            {
+                return adapter.InsertTS(entity, conn, tran);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
+        public static int InsertTS(InvoiceDetailsEntity entity, DbConnector conn, System.Data.Common.DbTransaction tran, ref string errormessage)
+        {
+            try
+            {
+                return adapter.InsertTS(entity, conn, tran);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
         public static bool UpDate(InvoiceDetailsEntity entity)
         {
             try

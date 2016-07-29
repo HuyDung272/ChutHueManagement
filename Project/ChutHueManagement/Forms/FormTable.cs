@@ -23,11 +23,14 @@ namespace ChutHueManagement.ChutHueManagement
         }
         private void FormTable_Load(object sender, EventArgs e)
         {
+            labelX4.Text = Get_Invoice_SerialCode();
             try
             {
                 AddPanel();
                 LoadGrvThucDon();
+                
                 listTable[0].Button.PerformClick();
+                
             }
             catch { };
         }
@@ -36,18 +39,18 @@ namespace ChutHueManagement.ChutHueManagement
         void LoadTable()
         {
             List<TableEntity> list = TablesManager.ConvertToList(TablesManager.GetAll());
-            
+
             for (int i = 0; i < list.Count; i++)
             {
-                
+
                 ButtonX n;
                 int x, y;
                 if (i % 3 == 0)
                 {
                     x = 5;
-                    y = ((i / 3) * 100 +  5);
+                    y = ((i / 3) * 100 + 5);
                 }
-                else if(i%3==1)
+                else if (i % 3 == 1)
                 {
                     x = 100 + 10;
                     y = ((i / 3) * 100 + 5);
@@ -55,7 +58,7 @@ namespace ChutHueManagement.ChutHueManagement
                 else
                 {
                     x = 2 * 100 + 15;
-                    y = (i / 3) * 100+ 5;
+                    y = (i / 3) * 100 + 5;
                 }
                 Table table = new Table();
                 table.CovnertToButton(list[i], x, y, i.ToString());
@@ -83,9 +86,9 @@ namespace ChutHueManagement.ChutHueManagement
         {
             try
             {
-              
+
                 ButtonX button = (ButtonX)sender;
-                string  i = button.Name;
+                string i = button.Name;
                 int index = int.Parse(i);
                 if (listTable[index].ListInvoiceDetail.Count == 0)
                 {
@@ -100,13 +103,14 @@ namespace ChutHueManagement.ChutHueManagement
                 LoadGridview(listTable[index].ListInvoiceDetail);
 
             }
-            catch{
+            catch
+            {
             }
         }
         void AddPanel()
         {
             LoadTable();
-            for(int i =0;i<listTable.Count;i++)
+            for (int i = 0; i < listTable.Count; i++)
             {
                 groupPanel1.Controls.Add(listTable[i].Button);
             }
@@ -123,19 +127,20 @@ namespace ChutHueManagement.ChutHueManagement
                     double priceTotal = tb[i].PriceTotal;
                     grwCTBan.Rows.Add(i + 1, nameFood, total, priceTotal);
                 }
-            }catch { }
+            }
+            catch { }
         }
 
         private void btnThemMon_Click(object sender, EventArgs e)
         {
-           
+
         }
 
 
-       
+
         private void grwCTBan_Click(object sender, EventArgs e)
         {
-            if(grwCTBan.SelectedRows.Count<0)
+            if (grwCTBan.SelectedRows.Count < 0)
             {
                 suaMonToolStripMenuItem.Enabled = false;
                 XoaToolStripMenuItem.Enabled = false;
@@ -144,7 +149,7 @@ namespace ChutHueManagement.ChutHueManagement
             {
                 suaMonToolStripMenuItem.Enabled = true;
                 XoaToolStripMenuItem.Enabled = true;
-      
+
             }
 
         }
@@ -196,13 +201,13 @@ namespace ChutHueManagement.ChutHueManagement
             {
                 DataGridViewRow row = dataGridViewThucDon.SelectedRows[0];
                 fooMenu = new FoodMenuEntity();
-                fooMenu.ID = (int) row.Cells[4].Value;
+                fooMenu.ID = (int)row.Cells[4].Value;
                 fooMenu.NameFood = txtMon.Text = row.Cells[1].Value.ToString();
-                fooMenu.Price  = (double) row.Cells[2].Value;
+                fooMenu.Price = (double)row.Cells[2].Value;
                 txtDonGia.Text = fooMenu.Price.ToString();
                 txtSoLuong.Text = "1";
             }
-            catch 
+            catch
             {
             }
         }
@@ -210,7 +215,7 @@ namespace ChutHueManagement.ChutHueManagement
         {
             List<FoodMenuEntity> list = new List<FoodMenuEntity>();
             list = FoodMenuManager.ConvertToList(FoodMenuManager.GetAll());
-            for(int i =0;i<list.Count;i++)
+            for (int i = 0; i < list.Count; i++)
             {
                 dataGridViewThucDon.Rows.Add(i + 1, list[i].NameFood, list[i].Price, list[i].Description, list[i].ID);
             }
@@ -281,6 +286,83 @@ namespace ChutHueManagement.ChutHueManagement
                 btnThanhToan.Enabled = true;
             }
             catch { }
+        }
+
+
+        string Get_Invoice_SerialCode()
+        {
+            DataTable dt;
+           
+            dt = InvoiceManager.GetSerialCodeMax();
+            string nam = DateTime.Now.Year.ToString().Substring(1, DateTime.Now.Year.ToString().Length - 1);
+            if (dt.Rows.Count == 0)
+            {
+                return nam + "-000000001";
+            }
+            string mahd = dt.Rows[0][0].ToString();
+            string[] temp = mahd.Split('-');
+            if (temp[0].CompareTo(nam) != 0)
+            {
+                return nam + "-000000001";
+            }
+
+            int duoi = 0;
+            string Duoi = "";
+            if (temp[0].CompareTo(nam) == 0)
+            {
+                mahd = "";
+                duoi = (int.Parse(temp[1]) + 1);
+                if (duoi < 10)
+                {
+                    Duoi = "-00000000" + duoi;
+                }
+                else
+                {
+                    if (duoi < 100)
+                    {
+                        Duoi = "-0000000" + duoi;
+                    }
+                    else
+                    {
+                        if (duoi < 1000)
+                        {
+                            Duoi = "-000000" + duoi;
+                        }
+                        else
+                        {
+                            if (duoi < 10000)
+                            {
+                                Duoi = "-00000" + duoi;
+                            }
+                            else
+                            {
+                                if (duoi < 100000)
+                                {
+                                    Duoi = "-0000" + duoi;
+                                }
+                                else
+                                {
+                                    if (duoi < 1000000)
+                                        Duoi = "-000" + duoi;
+                                    else
+                                    {
+                                        if (duoi < 10000000)
+                                            Duoi = "-00" + duoi;
+                                        else
+                                            Duoi = "-0" + duoi;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                mahd = temp[0] + Duoi;
+
+                return mahd;
+            }
+            else
+                return null;
         }
     }
 }

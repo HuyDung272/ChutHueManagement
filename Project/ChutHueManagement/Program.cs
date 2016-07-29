@@ -16,11 +16,11 @@ namespace ChutHueManagement.ChutHueManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChutHueManagement.FormBackup());
+            //Application.Run(new ChutHueManagement.FormBackup());
 
-            //FormConnection connection = new FormConnection();
-            //if (connection.ShowDialog() == DialogResult.OK)
-            //    Application.Run(new FormPrimary(connection.account));
+            FormConnection connection = new FormConnection();
+            if (connection.ShowDialog() == DialogResult.OK)
+                Application.Run(new FormPrimary(connection.account));
         }
     }
 }

@@ -33,6 +33,73 @@ namespace ChutHueManagement.DataAccessLayer
                 return 0;
             }
         }
+
+        public int InsertTS(InvoiceEntity entity, ref string errormessage)
+        {
+            try
+            {
+                DbConnector conn = DBFactory.Database.GetConnector();
+                System.Data.Common.DbTransaction tran = DBFactory.Database.CreateTransaction(conn);
+
+                int idInvoice = this.InsertTS(entity, conn, tran);
+
+                if (idInvoice == 0)
+                    return 0;
+
+                int countdetails = entity.ListDetail.Count;
+
+                InvoiceDetailsDA invoicedetailsDa = new InvoiceDetailsDA();
+
+                for (int i = 0; i < countdetails; i++)
+                {
+                    InvoiceDetailsEntity detailsentity = entity.ListDetail[i];
+                    detailsentity.IDInvoice = idInvoice;
+                    int id = invoicedetailsDa.InsertTS(detailsentity, conn, tran, ref errormessage);
+                    if (id == 0)
+                        return 0;
+                }
+                    return 0;
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
+        public int InsertTS(InvoiceEntity entity, DbConnector conn, System.Data.Common.DbTransaction tran)
+        {
+            try
+            {
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("InvoiceCode", entity.InvoiceCode);
+                pb.AddParameter("TableName", entity.TableName);
+                pb.AddParameter("DateTime", entity.Date);
+                pb.AddParameter("Note", entity.Note);
+                return (int)DBFactory.Database.ExecuteNonQuery("Invoice_Insert", pb.Parameters, conn, tran);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
+        public int InsertTS(InvoiceEntity entity, DbConnector conn, System.Data.Common.DbTransaction tran, ref string errormessage)
+        {
+            try
+            {
+                return InsertTS(entity, conn, tran);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
         public bool UpDate(InvoiceEntity entity)
         {
             try
@@ -82,6 +149,24 @@ namespace ChutHueManagement.DataAccessLayer
                 return null;
             }
         }
+
+        public DataTable GetSerialCodeMax()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                ParameterBuilder pd = DBFactory.CreateParamBuilder();
+
+                dt = DBFactory.Database.FillDataTable("Invoice_GetSerialCodeMax", pd.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
         public List<InvoiceEntity> ConvertToList(DataTable dt)
         {
             List<InvoiceEntity> list = new List<InvoiceEntity>();

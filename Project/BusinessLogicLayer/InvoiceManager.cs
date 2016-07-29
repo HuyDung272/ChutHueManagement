@@ -31,6 +31,21 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return 0;
             }
         }
+
+        public static int InsertTS(InvoiceEntity entity, DbConnector conn, System.Data.Common.DbTransaction tran, ref string errormessage)
+        {
+            try
+            {
+                return adapter.InsertTS(entity, conn, tran, ref errormessage);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
         public static bool UpDate(InvoiceEntity entity)
         {
             try
@@ -67,6 +82,20 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return null;
             }
         }
+
+        public static DataTable GetSerialCodeMax()
+        {
+            try
+            {
+                return adapter.GetSerialCodeMax();
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
         public static List<InvoiceEntity> ConvertToList(DataTable dt)
         {
             try
