@@ -45,6 +45,7 @@
     <Compile Include="InfoManager.cs" />
     <Compile Include="InvoiceDetailsManager.cs" />
     <Compile Include="InvoiceManager.cs" />
+    <Compile Include="LogBackupRestoreManager.cs" />
     <Compile Include="LogSystemManager.cs" />
     <Compile Include="MainMenuManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
