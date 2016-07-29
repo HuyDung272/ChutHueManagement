@@ -58,7 +58,8 @@ namespace ChutHueManagement.DataAccessLayer
                     if (id == 0)
                         return 0;
                 }
-                    return 0;
+                DBFactory.Database.CommitTransaction(conn, tran);
+                return idInvoice;
             }
             catch (Exception ex)
             {
