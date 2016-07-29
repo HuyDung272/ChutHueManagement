@@ -54,8 +54,12 @@ namespace ChutHueManagement.ChutHueManagement
                 this.txtThanhTien.Text = Entity.PriceTotal.ToString();
             }
             LoadCBB();
+            if (Entity.IDFoodMenu == 0)
+            {
+                txtsoLuong.Text = "1";
+            }
         }
-        void LoadCBB()
+         void LoadCBB()
         {
             cbbMon.Items.Clear();
             List<FoodMenuEntity> list = FoodMenuManager.ConvertToList(FoodMenuManager.GetAll());

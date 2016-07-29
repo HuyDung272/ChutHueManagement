@@ -66,7 +66,6 @@
             this.txtsoLuong.PreventEnterBeep = true;
             this.txtsoLuong.Size = new System.Drawing.Size(205, 22);
             this.txtsoLuong.TabIndex = 1;
-            this.txtsoLuong.Text = "1";
             this.txtsoLuong.TextChanged += new System.EventHandler(this.txtsoLuong_TextChanged);
             this.txtsoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsoLuong_KeyPress);
             // 
