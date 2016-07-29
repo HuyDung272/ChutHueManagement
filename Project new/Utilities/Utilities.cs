@@ -27,6 +27,7 @@ namespace ChutHueManagement.Utilities
                 {
                     if (col[i].Name.CompareTo(FormName) == 0)
                     {
+                        //col[i].Activate();
                         continue;
                     }
                     else
@@ -34,6 +35,8 @@ namespace ChutHueManagement.Utilities
                         try
                         {
                             col[i].Hide();
+                            
+
                         }
                         catch (Exception)
                         {

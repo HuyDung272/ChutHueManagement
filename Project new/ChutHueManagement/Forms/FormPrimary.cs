@@ -84,6 +84,25 @@ namespace ChutHueManagement.ChutHueManagement
             }
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormMainMenu");
+
+            //bool ok = false;
+            //foreach (MetroForm item in this.MdiChildren)
+            //{
+            //    if (item.Name == "FormMainMenu")
+            //    {
+            //        item.Activate();
+            //        ok = true;
+            //    }
+            //    item.Hide();
+            //    ok = false;
+            //}
+
+            //if (ok == false)
+            //{
+            //    FormMainMenu frm = new FormMainMenu();
+            //    frm.MdiParent = this;
+            //    frm.Show();
+            //}
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -183,11 +202,13 @@ namespace ChutHueManagement.ChutHueManagement
             {
                 FormFoodMenu frm = new FormFoodMenu();
                 frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
                 frm.Show();
                 //frm.WindowState = FormWindowState.Normal;
                 //frm.WindowState /
-                frm.WindowState = FormWindowState.Maximized;
+                
                 //this.Text = Title;
+                
             }
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormFoodMenu");
@@ -195,36 +216,37 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void btn_Invoice_Click(object sender, EventArgs e)
         {
-            //if ((Application.OpenForms["FormTable"] as FormTable) == null)
-            //{
-            //    FormTable frm = new FormTable();
-            //    frm.MdiParent = this;
-            //    frm.Show();
-            //    //frm.WindowState = FormWindowState.Normal;
-            //    //frm.WindowState /
-            //    frm.WindowState = FormWindowState.Maximized;
-            //    //this.Text = Title;
-            //}
-            //FormCollection a = Application.OpenForms;
-            //Library_Controls.ShowMDI(a, "FormTable");
-            bool ok = false;
-            foreach (MetroForm item in this.MdiChildren)
-            {
-                if (item.Name == "FormTable")
-                {
-                    item.Activate();
-                    ok = true;
-                    break;
-                }
-                        
-            }
-
-            if (!ok)
+            if ((Application.OpenForms["FormTable"] as FormTable) == null)
             {
                 FormTable frm = new FormTable();
                 frm.MdiParent = this;
                 frm.Show();
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
             }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormTable");
+
+            //bool ok = false;
+            //foreach (MetroForm item in this.MdiChildren)
+            //{
+            //    if (item.Name == "FormTable")
+            //    {
+            //        item.Activate();
+            //        ok = true;
+            //    }
+            //    item.Hide();
+            //    ok = false;
+            //}
+
+            //if (ok == false)
+            //{
+            //    FormTable frm = new FormTable();
+            //    frm.MdiParent = this;
+            //    frm.Show();
+            //}
+
+
         }
 
         private void btn_Backup_Click(object sender, EventArgs e)
