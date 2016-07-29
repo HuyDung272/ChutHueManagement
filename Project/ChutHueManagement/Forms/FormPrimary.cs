@@ -8,11 +8,16 @@ using System.Windows.Forms;
 using ChutHueManagement.Utilities;
 using ChutHueManagement.BusinessEntities;
 using DevComponents.DotNetBar;
+using ChutHueManagement.BusinessLogicLayer;
 
 namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormPrimary : DevComponents.DotNetBar.RibbonForm
     {
+        string errormessage = string.Empty;
+
+        LogSystemEntity logsystem = new LogSystemEntity();
+         
         public AccountEntity account { get; set; }
 
         public FormPrimary()
@@ -36,14 +41,21 @@ namespace ChutHueManagement.ChutHueManagement
             }
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormTable");
+
+            logsystem = new LogSystemEntity()
+            {
+                IDAccount = account.ID,
+                Event = account.UserName + " đã đăng nhập hệ thống",
+                Date = DateTime.Now,
+            };
+
+            LogSystemManager.Insert(logsystem);
         }
 
         private void FormPrimary_Load(object sender, EventArgs e)
         {
             toolStripStatusLabel_Time.Text = string.Format("Thời gian hệ thống: {0: h:mm:ss tt}", DateTime.Now);
         }
-
-        
 
         private void btn_InfoRestaurant_Click(object sender, EventArgs e)
         {
@@ -107,6 +119,14 @@ namespace ChutHueManagement.ChutHueManagement
                 else
                 {
                     notifyIcon1.Dispose();
+                    logsystem = new LogSystemEntity()
+                    {
+                        IDAccount = account.ID,
+                        Event = account.UserName + " đã thoát khỏi chương trình",
+                        Date = DateTime.Now,
+                    };
+
+                    LogSystemManager.Insert(logsystem);
                     Environment.Exit(0);
                     //this.Close();
                 }
@@ -142,7 +162,18 @@ namespace ChutHueManagement.ChutHueManagement
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất hay không", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                logsystem = new LogSystemEntity()
+                {
+                    IDAccount = account.ID,
+                    Event = account.UserName + " đã đăng xuất hệ thống",
+                    Date = DateTime.Now,
+                };
+
+                LogSystemManager.Insert(logsystem);
+
                 Application.Restart();
+            }
         }
 
         private void btn_FoodMenu_Click(object sender, EventArgs e)
@@ -176,5 +207,7 @@ namespace ChutHueManagement.ChutHueManagement
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormTable");
         }
+
+       
     }
 }

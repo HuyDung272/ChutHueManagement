@@ -45,6 +45,7 @@
     <Compile Include="InfoEntity.cs" />
     <Compile Include="InvoiceDetailsEntity.cs" />
     <Compile Include="InvoiceEntity.cs" />
+    <Compile Include="LogSystemEntity.cs" />
     <Compile Include="MainMenuEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestaurantInfoEntity.cs" />
