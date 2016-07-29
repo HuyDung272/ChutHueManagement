@@ -20,6 +20,8 @@ namespace ChutHueManagement.ChutHueManagement
         }
         public DataTable Table { get; set; }
 
+        string errormessage = string.Empty;
+
         private List<MainMenuEntity> mainMenuEntity;
         public void LoadListView(DataTable dt)
         {
@@ -99,6 +101,47 @@ namespace ChutHueManagement.ChutHueManagement
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripBtn_UpDate_Click(sender, e);
+        }
+
+        private void toolStripBtn_Delete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLoad.SelectedRows.Count > 0)
+            {
+                int i = 0;
+                var row = dataGridViewLoad.SelectedRows[0];
+                var entity = new MainMenuEntity()
+                {
+                    ID = (int)row.Cells[0].Value,
+                    NameEntryMenu = (string)row.Cells[1].Value,
+                    IsDelete = (bool)row.Cells[2].Value,
+                    Description = (string)row.Cells[3].Value,
+                };
+
+                var c = MessageBox.Show("Bạn muốn xóa Loại thực đơn \"" + entity.NameEntryMenu + "\" hay không?", "Thông báo", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                if (c == DialogResult.Yes)
+                {
+                    if (MainMenuManager.Delete((int)row.Cells[0].Value, ref errormessage))
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        MessageBox.Show(errormessage);
+                        LoadListView();
+                        return;
+                    }
+
+                    MessageBox.Show("Xóa thành công Loại thực đơn " + entity.NameEntryMenu);
+
+                    LoadListView();
+                }
+            }
+        }
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripBtn_Delete_Click(sender, e);
         }
     }
 }

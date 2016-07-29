@@ -118,5 +118,21 @@ namespace ChutHueManagement.DataAccessLayer
             return list;
         }
 
+        public bool Delete(int id)
+        {
+            try
+            {
+                ParameterBuilder pd = DBFactory.CreateParamBuilder();
+                pd.AddParameter("ID", id);
+
+                return DBFactory.Database.ExecuteNonQuery("FoodMenu_Delete", pd.Parameters) > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
     }
 }

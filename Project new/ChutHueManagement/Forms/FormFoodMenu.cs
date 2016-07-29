@@ -21,6 +21,7 @@ namespace ChutHueManagement.ChutHueManagement
 
         List<FoodMenuEntity> listFoodMenuEntity = new List<FoodMenuEntity>();
 
+        string errormessage = string.Empty;
 
         public FormFoodMenu()
         {
@@ -134,6 +135,49 @@ namespace ChutHueManagement.ChutHueManagement
         private void cậpNhậtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btn_UpDate_Click(sender, e);
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Load.SelectedRows.Count > 0)
+            {
+                int i = 0;
+                var row = dataGridView_Load.SelectedRows[0];
+                var entity = new FoodMenuEntity()
+                {
+                    ID = (int)row.Cells[0].Value,
+                    NameFood = (string)row.Cells[1].Value,
+                    IdMainMenu = (int)row.Cells[2].Value,
+                    Price = (double)row.Cells[3].Value,
+                    IsDelete = (bool)row.Cells[4].Value,
+                    Description = (string)row.Cells[5].Value,
+                };
+
+                var c = MessageBox.Show("Bạn muốn xóa \"" + entity.NameFood + "\" hay không?", "Thông báo", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                if (c == DialogResult.Yes)
+                {
+                    if (FoodMenuManager.Delete((int)row.Cells[0].Value, ref errormessage))
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        MessageBox.Show(errormessage);
+                        LoadListView(mainMenuEntity.ID);
+                        return;
+                    }
+
+                    MessageBox.Show("Xóa thành công thực đơn " + entity.NameFood);
+
+                    LoadListView(mainMenuEntity.ID);
+                }
+            }
+        }
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btn_Delete_Click(sender, e);
         }
     }
 }

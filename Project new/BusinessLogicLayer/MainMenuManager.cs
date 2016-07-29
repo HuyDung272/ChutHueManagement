@@ -103,6 +103,32 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
+        public static bool Delete(int id)
+        {
+            try
+            {
+                return adapter.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return false;
+            }
+        }
+
+        public static bool Delete(int id, ref string error)
+        {
+            try
+            {
+                return adapter.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                Logger.Write(ex);
+                return false;
+            }
+        }
 
         public static List<MainMenuEntity> ConvertToList(DataTable dt)
         {

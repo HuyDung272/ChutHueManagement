@@ -87,6 +87,21 @@ namespace ChutHueManagement.DataAccessLayer
             }
         }
 
+        public bool Delete(int id)
+        {
+            try
+            {
+                ParameterBuilder pd = DBFactory.CreateParamBuilder();
+                pd.AddParameter("ID", id);
+
+                return DBFactory.Database.ExecuteNonQuery("MainMenu_Delete", pd.Parameters) > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
+            }
+        }
 
         public List<MainMenuEntity> ConvertToList(DataTable dt)
         {
