@@ -9,41 +9,44 @@ using System.Data;
 
 namespace ChutHueManagement.BusinessLogicLayer
 {
-    public class LogBackupRestoreManager
+    public class BackupRestoreManager
     {
-        private static LogBackupRestoreDA adapter = null;
+        private static BackupRestoreDA adapter = null;
 
-        static LogBackupRestoreManager()
+        static BackupRestoreManager()
         {
             if (adapter == null)
-                adapter = new LogBackupRestoreDA();
+                adapter = new BackupRestoreDA();
+        }
+
+     
+        public static bool Backup(string strFileName)
+        {
+            try
+            {
+                return adapter.Backup(strFileName);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return false;
+            }
+        }
+      
+        public static bool Backup(string strFileName, ref string errormessage)
+        {
+            try
+            {
+                return adapter.Backup(strFileName);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return false;
+            }
         }
 
         
-        public static int Insert(LogBackupRestoreEntity entity)
-        {
-            try
-            {
-                return adapter.Insert(entity);
-            }
-            catch (Exception ex)
-            {
-                Logger.Write(ex);
-                return 0;
-            }
-        }
-
-        public static DataTable GetAll(bool dk)
-        {
-            try
-            {
-                return adapter.GetAll(dk);
-            }
-            catch (Exception ex)
-            {
-                Logger.Write(ex);
-                return null;
-            }
-        }
     }
 }

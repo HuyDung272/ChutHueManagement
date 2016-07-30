@@ -62,19 +62,21 @@ namespace ChutHueManagement.BusinessEntities
         }
 
         
-        public LogBackupRestoreEntity(string name, bool isBackup, string path, string note)
+        public LogBackupRestoreEntity(string name, DateTime date,bool isBackup, string path, string note)
         {
             _id = 0;
             _name = name;
+            _datetime = date;
             _isBackup = isBackup;
             _paths = path;
             _note = note;
         }
         
-        public LogBackupRestoreEntity(int iD, string name, bool isBackup, string path, string note)
+        public LogBackupRestoreEntity(int iD, string name, DateTime date, bool isBackup, string path, string note)
         {
             _id = iD;
             _name = name;
+            _datetime = date;
             _isBackup = isBackup;
             _paths = path;
             _note = note;

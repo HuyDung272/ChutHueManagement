@@ -26,7 +26,7 @@ namespace ChutHueManagement.DataAccessLayer
                 pb.AddParameter("Name", entity.Name);
                 pb.AddParameter("DateTime", entity.Date);
                 pb.AddParameter("IsBackup", entity.IsBackup);
-                pb.AddParameter("Path", entity.Path);
+                pb.AddParameter("Paths", entity.Path);
                 pb.AddParameter("Note", entity.Note);
 
                 return (int)DBFactory.Database.ExecuteNonQuery("LogBackupRestore_Insert", pb.Parameters);
@@ -38,7 +38,7 @@ namespace ChutHueManagement.DataAccessLayer
             }
         }
 
-       
+
         //public DataTable Find(bool gt)
         //{
         //    try
@@ -58,6 +58,26 @@ namespace ChutHueManagement.DataAccessLayer
         //        return null;
         //    }
         //}
+
+        public DataTable GetAll(bool gt)
+        {
+            try
+            {
+                ParameterBuilder pd = DBFactory.CreateParamBuilder();
+                if (gt)
+                    pd.AddParameter("IsBackup", 1);
+                else
+                    pd.AddParameter("IsBackup", 0);
+                DataTable dt = new DataTable();
+                dt = DBFactory.Database.FillDataTable("LogBackupRestore_GetAll", pd.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
 
     }
 }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountManager.cs" />
+    <Compile Include="BackupRestoreManager.cs" />
     <Compile Include="FoodMenuManager.cs" />
     <Compile Include="InfoManager.cs" />
     <Compile Include="InvoiceDetailsManager.cs" />
