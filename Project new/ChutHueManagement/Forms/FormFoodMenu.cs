@@ -134,7 +134,22 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void cậpNhậtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btn_UpDate_Click(sender, e);
+            if (dataGridView_Load.SelectedRows.Count > 0)
+            {
+                var row = dataGridView_Load.SelectedRows[0];
+                var entity = new FoodMenuEntity()
+                {
+                    ID = (int)row.Cells[0].Value,
+                    NameFood = (string)row.Cells[1].Value,
+                    IdMainMenu = (int)row.Cells[2].Value,
+                    Price = (double)row.Cells[3].Value,
+                    IsDelete = (bool)row.Cells[4].Value,
+                    Description = (string)row.Cells[5].Value,
+                };
+                FormFoodMenu_Add FoodMenu_add = new FormFoodMenu_Add(mainMenuEntity, entity);
+                if (FoodMenu_add.ShowDialog() == DialogResult.OK)
+                    LoadListView(mainMenuEntity.ID);
+            }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
