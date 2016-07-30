@@ -78,7 +78,7 @@ namespace ChutHueManagement.DataAccessLayer
                 pb.AddParameter("TableName", entity.TableName);
                 pb.AddParameter("DateTime", entity.Date);
                 pb.AddParameter("Note", entity.Note);
-                return (int)DBFactory.Database.ExecuteNonQuery("Invoice_Insert", pb.Parameters, conn, tran);
+                return (int)DBFactory.Database.ExecuteNonQueryGetID("Invoice_Insert", pb.Parameters, conn, tran);
             }
             catch (Exception ex)
             {

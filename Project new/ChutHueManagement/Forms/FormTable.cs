@@ -18,13 +18,15 @@ namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormTable : DevComponents.DotNetBar.Metro.MetroForm
     {
+        public string truyendulieuchoformChinh = "";
+
         public FormTable()
         {
             InitializeComponent();
         }
         private void FormTable_Load(object sender, EventArgs e)
         {
-            labelX4.Text = Get_Invoice_SerialCode();
+            //labelX4.Text = Get_Invoice_SerialCode();
             try
             {
                 AddPanel();
@@ -35,7 +37,9 @@ namespace ChutHueManagement.ChutHueManagement
             }
             catch { };
         }
-        List<Table> listTable = new List<Table>();
+        
+        public List<Table> listTable = new List<Table>();
+
         int index = 0;
         void LoadTable()
         {
@@ -134,13 +138,10 @@ namespace ChutHueManagement.ChutHueManagement
             }
             catch { }
         }
-
         private void btnThemMon_Click(object sender, EventArgs e)
         {
 
         }
-
-
 
         private void grwCTBan_Click(object sender, EventArgs e)
         {
@@ -313,7 +314,6 @@ namespace ChutHueManagement.ChutHueManagement
             catch { }
         }
 
-
         string Get_Invoice_SerialCode()
         {
             DataTable dt;
@@ -420,6 +420,13 @@ namespace ChutHueManagement.ChutHueManagement
             }
             catch (Exception ex)
             { Logger.Write(ex); }
+        }
+
+        private void FormTable_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //truyendulieuchoformChinh = textBoxX1.Text;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

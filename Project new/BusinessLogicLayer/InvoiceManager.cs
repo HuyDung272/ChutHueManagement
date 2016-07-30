@@ -46,6 +46,20 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
+        public static int InsertTS(InvoiceEntity entity, ref string errormessage)
+        {
+            try
+            {
+                return adapter.InsertTS(entity, ref errormessage);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
         public static bool UpDate(InvoiceEntity entity)
         {
             try
