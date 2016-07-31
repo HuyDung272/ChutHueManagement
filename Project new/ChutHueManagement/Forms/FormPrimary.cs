@@ -271,5 +271,19 @@ namespace ChutHueManagement.ChutHueManagement
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormRestore");
         }
+
+        private void btn_SalesReport_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["FormReportSales"] as FormReportSales) == null)
+            {
+                FormReportSales frm = new FormReportSales();
+                frm.MdiParent = this;
+                frm.Show();
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormReportSales");
+        }
     }
 }

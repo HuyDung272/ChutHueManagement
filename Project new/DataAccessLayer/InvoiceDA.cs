@@ -119,6 +119,7 @@ namespace ChutHueManagement.DataAccessLayer
                 return false;
             }
         }
+
         public DataTable GetAll()
         {
             try
@@ -134,6 +135,7 @@ namespace ChutHueManagement.DataAccessLayer
                 return null;
             }
         }
+
         public DataTable GetByID(int iD)
         {
             try
@@ -142,6 +144,45 @@ namespace ChutHueManagement.DataAccessLayer
                 ParameterBuilder pb = DBFactory.CreateParamBuilder();
                 pb.AddParameter("ID", iD);
                 dt = DBFactory.Database.FillDataTable("Invoice_GetByID", pb.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
+        public DataTable GetSalesAllByDateTime(int getfor, DateTime Start, DateTime End)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("GetFor", getfor);
+                pb.AddParameter("DateStart", Start);
+                pb.AddParameter("DateEnd", End);
+                dt = DBFactory.Database.FillDataTable("Invoice_GetSalesAllByDateTime", pb.Parameters);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
+        public DataTable GetSalesWithFoodForFoodByDateTime(int foodid, int getfor, DateTime Start, DateTime End)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("FoodID", foodid);
+                pb.AddParameter("GetFor", getfor);
+                pb.AddParameter("DateStart", Start);
+                pb.AddParameter("DateEnd", End);
+                dt = DBFactory.Database.FillDataTable("Invoice_GetSalesWithFoodForFoodByDateTime", pb.Parameters);
                 return dt;
             }
             catch (Exception ex)

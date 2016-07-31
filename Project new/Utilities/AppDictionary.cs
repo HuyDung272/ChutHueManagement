@@ -22,6 +22,9 @@ namespace ChutHueManagement.Utilities
             dic.Add("IsBackup", "Backup");
             dic.Add("Paths", "Đường dẫn");
             dic.Add("DateTime", "Thời gian");
+            dic.Add("PriceTotal", "Tổng tiền");
+            dic.Add("InvoiceCode", "Mã hóa đơn");
+            dic.Add("Total", "Tổng cộng");
         }
         public string KiemTra(string key)
         {

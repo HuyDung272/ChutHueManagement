@@ -434,6 +434,11 @@ namespace ChutHueManagement.Utilities
             }
             return true;
         }
+
+        public static DataTable ChangeColumn(object p)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class FileHelper

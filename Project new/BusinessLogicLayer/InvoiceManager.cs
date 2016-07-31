@@ -110,6 +110,32 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
+        public static DataTable GetSalesAllByDateTime(int getfor, DateTime Start, DateTime End)
+        {
+            try
+            {
+                return adapter.GetSalesAllByDateTime(getfor, Start, End);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
+        public static DataTable GetSalesWithFoodForFoodByDateTime(int foodid, int getfor, DateTime Start, DateTime End)
+        {
+            try
+            {
+                return adapter.GetSalesWithFoodForFoodByDateTime(foodid, getfor, Start, End);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
         public static List<InvoiceEntity> ConvertToList(DataTable dt)
         {
             try
