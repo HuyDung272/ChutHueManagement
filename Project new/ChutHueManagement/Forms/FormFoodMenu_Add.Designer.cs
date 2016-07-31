@@ -57,7 +57,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(380, 23);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Thêm mới loại thực đơn";
+            this.labelX1.Text = "Thêm mới vào loại thực đơn";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // lbl_NameMainMenu
@@ -68,7 +68,7 @@
             // 
             this.lbl_NameMainMenu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbl_NameMainMenu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NameMainMenu.ForeColor = System.Drawing.Color.Black;
+            this.lbl_NameMainMenu.ForeColor = System.Drawing.Color.Red;
             this.lbl_NameMainMenu.Location = new System.Drawing.Point(12, 30);
             this.lbl_NameMainMenu.Name = "lbl_NameMainMenu";
             this.lbl_NameMainMenu.Size = new System.Drawing.Size(380, 23);

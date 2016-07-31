@@ -1,4 +1,4 @@
-namespace ChutHueManagement.ChutHueManagement
+﻿namespace ChutHueManagement.ChutHueManagement
 {
     partial class FormRestore
     {
@@ -29,7 +29,7 @@ namespace ChutHueManagement.ChutHueManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRestore));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.cbox_BackupRestore = new System.Windows.Forms.ToolStripComboBox();
             this.btn_Restore = new System.Windows.Forms.ToolStripButton();
@@ -65,8 +65,8 @@ namespace ChutHueManagement.ChutHueManagement
             this.btn_Restore.Image = ((System.Drawing.Image)(resources.GetObject("btn_Restore.Image")));
             this.btn_Restore.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Restore.Name = "btn_Restore";
-            this.btn_Restore.Size = new System.Drawing.Size(66, 22);
-            this.btn_Restore.Text = "Restore";
+            this.btn_Restore.Size = new System.Drawing.Size(120, 22);
+            this.btn_Restore.Text = "Khôi phục dữ liệu";
             this.btn_Restore.Click += new System.EventHandler(this.btn_Restore_Click);
             // 
             // dataGridViewLoad
@@ -75,14 +75,14 @@ namespace ChutHueManagement.ChutHueManagement
             this.dataGridViewLoad.AllowUserToDeleteRows = false;
             this.dataGridViewLoad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLoad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewLoad.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLoad.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewLoad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewLoad.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridViewLoad.Location = new System.Drawing.Point(0, 25);

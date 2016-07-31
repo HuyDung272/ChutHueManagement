@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripBtn_Add = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtn_Delete = new System.Windows.Forms.ToolStripButton();
@@ -63,7 +63,7 @@
             // 
             // toolStripBtn_Add
             // 
-            this.toolStripBtn_Add.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtn_Add.Image")));
+            this.toolStripBtn_Add.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.add;
             this.toolStripBtn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripBtn_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Add.Name = "toolStripBtn_Add";
@@ -74,7 +74,7 @@
             // 
             // toolStripBtn_Delete
             // 
-            this.toolStripBtn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtn_Delete.Image")));
+            this.toolStripBtn_Delete.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Delete;
             this.toolStripBtn_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Delete.Name = "toolStripBtn_Delete";
             this.toolStripBtn_Delete.Size = new System.Drawing.Size(47, 22);
@@ -83,7 +83,7 @@
             // 
             // toolStripBtn_UpDate
             // 
-            this.toolStripBtn_UpDate.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtn_UpDate.Image")));
+            this.toolStripBtn_UpDate.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Update;
             this.toolStripBtn_UpDate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_UpDate.Name = "toolStripBtn_UpDate";
             this.toolStripBtn_UpDate.Size = new System.Drawing.Size(75, 22);
@@ -139,26 +139,26 @@
             this.xóaToolStripMenuItem,
             this.sửaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 70);
             // 
             // thêmToolStripMenuItem
             // 
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.thêmToolStripMenuItem.Text = "Thêm";
             this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
             // xóaToolStripMenuItem
             // 
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // sửaToolStripMenuItem
             // 
             this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.sửaToolStripMenuItem.Text = "Cập nhật";
             this.sửaToolStripMenuItem.Click += new System.EventHandler(this.sửaToolStripMenuItem_Click);
             // 

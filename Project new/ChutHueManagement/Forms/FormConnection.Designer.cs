@@ -48,7 +48,6 @@
             this.rd_Lan = new System.Windows.Forms.RadioButton();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.btn_Huy = new DevComponents.DotNetBar.ButtonX();
             this.btn_DangNhap = new DevComponents.DotNetBar.ButtonX();
             this.btn_ChiTietDangNhap = new DevComponents.DotNetBar.ButtonX();
@@ -57,6 +56,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.txt_username = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -348,21 +348,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // labelX9
-            // 
-            this.labelX9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelX9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("labelX9.BackgroundImage")));
-            this.labelX9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.ForeColor = System.Drawing.Color.Black;
-            this.labelX9.Location = new System.Drawing.Point(33, 16);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(52, 44);
-            this.labelX9.TabIndex = 5;
-            // 
             // btn_Huy
             // 
             this.btn_Huy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -465,6 +450,21 @@
             this.buttonItem1.Name = "buttonItem1";
             this.buttonItem1.Text = "buttonItem1";
             // 
+            // labelX9
+            // 
+            this.labelX9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX9.BackgroundImage = global::ChutHueManagement.ChutHueManagement.Properties.Resources._1370933891_preferences_desktop_cryptography;
+            this.labelX9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.ForeColor = System.Drawing.Color.Black;
+            this.labelX9.Location = new System.Drawing.Point(33, 16);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(52, 44);
+            this.labelX9.TabIndex = 5;
+            // 
             // labelX1
             // 
             this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -474,7 +474,7 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Image = ((System.Drawing.Image)(resources.GetObject("labelX1.Image")));
+            this.labelX1.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.connect;
             this.labelX1.Location = new System.Drawing.Point(0, 0);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(404, 70);
