@@ -19,9 +19,8 @@ namespace ChutHueManagement.ChutHueManagement
 
         LogSystemEntity logsystem = new LogSystemEntity();
 
-        string truyenchoFormTable = "";
 
-        List<Table> ListTableForFormTable;
+        List<Table> ListTableForFormTable = new List<Table>();
 
         public AccountEntity account { get; set; }
 
@@ -34,31 +33,15 @@ namespace ChutHueManagement.ChutHueManagement
         {
             InitializeComponent();
             this.account = account;
-
-            //truyenchoFormTable = "Dữ liệu frm chính";
-            
-            FormTable frm = new FormTable();
-            //frm.truyendulieuchoformChinh = truyenchoFormTable;
-            //frm.listTable = ListTableForFormTable;
-            if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if ((Application.OpenForms["FormTable"] as FormTable) == null)
             {
-                ListTableForFormTable = frm.listTable;
-                //truyenchoFormTable = frm.truyendulieuchoformChinh;
-                //MessageBox.Show(truyenchoFormTable);
+                FormTable frm = new FormTable(ListTableForFormTable);
+                frm.MdiParent = this;
+                frm.Show();
+                frm.WindowState = FormWindowState.Maximized;
+                ListTableForFormTable = frm.ListTable;
             }
-
-            //if ((Application.OpenForms["FormTable"] as FormTable) == null)
-            //{
-            //    FormTable frm = new FormTable();
-            //    frm.MdiParent = this;
-            //    frm.Show();
-            //    //frm.WindowState = FormWindowState.Normal;
-            //    //frm.WindowState /
-            //    frm.WindowState = FormWindowState.Maximized;
-            //    //this.Text = Title;
-            //}
-            //FormCollection a = Application.OpenForms;
-            //Library_Controls.ShowMDI(a, "FormTable");
+            
 
             logsystem = new LogSystemEntity()
             {
@@ -236,49 +219,14 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void btn_Invoice_Click(object sender, EventArgs e)
         {
-            //truyenchoFormTable = "Dữ liệu frm chính";
-            
-            FormTable frm = new FormTable();
-            //frm.truyendulieuchoformChinh = truyenchoFormTable;
-            frm.listTable = ListTableForFormTable;
-            if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if ((Application.OpenForms["FormTable"] as FormTable) == null)
             {
-                ListTableForFormTable = frm.listTable;
-                //truyenchoFormTable = frm.truyendulieuchoformChinh;
-                //MessageBox.Show(truyenchoFormTable);
+                FormTable frm = new FormTable(ListTableForFormTable);
+                frm.MdiParent = this;
+                frm.Show();
+                frm.WindowState = FormWindowState.Maximized;
+                ListTableForFormTable = frm.ListTable;
             }
-
-            //if ((Application.OpenForms["FormTable"] as FormTable) == null)
-            //{
-            //    FormTable frm = new FormTable();
-            //    frm.MdiParent = this;
-            //    frm.Show();
-            //    frm.WindowState = FormWindowState.Maximized;
-            //    //this.Text = Title;
-            //}
-            //FormCollection a = Application.OpenForms;
-            //Library_Controls.ShowMDI(a, "FormTable");
-
-            //bool ok = false;
-            //foreach (MetroForm item in this.MdiChildren)
-            //{
-            //    if (item.Name == "FormTable")
-            //    {
-            //        item.Activate();
-            //        ok = true;
-            //    }
-            //    item.Hide();
-            //    ok = false;
-            //}
-
-            //if (ok == false)
-            //{
-            //    FormTable frm = new FormTable();
-            //    frm.MdiParent = this;
-            //    frm.Show();
-            //}
-
-
         }
 
         private void btn_Backup_Click(object sender, EventArgs e)

@@ -40,7 +40,9 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void FoemPay_Load(object sender, EventArgs e)
         {
-            lbSoBan.Text = _table.Button.Text;
+
+            TableEntity tb = TablesManager.ConvertToList(TablesManager.GetByID(int.Parse(_table.ID)))[0];
+            lbSoBan.Text = tb.TableName;
             lbTGD.Text = _table.TGDen.ToString();
             LoadGRV();
             txtTienKhachDua.Text = "0";
@@ -72,6 +74,12 @@ namespace ChutHueManagement.ChutHueManagement
         private void buttonX2_Click(object sender, EventArgs e)
         {
             iSPAy = true;
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }
