@@ -234,7 +234,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Icons\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +274,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\1469725999_invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\MainMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Info %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ChangePass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Log Out.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

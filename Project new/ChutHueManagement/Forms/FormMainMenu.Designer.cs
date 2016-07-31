@@ -111,13 +111,14 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewLoad.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewLoad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewLoad.EnableHeadersVisualStyles = false;
             this.dataGridViewLoad.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridViewLoad.Location = new System.Drawing.Point(0, 25);
+            this.dataGridViewLoad.MultiSelect = false;
             this.dataGridViewLoad.Name = "dataGridViewLoad";
             this.dataGridViewLoad.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

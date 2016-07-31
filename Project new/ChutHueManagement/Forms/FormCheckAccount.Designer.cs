@@ -89,7 +89,7 @@
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.PreventEnterBeep = true;
             this.txt_Password.Size = new System.Drawing.Size(215, 25);
-            this.txt_Password.TabIndex = 3;
+            this.txt_Password.TabIndex = 2;
             // 
             // labelX2
             // 
@@ -103,7 +103,7 @@
             this.labelX2.Location = new System.Drawing.Point(13, 54);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
-            this.labelX2.TabIndex = 2;
+            this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Mật khẩu";
             // 
             // btn_Exit
@@ -132,7 +132,7 @@
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(94, 23);
             this.btn_OK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_OK.TabIndex = 4;
+            this.btn_OK.TabIndex = 3;
             this.btn_OK.Text = "Ok";
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 

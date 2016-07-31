@@ -85,7 +85,7 @@
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.PreventEnterBeep = true;
             this.txt_Description.Size = new System.Drawing.Size(173, 85);
-            this.txt_Description.TabIndex = 3;
+            this.txt_Description.TabIndex = 2;
             // 
             // labelX2
             // 
@@ -98,7 +98,7 @@
             this.labelX2.Location = new System.Drawing.Point(12, 54);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
-            this.labelX2.TabIndex = 2;
+            this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Mô tả";
             // 
             // btn_Add
@@ -163,7 +163,7 @@
             this.cb_IsDelete.Name = "cb_IsDelete";
             this.cb_IsDelete.Size = new System.Drawing.Size(111, 23);
             this.cb_IsDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_IsDelete.TabIndex = 8;
+            this.cb_IsDelete.TabIndex = 3;
             this.cb_IsDelete.Text = "Tình trạng (Khóa)";
             // 
             // FormMainMenu_Add

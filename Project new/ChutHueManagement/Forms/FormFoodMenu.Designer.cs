@@ -34,6 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFoodMenu));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btn_Add = new System.Windows.Forms.ToolStripButton();
+            this.btn_Delete = new System.Windows.Forms.ToolStripButton();
+            this.btn_UpDate = new System.Windows.Forms.ToolStripButton();
             this.dataGridView_Load = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,9 +46,6 @@
             this.cBox_MainMenu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.btn_Add = new System.Windows.Forms.ToolStripButton();
-            this.btn_Delete = new System.Windows.Forms.ToolStripButton();
-            this.btn_UpDate = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -65,6 +65,34 @@
             this.toolStrip1.Size = new System.Drawing.Size(1584, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.add;
+            this.btn_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_Add.Size = new System.Drawing.Size(58, 22);
+            this.btn_Add.Text = "Thêm";
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Delete;
+            this.btn_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(47, 22);
+            this.btn_Delete.Text = "Xóa";
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btn_UpDate
+            // 
+            this.btn_UpDate.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Update;
+            this.btn_UpDate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_UpDate.Name = "btn_UpDate";
+            this.btn_UpDate.Size = new System.Drawing.Size(75, 22);
+            this.btn_UpDate.Text = "Cập nhật";
+            this.btn_UpDate.Click += new System.EventHandler(this.btn_UpDate_Click);
             // 
             // dataGridView_Load
             // 
@@ -96,6 +124,7 @@
             this.dataGridView_Load.EnableHeadersVisualStyles = false;
             this.dataGridView_Load.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridView_Load.Location = new System.Drawing.Point(0, 60);
+            this.dataGridView_Load.MultiSelect = false;
             this.dataGridView_Load.Name = "dataGridView_Load";
             this.dataGridView_Load.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -108,7 +137,7 @@
             this.dataGridView_Load.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Load.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Load.Size = new System.Drawing.Size(1584, 601);
-            this.dataGridView_Load.TabIndex = 2;
+            this.dataGridView_Load.TabIndex = 1;
             // 
             // contextMenuStrip1
             // 
@@ -181,7 +210,7 @@
             // 
             // 
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 8;
+            this.groupPanel1.TabIndex = 0;
             // 
             // cBox_MainMenu
             // 
@@ -195,7 +224,7 @@
             this.cBox_MainMenu.Name = "cBox_MainMenu";
             this.cBox_MainMenu.Size = new System.Drawing.Size(218, 23);
             this.cBox_MainMenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cBox_MainMenu.TabIndex = 1;
+            this.cBox_MainMenu.TabIndex = 0;
             this.cBox_MainMenu.SelectedIndexChanged += new System.EventHandler(this.cBox_MainMenu_SelectedIndexChanged);
             // 
             // labelX1
@@ -216,34 +245,6 @@
             // 
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(115)))), ((int)(((byte)(70))))));
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.add;
-            this.btn_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Add.Size = new System.Drawing.Size(58, 22);
-            this.btn_Add.Text = "Thêm";
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Delete;
-            this.btn_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(47, 22);
-            this.btn_Delete.Text = "Xóa";
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
-            // btn_UpDate
-            // 
-            this.btn_UpDate.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Update;
-            this.btn_UpDate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_UpDate.Name = "btn_UpDate";
-            this.btn_UpDate.Size = new System.Drawing.Size(75, 22);
-            this.btn_UpDate.Text = "Cập nhật";
-            this.btn_UpDate.Click += new System.EventHandler(this.btn_UpDate_Click);
             // 
             // FormFoodMenu
             // 
