@@ -49,9 +49,7 @@ namespace ChutHueManagement.DataAccessLayer
 
                 pb.AddParameter("paths", paths);
 
-                return DBFactory.Database.ExecuteNonQueryGetID("RestoreDatabase", pb.Parameters) == 1;
-
-               
+                return DBFactory.Database.ExecuteNonQueryGetID("RestoreDatabase", pb.Parameters) == 1;            
             }
             catch (Exception ex)
             {

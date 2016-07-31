@@ -47,6 +47,31 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
-        
+        public static bool Restore(string strPath)
+        {
+            try
+            {
+                return adapter.Restore(strPath);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return false;
+            }
+        }
+
+        public static bool Restore(string strPath, ref string errormessage)
+        {
+            try
+            {
+                return adapter.Restore(strPath);
+            }
+            catch (Exception ex)
+            {
+                errormessage = ex.Message;
+                Logger.Write(ex);
+                return false;
+            }
+        }
     }
 }

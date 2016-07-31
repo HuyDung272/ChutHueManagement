@@ -86,6 +86,12 @@
     <Compile Include="Forms\FormChangePass.Designer.cs">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormCheckAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCheckAccount.Designer.cs">
+      <DependentUpon>FormCheckAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormConnection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     <Compile Include="Forms\FormPrimary.Designer.cs">
       <DependentUpon>FormPrimary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRestore.Designer.cs">
+      <DependentUpon>FormRestore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormChangePass.resx">
       <DependentUpon>FormChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCheckAccount.resx">
+      <DependentUpon>FormCheckAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormConnection.resx">
       <DependentUpon>FormConnection.cs</DependentUpon>
@@ -172,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPrimary.resx">
       <DependentUpon>FormPrimary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRestore.resx">
+      <DependentUpon>FormRestore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTable.resx">
       <DependentUpon>FormTable.cs</DependentUpon>

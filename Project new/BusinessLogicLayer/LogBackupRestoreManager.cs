@@ -33,6 +33,19 @@ namespace ChutHueManagement.BusinessLogicLayer
             }
         }
 
+        public static int InsertGetID(LogBackupRestoreEntity entity)
+        {
+            try
+            {
+                return adapter.InsertGetID(entity);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
         public static DataTable GetAll(bool dk)
         {
             try
@@ -43,6 +56,19 @@ namespace ChutHueManagement.BusinessLogicLayer
             {
                 Logger.Write(ex);
                 return null;
+            }
+        }
+
+        public static bool Delete(int id)
+        {
+            try
+            {
+                return adapter.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return false;
             }
         }
     }

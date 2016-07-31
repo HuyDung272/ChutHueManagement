@@ -17,6 +17,11 @@ namespace ChutHueManagement.Utilities
             dic.Add("Description", "Mô tả");
             dic.Add("NameFood", "Tên món");
             dic.Add("Price", "Đơn giá");
+            dic.Add("Name", "Tên");
+            dic.Add("Note", "Ghi chú");
+            dic.Add("IsBackup", "Backup");
+            dic.Add("Paths", "Đường dẫn");
+            dic.Add("DateTime", "Thời gian");
         }
         public string KiemTra(string key)
         {

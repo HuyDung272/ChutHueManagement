@@ -38,6 +38,27 @@ namespace ChutHueManagement.DataAccessLayer
             }
         }
 
+        public int InsertGetID(LogBackupRestoreEntity entity)
+        {
+            try
+            {
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+
+                pb.AddParameter("Name", entity.Name);
+                pb.AddParameter("DateTime", entity.Date);
+                pb.AddParameter("IsBackup", entity.IsBackup);
+                pb.AddParameter("Paths", entity.Path);
+                pb.AddParameter("Note", entity.Note);
+
+                return (int)DBFactory.Database.ExecuteNonQueryGetID("LogBackupRestore_InsertGetID", pb.Parameters);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return 0;
+            }
+        }
+
 
         //public DataTable Find(bool gt)
         //{
@@ -76,6 +97,22 @@ namespace ChutHueManagement.DataAccessLayer
             {
                 Logger.Write(ex);
                 return null;
+            }
+        }
+
+        public bool Delete(int id)
+        {
+            try
+            {
+                ParameterBuilder pd = DBFactory.CreateParamBuilder();
+                pd.AddParameter("ID", id);
+
+                return DBFactory.Database.ExecuteNonQuery("LogBackupRestore_Delete", pd.Parameters) > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
             }
         }
 

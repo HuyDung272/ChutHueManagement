@@ -308,5 +308,20 @@ namespace ChutHueManagement.ChutHueManagement
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormTable");
         }
+
+        private void buttonItem17_Click(object sender, EventArgs e)
+        {
+
+            if ((Application.OpenForms["FormRestore"] as FormRestore) == null)
+            {
+                FormRestore frm = new FormRestore();
+                frm.MdiParent = this;
+                frm.Show();
+                frm.WindowState = FormWindowState.Maximized;
+                //this.Text = Title;
+            }
+            FormCollection a = Application.OpenForms;
+            Library_Controls.ShowMDI(a, "FormRestore");
+        }
     }
 }
