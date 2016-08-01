@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -40,8 +40,8 @@
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.btnIn = new DevComponents.DotNetBar.ButtonX();
+            this.btnThanhToan = new DevComponents.DotNetBar.ButtonX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -83,9 +83,9 @@
             this.labelX2.ForeColor = System.Drawing.Color.Black;
             this.labelX2.Location = new System.Drawing.Point(12, 25);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(43, 23);
             this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "Số Bàn :";
+            this.labelX2.Text = "Bàn :";
             // 
             // labelX3
             // 
@@ -96,7 +96,7 @@
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(153, 26);
+            this.labelX3.Location = new System.Drawing.Point(191, 24);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(86, 23);
             this.labelX3.TabIndex = 0;
@@ -109,41 +109,41 @@
             this.FoodName,
             this.Total,
             this.PriceTotal});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvChiTiet.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvChiTiet.DefaultCellStyle = dataGridViewCellStyle4;
             this.grvChiTiet.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.grvChiTiet.Location = new System.Drawing.Point(10, 159);
+            this.grvChiTiet.Location = new System.Drawing.Point(10, 177);
             this.grvChiTiet.Name = "grvChiTiet";
             this.grvChiTiet.RowHeadersVisible = false;
-            this.grvChiTiet.Size = new System.Drawing.Size(427, 384);
+            this.grvChiTiet.Size = new System.Drawing.Size(427, 366);
             this.grvChiTiet.TabIndex = 1;
             // 
             // FoodName
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.FoodName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.FoodName.DefaultCellStyle = dataGridViewCellStyle1;
             this.FoodName.HeaderText = "Tên Món";
             this.FoodName.Name = "FoodName";
             this.FoodName.Width = 200;
             // 
             // Total
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Total.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle2;
             this.Total.HeaderText = "Số Lượng";
             this.Total.Name = "Total";
             this.Total.Width = 65;
             // 
             // PriceTotal
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.PriceTotal.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.PriceTotal.DefaultCellStyle = dataGridViewCellStyle3;
             this.PriceTotal.HeaderText = "Thành Tiền";
             this.PriceTotal.Name = "PriceTotal";
             this.PriceTotal.Width = 157;
@@ -163,28 +163,29 @@
             this.labelX4.TabIndex = 0;
             this.labelX4.Text = "Tổng tiền";
             // 
-            // buttonX1
+            // btnIn
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(12, 549);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(184, 61);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 2;
-            this.buttonX1.Text = "In Hóa Đơn";
+            this.btnIn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnIn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnIn.Location = new System.Drawing.Point(12, 549);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(184, 61);
+            this.btnIn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnIn.TabIndex = 2;
+            this.btnIn.Text = "In Hóa Đơn";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
-            // buttonX2
+            // btnThanhToan
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(242, 549);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(197, 61);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 2;
-            this.buttonX2.Text = "Thanh Toán";
-            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            this.btnThanhToan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThanhToan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThanhToan.Location = new System.Drawing.Point(242, 549);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(197, 61);
+            this.btnThanhToan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThanhToan.TabIndex = 2;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // labelX5
             // 
@@ -264,7 +265,7 @@
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX10.ForeColor = System.Drawing.Color.Black;
-            this.labelX10.Location = new System.Drawing.Point(12, 137);
+            this.labelX10.Location = new System.Drawing.Point(12, 146);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(98, 23);
             this.labelX10.TabIndex = 0;
@@ -333,9 +334,9 @@
             this.lbSoBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbSoBan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoBan.ForeColor = System.Drawing.Color.Black;
-            this.lbSoBan.Location = new System.Drawing.Point(89, 25);
+            this.lbSoBan.Location = new System.Drawing.Point(61, 25);
             this.lbSoBan.Name = "lbSoBan";
-            this.lbSoBan.Size = new System.Drawing.Size(48, 23);
+            this.lbSoBan.Size = new System.Drawing.Size(124, 23);
             this.lbSoBan.TabIndex = 0;
             this.lbSoBan.Text = "0";
             // 
@@ -348,13 +349,13 @@
             this.lbTGD.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbTGD.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTGD.ForeColor = System.Drawing.Color.Black;
-            this.lbTGD.Location = new System.Drawing.Point(242, 26);
+            this.lbTGD.Location = new System.Drawing.Point(283, 24);
             this.lbTGD.Name = "lbTGD";
-            this.lbTGD.Size = new System.Drawing.Size(195, 23);
+            this.lbTGD.Size = new System.Drawing.Size(154, 23);
             this.lbTGD.TabIndex = 0;
             this.lbTGD.Text = "dd/mm/yyyy";
             // 
-            // FoemPay
+            // FormPay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,8 +366,8 @@
             this.Controls.Add(this.labelX9);
             this.Controls.Add(this.labelX8);
             this.Controls.Add(this.labelX7);
-            this.Controls.Add(this.buttonX2);
-            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.btnThanhToan);
+            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.grvChiTiet);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.labelX6);
@@ -383,7 +384,7 @@
             this.MaximumSize = new System.Drawing.Size(465, 661);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(465, 661);
-            this.Name = "FoemPay";
+            this.Name = "FormPay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh Toán Hóa Đơn";
             this.Load += new System.EventHandler(this.FoemPay_Load);
@@ -399,8 +400,8 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.DataGridViewX grvChiTiet;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btnIn;
+        private DevComponents.DotNetBar.ButtonX btnThanhToan;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX7;

@@ -279,8 +279,7 @@ namespace ChutHueManagement.ChutHueManagement
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             FormPay frm = new FormPay(listTable[index]);
-            frm.ShowDialog();
-            if (frm.ISPAy)
+            if (frm.ShowDialog()==DialogResult.OK)
             {
                 listTable[index].ListInvoiceDetail = new List<InvoiceDetailsEntity>();
                 grwCTBan.Rows.Clear();
