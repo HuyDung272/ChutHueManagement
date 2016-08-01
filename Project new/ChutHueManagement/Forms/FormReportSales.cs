@@ -25,6 +25,7 @@ namespace ChutHueManagement.ChutHueManagement
         double PriceTotal = 0;
         private void FormReportSales_Load(object sender, EventArgs e)
         {
+            //http://stackoverflow.com/questions/20327129/datagridview-with-money-format
             PriceTotal = 0.0;
             string money = double.Parse(PriceTotal.ToString()).ToString("#,###", cul.NumberFormat);
             //lbl_PriceTotal.Text = money + " đồng";
