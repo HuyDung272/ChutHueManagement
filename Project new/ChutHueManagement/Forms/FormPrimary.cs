@@ -33,6 +33,15 @@ namespace ChutHueManagement.ChutHueManagement
         {
             InitializeComponent();
             this.account = account;
+
+            if (!this.account.FullAccess)
+            {
+                ribbonTabItem1.Visible = false;
+                //ribbonTabItem2.Visible = false;
+                ribbonBar2.Visible = false;
+                ribbonBar3.Visible = false;
+            }
+
             if ((Application.OpenForms["FormTable"] as FormTable) == null)
             {
                 FormTable frm = new FormTable(ListTableForFormTable);
@@ -214,9 +223,7 @@ namespace ChutHueManagement.ChutHueManagement
             FormCollection a = Application.OpenForms;
             Library_Controls.ShowMDI(a, "FormFoodMenu");
         }
-
         
-
         private void btn_Invoice_Click(object sender, EventArgs e)
         {
             if ((Application.OpenForms["FormTable"] as FormTable) == null)

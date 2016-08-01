@@ -59,6 +59,14 @@ namespace ChutHueManagement.ChutHueManagement
                 dataGridViewLoad.DataSource = Table;
                 //dataGridViewLoad.Columns[0].Visible = false;
                 //dataGridViewLoad.Columns["Tình trạng"].Visible = false;
+                dataGridViewLoad.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridViewLoad.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                //header giữa
+                foreach (DataGridViewColumn col in dataGridViewLoad.Columns)
+                {
+                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+                }
                 mainMenuEntity = MainMenuManager.ConvertToList(MainMenuManager.GetAll());
             }
 

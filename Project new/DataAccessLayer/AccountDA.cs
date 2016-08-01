@@ -168,8 +168,9 @@ namespace ChutHueManagement.DataAccessLayer
                 int id = (int)dt.Rows[i][0];
                 string username = dt.Rows[i][1].ToString();
                 string password = dt.Rows[i][2].ToString();
-                string description = dt.Rows[i][3].ToString();
-                AccountEntity acc = new AccountEntity(id, username, password, description);
+                bool fullaccess = (bool)dt.Rows[i][3];
+                string description = dt.Rows[i][4].ToString();
+                AccountEntity acc = new AccountEntity(id, username, password, fullaccess, description);
                 list.Add(acc);
             }
             return list;

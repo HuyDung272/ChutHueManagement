@@ -27,9 +27,7 @@ namespace ChutHueManagement.ChutHueManagement
             cbox_BackupRestore.SelectedIndex = 0;
             cbox_BackupRestore.Width = 300;
         }
-
-
-
+        
         private void cbox_BackupRestore_SelectedIndexChanged(object sender, EventArgs e)
         {
             int rowindex = cbox_BackupRestore.SelectedIndex;
@@ -53,7 +51,13 @@ namespace ChutHueManagement.ChutHueManagement
             DataTable dt = LogBackupRestoreManager.GetAll(true);
             dt = DataUtil.ChangeColumn(dt);
             if (dt == null) return;
-            dataGridViewLoad.DataSource = dt;  
+            dataGridViewLoad.DataSource = dt;
+            //header giữa
+            foreach (DataGridViewColumn col in dataGridViewLoad.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
         }
 
         void LoadListRestore()
@@ -62,6 +66,12 @@ namespace ChutHueManagement.ChutHueManagement
             dt = DataUtil.ChangeColumn(dt);
             if (dt == null) return;
             dataGridViewLoad.DataSource = dt;
+            //header giữa
+            foreach (DataGridViewColumn col in dataGridViewLoad.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
         }
 
         private void btn_Restore_Click(object sender, EventArgs e)

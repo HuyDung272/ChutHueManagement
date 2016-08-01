@@ -74,6 +74,12 @@ namespace ChutHueManagement.ChutHueManagement
             if (dt == null) return;
             dataGridViewLoad.DataSource = dt;
             //dataGridViewLoad.Columns[0].Visible = false;
+            //header giữa
+            foreach (DataGridViewColumn col in dataGridViewLoad.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
         }
 
         

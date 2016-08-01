@@ -78,6 +78,15 @@ namespace ChutHueManagement.ChutHueManagement
             listFoodMenuEntity = FoodMenuManager.ConvertToList(dt);
             dataGridView_Load.DataSource = dt;
             dataGridView_Load.Columns[2].Visible = false;
+            dataGridView_Load.Columns[3].DefaultCellStyle.Format = "#,##00 đồng";
+            dataGridView_Load.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView_Load.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //header giữa
+            foreach (DataGridViewColumn col in dataGridView_Load.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
         }
 
         private void cBox_MainMenu_SelectedIndexChanged(object sender, EventArgs e)

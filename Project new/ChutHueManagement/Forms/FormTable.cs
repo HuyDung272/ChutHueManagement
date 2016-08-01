@@ -9,6 +9,7 @@ using DevComponents.DotNetBar;
 using ChutHueManagement.BusinessLogicLayer;
 using ChutHueManagement.BusinessEntities;
 using ChutHueManagement.Utilities;
+using System.Globalization;
 
 namespace ChutHueManagement.ChutHueManagement
 {
@@ -42,7 +43,8 @@ namespace ChutHueManagement.ChutHueManagement
         }
         void LoadGrvThucDon()
         {
-            dataGridViewThucDon.DataSource = FoodMenuManager.GetAll();
+            // dataGridViewThucDon.DataSource = FoodMenuManager.GetAll();
+            dataGridViewThucDon.DataSource = FoodMenuManager.GetNotDelete();
         }
         void ResetActived()
         {
@@ -115,6 +117,8 @@ namespace ChutHueManagement.ChutHueManagement
             {
             }
         }
+
+        CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
         void LoadGridview(List<InvoiceDetailsEntity> tb)
         {
             try
@@ -129,7 +133,9 @@ namespace ChutHueManagement.ChutHueManagement
                     tongtien += priceTotal;
                     grwCTBan.Rows.Add(i + 1, nameFood, total, priceTotal);
                 }
-                lbTongTien.Text = tongtien.ToString();
+
+                string money = double.Parse(tongtien.ToString()).ToString("#,###", cul.NumberFormat);
+                lbTongTien.Text = money + " đ";
             }
             catch { }
         }

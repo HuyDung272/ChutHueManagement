@@ -28,31 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dataGridView_Load = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.cbox_ReportFor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.dateTimeInput_Start = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.dateTimeInput_End = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.cbox_MainFood = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.btn_Report = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.cbox_FoodMenu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.lbl_PriceTotal = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.btn_Report = new DevComponents.DotNetBar.ButtonX();
+            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cbox_FoodMenu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cbox_MainFood = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.dateTimeInput_End = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.dateTimeInput_Start = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.cbox_ReportFor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.dataGridView_Load = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.txt_PriceTotal = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lbl_Total = new DevComponents.DotNetBar.LabelX();
+            this.txt_Total = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).BeginInit();
-            this.groupPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_End)).BeginInit();
             this.groupPanel3.SuspendLayout();
+            this.groupPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_End)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -60,8 +62,10 @@
             this.groupPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel1.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.txt_Total);
+            this.groupPanel1.Controls.Add(this.lbl_Total);
+            this.groupPanel1.Controls.Add(this.txt_PriceTotal);
             this.groupPanel1.Controls.Add(this.labelX4);
-            this.groupPanel1.Controls.Add(this.lbl_PriceTotal);
             this.groupPanel1.Controls.Add(this.buttonX2);
             this.groupPanel1.Controls.Add(this.btn_Report);
             this.groupPanel1.Controls.Add(this.groupPanel3);
@@ -102,64 +106,123 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 0;
             // 
-            // dataGridView_Load
+            // labelX4
             // 
-            this.dataGridView_Load.AllowUserToAddRows = false;
-            this.dataGridView_Load.AllowUserToDeleteRows = false;
-            this.dataGridView_Load.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_Load.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Load.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView_Load.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_Load.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView_Load.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView_Load.EnableHeadersVisualStyles = false;
-            this.dataGridView_Load.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dataGridView_Load.Location = new System.Drawing.Point(270, 0);
-            this.dataGridView_Load.MultiSelect = false;
-            this.dataGridView_Load.Name = "dataGridView_Load";
-            this.dataGridView_Load.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Load.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView_Load.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Load.Size = new System.Drawing.Size(738, 729);
-            this.dataGridView_Load.TabIndex = 1;
-            // 
-            // labelX1
-            // 
-            this.labelX1.AccessibleRole = System.Windows.Forms.AccessibleRole.Document;
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelX1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(264, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "BÁO CÁO DOANH THU";
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.ForeColor = System.Drawing.Color.Black;
+            this.labelX4.Location = new System.Drawing.Point(3, 516);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(119, 23);
+            this.labelX4.TabIndex = 5;
+            this.labelX4.Text = "Tổng doanh thu:";
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX2.Location = new System.Drawing.Point(3, 398);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(258, 50);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 3;
+            this.buttonX2.Text = "Xuất Excel";
+            // 
+            // btn_Report
+            // 
+            this.btn_Report.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_Report.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_Report.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.Location = new System.Drawing.Point(3, 340);
+            this.btn_Report.Name = "btn_Report";
+            this.btn_Report.Size = new System.Drawing.Size(258, 50);
+            this.btn_Report.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_Report.TabIndex = 3;
+            this.btn_Report.Text = "Báo cáo";
+            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
+            // 
+            // groupPanel3
+            // 
+            this.groupPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupPanel3.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.cbox_FoodMenu);
+            this.groupPanel3.Controls.Add(this.cbox_MainFood);
+            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel3.Location = new System.Drawing.Point(3, 228);
+            this.groupPanel3.Name = "groupPanel3";
+            this.groupPanel3.Size = new System.Drawing.Size(258, 106);
+            // 
+            // 
+            // 
+            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel3.Style.BackColorGradientAngle = 90;
+            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderBottomWidth = 1;
+            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderLeftWidth = 1;
+            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderRightWidth = 1;
+            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderTopWidth = 1;
+            this.groupPanel3.Style.CornerDiameter = 4;
+            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel3.TabIndex = 2;
+            this.groupPanel3.Text = "Theo thực đơn";
+            // 
+            // cbox_FoodMenu
+            // 
+            this.cbox_FoodMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbox_FoodMenu.DisplayMember = "Text";
+            this.cbox_FoodMenu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbox_FoodMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbox_FoodMenu.ForeColor = System.Drawing.Color.Black;
+            this.cbox_FoodMenu.FormattingEnabled = true;
+            this.cbox_FoodMenu.ItemHeight = 17;
+            this.cbox_FoodMenu.Location = new System.Drawing.Point(4, 48);
+            this.cbox_FoodMenu.Name = "cbox_FoodMenu";
+            this.cbox_FoodMenu.Size = new System.Drawing.Size(240, 23);
+            this.cbox_FoodMenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbox_FoodMenu.TabIndex = 1;
+            this.cbox_FoodMenu.SelectedIndexChanged += new System.EventHandler(this.cbox_FoodMenu_SelectedIndexChanged);
+            // 
+            // cbox_MainFood
+            // 
+            this.cbox_MainFood.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbox_MainFood.DisplayMember = "Text";
+            this.cbox_MainFood.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbox_MainFood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbox_MainFood.ForeColor = System.Drawing.Color.Black;
+            this.cbox_MainFood.FormattingEnabled = true;
+            this.cbox_MainFood.ItemHeight = 17;
+            this.cbox_MainFood.Location = new System.Drawing.Point(4, 13);
+            this.cbox_MainFood.Name = "cbox_MainFood";
+            this.cbox_MainFood.Size = new System.Drawing.Size(241, 23);
+            this.cbox_MainFood.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbox_MainFood.TabIndex = 0;
+            this.cbox_MainFood.SelectedIndexChanged += new System.EventHandler(this.cbox_MainFood_SelectedIndexChanged);
             // 
             // groupPanel2
             // 
@@ -205,102 +268,6 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 1;
             this.groupPanel2.Text = "Báo cáo theo";
-            // 
-            // cbox_ReportFor
-            // 
-            this.cbox_ReportFor.DisplayMember = "Text";
-            this.cbox_ReportFor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbox_ReportFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbox_ReportFor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_ReportFor.ForeColor = System.Drawing.Color.Black;
-            this.cbox_ReportFor.FormattingEnabled = true;
-            this.cbox_ReportFor.ItemHeight = 20;
-            this.cbox_ReportFor.Location = new System.Drawing.Point(3, 4);
-            this.cbox_ReportFor.Name = "cbox_ReportFor";
-            this.cbox_ReportFor.Size = new System.Drawing.Size(242, 26);
-            this.cbox_ReportFor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbox_ReportFor.TabIndex = 0;
-            this.cbox_ReportFor.SelectedIndexChanged += new System.EventHandler(this.cbox_ReportFor_SelectedIndexChanged);
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.ForeColor = System.Drawing.Color.Black;
-            this.labelX2.Location = new System.Drawing.Point(3, 34);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(242, 23);
-            this.labelX2.TabIndex = 1;
-            this.labelX2.Text = "Từ ngày:";
-            // 
-            // dateTimeInput_Start
-            // 
-            this.dateTimeInput_Start.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.dateTimeInput_Start.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dateTimeInput_Start.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput_Start.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dateTimeInput_Start.ButtonDropDown.Visible = true;
-            this.dateTimeInput_Start.CustomFormat = "dd/MM/yyyy";
-            this.dateTimeInput_Start.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeInput_Start.ForeColor = System.Drawing.Color.Black;
-            this.dateTimeInput_Start.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
-            this.dateTimeInput_Start.IsPopupCalendarOpen = false;
-            this.dateTimeInput_Start.Location = new System.Drawing.Point(3, 63);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.dateTimeInput_Start.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput_Start.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dateTimeInput_Start.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput_Start.MonthCalendar.DisplayMonth = new System.DateTime(2016, 7, 1, 0, 0, 0, 0);
-            this.dateTimeInput_Start.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            // 
-            // 
-            // 
-            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeInput_Start.MonthCalendar.TodayButtonVisible = true;
-            this.dateTimeInput_Start.Name = "dateTimeInput_Start";
-            this.dateTimeInput_Start.Size = new System.Drawing.Size(242, 25);
-            this.dateTimeInput_Start.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dateTimeInput_Start.TabIndex = 2;
-            // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(3, 104);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(242, 23);
-            this.labelX3.TabIndex = 1;
-            this.labelX3.Text = "Đến ngày:";
             // 
             // dateTimeInput_End
             // 
@@ -352,138 +319,213 @@
             this.dateTimeInput_End.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimeInput_End.TabIndex = 2;
             // 
-            // groupPanel3
+            // labelX3
             // 
-            this.groupPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupPanel3.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.cbox_FoodMenu);
-            this.groupPanel3.Controls.Add(this.cbox_MainFood);
-            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel3.Location = new System.Drawing.Point(3, 228);
-            this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(258, 106);
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel3.Style.BackColorGradientAngle = 90;
-            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderBottomWidth = 1;
-            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderLeftWidth = 1;
-            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderRightWidth = 1;
-            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderTopWidth = 1;
-            this.groupPanel3.Style.CornerDiameter = 4;
-            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX3.ForeColor = System.Drawing.Color.Black;
+            this.labelX3.Location = new System.Drawing.Point(3, 104);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(242, 23);
+            this.labelX3.TabIndex = 1;
+            this.labelX3.Text = "Đến ngày:";
+            // 
+            // dateTimeInput_Start
+            // 
+            this.dateTimeInput_Start.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput_Start.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dateTimeInput_Start.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput_Start.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dateTimeInput_Start.ButtonDropDown.Visible = true;
+            this.dateTimeInput_Start.CustomFormat = "dd/MM/yyyy";
+            this.dateTimeInput_Start.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeInput_Start.ForeColor = System.Drawing.Color.Black;
+            this.dateTimeInput_Start.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
+            this.dateTimeInput_Start.IsPopupCalendarOpen = false;
+            this.dateTimeInput_Start.Location = new System.Drawing.Point(3, 63);
             // 
             // 
             // 
-            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 2;
-            this.groupPanel3.Text = "Theo thực đơn";
-            // 
-            // cbox_MainFood
-            // 
-            this.cbox_MainFood.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbox_MainFood.DisplayMember = "Text";
-            this.cbox_MainFood.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbox_MainFood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbox_MainFood.ForeColor = System.Drawing.Color.Black;
-            this.cbox_MainFood.FormattingEnabled = true;
-            this.cbox_MainFood.ItemHeight = 17;
-            this.cbox_MainFood.Location = new System.Drawing.Point(4, 13);
-            this.cbox_MainFood.Name = "cbox_MainFood";
-            this.cbox_MainFood.Size = new System.Drawing.Size(241, 23);
-            this.cbox_MainFood.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbox_MainFood.TabIndex = 0;
-            this.cbox_MainFood.SelectedIndexChanged += new System.EventHandler(this.cbox_MainFood_SelectedIndexChanged);
-            // 
-            // btn_Report
-            // 
-            this.btn_Report.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_Report.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_Report.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Report.Location = new System.Drawing.Point(3, 340);
-            this.btn_Report.Name = "btn_Report";
-            this.btn_Report.Size = new System.Drawing.Size(258, 50);
-            this.btn_Report.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_Report.TabIndex = 3;
-            this.btn_Report.Text = "Báo cáo";
-            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(3, 398);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(258, 50);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 3;
-            this.buttonX2.Text = "Xuất Excel";
-            // 
-            // cbox_FoodMenu
-            // 
-            this.cbox_FoodMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbox_FoodMenu.DisplayMember = "Text";
-            this.cbox_FoodMenu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbox_FoodMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbox_FoodMenu.ForeColor = System.Drawing.Color.Black;
-            this.cbox_FoodMenu.FormattingEnabled = true;
-            this.cbox_FoodMenu.ItemHeight = 17;
-            this.cbox_FoodMenu.Location = new System.Drawing.Point(4, 48);
-            this.cbox_FoodMenu.Name = "cbox_FoodMenu";
-            this.cbox_FoodMenu.Size = new System.Drawing.Size(240, 23);
-            this.cbox_FoodMenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbox_FoodMenu.TabIndex = 1;
-            this.cbox_FoodMenu.SelectedIndexChanged += new System.EventHandler(this.cbox_FoodMenu_SelectedIndexChanged);
-            // 
-            // lbl_PriceTotal
-            // 
-            this.lbl_PriceTotal.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbl_PriceTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PriceTotal.ForeColor = System.Drawing.Color.Black;
-            this.lbl_PriceTotal.Location = new System.Drawing.Point(113, 467);
-            this.lbl_PriceTotal.Name = "lbl_PriceTotal";
-            this.lbl_PriceTotal.Size = new System.Drawing.Size(148, 23);
-            this.lbl_PriceTotal.TabIndex = 4;
-            this.lbl_PriceTotal.Text = "0 đồng";
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            this.dateTimeInput_Start.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput_Start.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dateTimeInput_Start.MonthCalendar.ClearButtonVisible = true;
             // 
             // 
             // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Location = new System.Drawing.Point(3, 467);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(108, 23);
-            this.labelX4.TabIndex = 5;
-            this.labelX4.Text = "Tổng doanh thu:";
+            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dateTimeInput_Start.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput_Start.MonthCalendar.DisplayMonth = new System.DateTime(2016, 7, 1, 0, 0, 0, 0);
+            this.dateTimeInput_Start.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            // 
+            // 
+            // 
+            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dateTimeInput_Start.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dateTimeInput_Start.MonthCalendar.TodayButtonVisible = true;
+            this.dateTimeInput_Start.Name = "dateTimeInput_Start";
+            this.dateTimeInput_Start.Size = new System.Drawing.Size(242, 25);
+            this.dateTimeInput_Start.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dateTimeInput_Start.TabIndex = 2;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(3, 34);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(242, 23);
+            this.labelX2.TabIndex = 1;
+            this.labelX2.Text = "Từ ngày:";
+            // 
+            // cbox_ReportFor
+            // 
+            this.cbox_ReportFor.DisplayMember = "Text";
+            this.cbox_ReportFor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbox_ReportFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbox_ReportFor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbox_ReportFor.ForeColor = System.Drawing.Color.Black;
+            this.cbox_ReportFor.FormattingEnabled = true;
+            this.cbox_ReportFor.ItemHeight = 20;
+            this.cbox_ReportFor.Location = new System.Drawing.Point(3, 4);
+            this.cbox_ReportFor.Name = "cbox_ReportFor";
+            this.cbox_ReportFor.Size = new System.Drawing.Size(242, 26);
+            this.cbox_ReportFor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbox_ReportFor.TabIndex = 0;
+            this.cbox_ReportFor.SelectedIndexChanged += new System.EventHandler(this.cbox_ReportFor_SelectedIndexChanged);
+            // 
+            // labelX1
+            // 
+            this.labelX1.AccessibleRole = System.Windows.Forms.AccessibleRole.Document;
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelX1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
+            this.labelX1.Location = new System.Drawing.Point(0, 0);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(264, 23);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "BÁO CÁO DOANH THU";
+            // 
+            // dataGridView_Load
+            // 
+            this.dataGridView_Load.AllowUserToAddRows = false;
+            this.dataGridView_Load.AllowUserToDeleteRows = false;
+            this.dataGridView_Load.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_Load.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Load.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_Load.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Load.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_Load.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_Load.EnableHeadersVisualStyles = false;
+            this.dataGridView_Load.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dataGridView_Load.Location = new System.Drawing.Point(270, 0);
+            this.dataGridView_Load.MultiSelect = false;
+            this.dataGridView_Load.Name = "dataGridView_Load";
+            this.dataGridView_Load.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Load.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_Load.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_Load.Size = new System.Drawing.Size(738, 729);
+            this.dataGridView_Load.TabIndex = 1;
+            // 
+            // txt_PriceTotal
+            // 
+            this.txt_PriceTotal.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txt_PriceTotal.Border.Class = "TextBoxBorder";
+            this.txt_PriceTotal.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_PriceTotal.DisabledBackColor = System.Drawing.Color.White;
+            this.txt_PriceTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PriceTotal.ForeColor = System.Drawing.Color.Black;
+            this.txt_PriceTotal.Location = new System.Drawing.Point(120, 516);
+            this.txt_PriceTotal.Name = "txt_PriceTotal";
+            this.txt_PriceTotal.PreventEnterBeep = true;
+            this.txt_PriceTotal.ReadOnly = true;
+            this.txt_PriceTotal.Size = new System.Drawing.Size(141, 25);
+            this.txt_PriceTotal.TabIndex = 6;
+            this.txt_PriceTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbl_Total
+            // 
+            this.lbl_Total.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lbl_Total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbl_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Total.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Total.Location = new System.Drawing.Point(3, 473);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.Size = new System.Drawing.Size(119, 23);
+            this.lbl_Total.TabIndex = 7;
+            this.lbl_Total.Text = "Tổng doanh thu:";
+            // 
+            // txt_Total
+            // 
+            this.txt_Total.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txt_Total.Border.Class = "TextBoxBorder";
+            this.txt_Total.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_Total.DisabledBackColor = System.Drawing.Color.White;
+            this.txt_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Total.ForeColor = System.Drawing.Color.Black;
+            this.txt_Total.Location = new System.Drawing.Point(120, 473);
+            this.txt_Total.Name = "txt_Total";
+            this.txt_Total.PreventEnterBeep = true;
+            this.txt_Total.ReadOnly = true;
+            this.txt_Total.Size = new System.Drawing.Size(141, 25);
+            this.txt_Total.TabIndex = 8;
+            this.txt_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FormReportSales
             // 
@@ -494,16 +536,18 @@
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "FormReportSales";
             this.Text = "MetroForm";
             this.Load += new System.EventHandler(this.FormReportSales_Load);
             this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).EndInit();
-            this.groupPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_End)).EndInit();
             this.groupPanel3.ResumeLayout(false);
+            this.groupPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_End)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -524,7 +568,9 @@
         private DevComponents.DotNetBar.ButtonX btn_Report;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbox_FoodMenu;
-        private DevComponents.DotNetBar.LabelX lbl_PriceTotal;
         private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_PriceTotal;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_Total;
+        private DevComponents.DotNetBar.LabelX lbl_Total;
     }
 }

@@ -24,7 +24,7 @@ namespace ChutHueManagement.Utilities
             dic.Add("DateTime", "Thời gian");
             dic.Add("PriceTotal", "Tổng tiền");
             dic.Add("InvoiceCode", "Mã hóa đơn");
-            dic.Add("Total", "Tổng cộng");
+            dic.Add("Total", "Số lượng");
         }
         public string KiemTra(string key)
         {

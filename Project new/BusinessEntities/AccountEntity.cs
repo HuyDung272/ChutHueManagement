@@ -33,6 +33,14 @@ namespace ChutHueManagement.BusinessEntities
 
         private string _description;
 
+        public bool FullAccess
+        {
+            get { return _fullAccess; }
+            set { _fullAccess = value; }
+        }
+
+        private bool _fullAccess;
+
         public string Description
         {
             get { return _description; }
@@ -44,19 +52,21 @@ namespace ChutHueManagement.BusinessEntities
 
         }
         
-        public AccountEntity(string userName, string pass, string description)
+        public AccountEntity(string userName, string pass, bool fullaccess, string description)
         {
             _iD = 0;
             _userName = userName;
             _password = pass;
+            _fullAccess = fullaccess;
             _description = description;         
         }
      
-        public AccountEntity(int iD, string userName, string pass, string description)
+        public AccountEntity(int iD, string userName, string pass, bool fullaccess, string description)
         {
             _iD = iD;
             _userName = userName;
             _password = pass;
+            _fullAccess = fullaccess;
             _description = description;
         }
     }

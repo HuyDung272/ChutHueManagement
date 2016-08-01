@@ -68,6 +68,24 @@ namespace ChutHueManagement.DataAccessLayer
                 throw new Exception(ex.Message, ex);
             }
         }
+
+        
+
+        public DataTable GetNotDelete()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                //ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                dt = DBFactory.Database.FillDataTable("FoodMenu_GetNotDelete");
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                throw new Exception(ex.Message, ex);
+            }
+        }
         public DataTable GetByID(int iD)
         {
             try

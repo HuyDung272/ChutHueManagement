@@ -16,9 +16,11 @@ namespace ChutHueManagement.ChutHueManagement
         {
             InitializeComponent();
         }
+
         private Table _table;
 
-       
+        InvoiceEntity invoice = new InvoiceEntity();
+
 
         public FormPay(Table table)
         {
@@ -139,7 +141,7 @@ namespace ChutHueManagement.ChutHueManagement
             try
             {
                 string tableName = TablesManager.ConvertToList(TablesManager.GetByID(int.Parse(_table.ID)))[0].TableName;
-                InvoiceEntity invoice = new InvoiceEntity(Get_Invoice_SerialCode(), tableName, DateTime.Now, "");
+                invoice = new InvoiceEntity(Get_Invoice_SerialCode(), tableName, DateTime.Now, "");
                 invoice.ListDetail = _table.ListInvoiceDetail;
                 if(InvoiceManager.InsertTS(invoice, ref error)!=0)
                 {
@@ -155,6 +157,22 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void btnIn_Click(object sender, EventArgs e)
         {
+            string error = "";
+            try
+            {
+                string tableName = TablesManager.ConvertToList(TablesManager.GetByID(int.Parse(_table.ID)))[0].TableName;
+                invoice = new InvoiceEntity(Get_Invoice_SerialCode(), tableName, DateTime.Now, "");
+                //invoice.ListDetail = _table.ListInvoiceDetail;
+                FormReport frm = new FormReport(_table, invoice);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    
+                }
+            }
+            catch
+            {
+                MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             btnThanhToan.Enabled = true;
         }
 

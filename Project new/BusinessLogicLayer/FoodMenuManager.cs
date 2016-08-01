@@ -86,11 +86,26 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return null;
             }
         }
+
+        
         public static DataTable GetAll()
         {
             try
             {
                 return adapter.GetAll();
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return null;
+            }
+        }
+
+        public static DataTable GetNotDelete()
+        {
+            try
+            {
+                return adapter.GetNotDelete();
             }
             catch (Exception ex)
             {

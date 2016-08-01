@@ -29,7 +29,8 @@ namespace ChutHueManagement.ChutHueManagement
             PriceTotal = 0.0;
             string money = double.Parse(PriceTotal.ToString()).ToString("#,###", cul.NumberFormat);
             //lbl_PriceTotal.Text = money + " đồng";
-
+            txt_PriceTotal.Text = money + " đồng";
+            //lbl_PriceTotal.Style["text-align"] = "right";
             LoadListReportFor();
             LoadMainFood();
             LoadListFoodMenu();
@@ -149,7 +150,18 @@ namespace ChutHueManagement.ChutHueManagement
                 //tables.Columns[3].DataType = typeof(decimal);
                 dataGridView_Load.DataSource = tables;
                 dataGridView_Load.Columns[0].Visible = false;
-                
+                dataGridView_Load.Columns[3].DefaultCellStyle.Format = "#,##00 đồng";
+                dataGridView_Load.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dataGridView_Load.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dataGridView_Load.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+
+                //header giữa
+                foreach (DataGridViewColumn col in dataGridView_Load.Columns)
+                {
+                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+                }
+
                 PriceTotal = 0;
 
                 for (int i = 0; i < tables.Rows.Count; i++)
@@ -160,7 +172,11 @@ namespace ChutHueManagement.ChutHueManagement
                 }
                 
                 string money = double.Parse(PriceTotal.ToString()).ToString("#,###", cul.NumberFormat);
-                lbl_PriceTotal.Text = money + " đồng";
+                txt_PriceTotal.Text = money + " đồng";
+                //lbl_PriceTotal.Text = money + " đồng";
+                lbl_Total.Text = "Tổng hóa đơn:";
+                txt_Total.Text = tables.Rows.Count.ToString();
+
             }
             else
             {
@@ -180,17 +196,28 @@ namespace ChutHueManagement.ChutHueManagement
                 //tables.Columns[3].DataType = typeof(decimal);
                 dataGridView_Load.DataSource = tables;
                 dataGridView_Load.Columns[2].Visible = false;
+                //header giữa
+                foreach (DataGridViewColumn col in dataGridView_Load.Columns)
+                {
+                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+                }
 
                 PriceTotal = 0;
-
+                int Total = 0;
                 for (int i = 0; i < tables.Rows.Count; i++)
                 {
                     DataRow dr = tables.Rows[i];
                     PriceTotal += (double)dr[5];
+                    Total += (int)dr[4];
                 }
 
                 string money = double.Parse(PriceTotal.ToString()).ToString("#,###", cul.NumberFormat);
-                lbl_PriceTotal.Text = money + " đồng";
+                txt_PriceTotal.Text = money + " đồng";
+                //lbl_PriceTotal.Text = money + " đồng";
+
+                lbl_Total.Text = "Tổng số:";
+                txt_Total.Text = Total.ToString();
             }
         }
 
