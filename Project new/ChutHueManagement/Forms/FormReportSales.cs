@@ -176,6 +176,7 @@ namespace ChutHueManagement.ChutHueManagement
                 }
                 tables = InvoiceManager.GetSalesWithFoodForFoodByDateTime(indexFoodMenu, indexReportFor, start, end);
                 tables = DataUtil.ChangeColumn(tables);
+                //tables.Columns[]
                 //tables.Columns[3].DataType = typeof(decimal);
                 dataGridView_Load.DataSource = tables;
                 dataGridView_Load.Columns[2].Visible = false;

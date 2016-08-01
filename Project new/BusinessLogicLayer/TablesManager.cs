@@ -43,6 +43,18 @@ namespace ChutHueManagement.BusinessLogicLayer
                 return false;
             }
         }
+        public static bool Delete(int  iD)
+        {
+            try
+            {
+                return adapter.Delete(iD);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return false;
+            }
+        }
         public static DataTable GetAll()
         {
             try

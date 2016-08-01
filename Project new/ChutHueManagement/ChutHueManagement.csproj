@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEditAddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAddTable.Designer.cs">
+      <DependentUpon>FormEditAddTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddEditInvoiceDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Table.cs" />
+    <EmbeddedResource Include="FormEditAddTable.resx">
+      <DependentUpon>FormEditAddTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddEditInvoiceDetail.resx">
       <DependentUpon>AddEditInvoiceDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +316,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\Doanh thu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

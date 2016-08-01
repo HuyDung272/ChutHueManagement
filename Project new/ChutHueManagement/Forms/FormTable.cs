@@ -71,7 +71,7 @@ namespace ChutHueManagement.ChutHueManagement
         public ButtonX CovnertToButton(TableEntity entity, int x, int y, string name)
         {
             ButtonX _button = new ButtonX();
-            _button.Text = entity.TableName.ToString();
+            _button.Text = entity.TableName;
             _button.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             _button.BackgroundImage = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Ban;
             _button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -82,6 +82,7 @@ namespace ChutHueManagement.ChutHueManagement
             _button.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             _button.TextColor = System.Drawing.Color.Black;
             _button.Location = new System.Drawing.Point(x, y);
+            
             return _button;
         }
         private void Button_Click(object sender, EventArgs e)
@@ -90,6 +91,10 @@ namespace ChutHueManagement.ChutHueManagement
             {
 
                 ButtonX button = (ButtonX)sender;
+                toolStripSuaBan.Text = "Sửa Bàn " + button.Text;
+                toolStripXoaBan.Text = "Xóa Bàn " + button.Text;
+                toolStripSuaBan.Enabled = true;
+                toolStripXoaBan.Enabled = true;
                 string i = button.Name;
                 index = int.Parse(i);
                 if (listTable[index].ListInvoiceDetail.Count == 0)
@@ -130,6 +135,7 @@ namespace ChutHueManagement.ChutHueManagement
         }
         void LoadPanelTables()
         {
+            panelTables.Controls.Clear();
             if (listTable.Count == 0)
                 LoadTable();
             bool ok = false;
@@ -286,6 +292,66 @@ namespace ChutHueManagement.ChutHueManagement
             DataTable dt = FoodMenuManager.GetAll();
             dt.DefaultView.RowFilter = string.Format("NameFood LIKE '%{0}%'", textBoxX1.Text);
             dataGridViewThucDon.DataSource = dt;
+        }
+
+        private void toolstripthemban_Click(object sender, EventArgs e)
+        {
+            FormEditAddTable frm = new FormEditAddTable();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                Table tb = new Table();
+                tb.ID = frm.Tb.ID.ToString();
+                listTable.Add(tb);
+                LoadPanelTables();
+            }
+            
+        }
+
+        private void toolStripSuaBan_Click(object sender, EventArgs e)
+        {
+            TableEntity tb = TablesManager.ConvertToList(TablesManager.GetByID(int.Parse(listTable[index].ID)))[0];
+            FormEditAddTable frm = new FormEditAddTable(tb);
+            if(frm.ShowDialog()==DialogResult.OK)
+            {
+                LoadPanelTables();
+            }
+        }
+
+        private void toolStripXoaBan_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn " + toolStripXoaBan.Text+"\n" + toolStripXoaBan.Text+", sẽ xóa hết dữ liệu hiện hành.\n Bạn chắc chứ?", "Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                if (TablesManager.Delete(int.Parse(listTable[index].ID)))
+                {
+                    MessageBox.Show("Đã " + toolStripXoaBan.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listTable.RemoveAt(index);
+                    LoadPanelTables();
+                }
+                else
+                {
+                    MessageBox.Show( toolStripXoaBan.Text + "Thất Bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnXoaTrangBan_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn Có Chắc Muốn Xóa Trắng Bàn Này?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
+            {
+                listTable[index].ListInvoiceDetail = new List<InvoiceDetailsEntity>();
+                LoadPanelTables();
+            }
+        }
+
+        private void dataGridViewThucDon_DoubleClick(object sender, EventArgs e)
+        {
+            btnThemVaoBan.PerformClick();
+        }
+
+        private void dataGridViewThucDon_SizeChanged(object sender, EventArgs e)
+        {
+            dataGridViewThucDon.Columns["NameFood"].Width = (int)((double) 0.7 * dataGridViewThucDon.Width);
+            dataGridViewThucDon.Columns["Price"].Width = dataGridViewThucDon.Width - dataGridViewThucDon.Columns["NameFood"].Width-5;
         }
     }
 }

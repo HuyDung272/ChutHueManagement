@@ -45,6 +45,20 @@ namespace ChutHueManagement.DataAccessLayer
                 return false;
             }
         }
+        public bool Delete(int iD)
+        {
+            try
+            {
+                ParameterBuilder pb = DBFactory.CreateParamBuilder();
+                pb.AddParameter("ID", iD);
+                return DBFactory.Database.ExecuteNonQuery("Tables_Delete", pb.Parameters) > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex);
+                return false;
+            }
+        }
         public DataTable GetByID(int iD)
         {
             try
