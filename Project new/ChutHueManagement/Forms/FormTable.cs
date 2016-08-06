@@ -287,11 +287,13 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            
             FormPay frm = new FormPay(listTable[index]);
             if (frm.ShowDialog()==DialogResult.OK)
             {
                 listTable[index].ListInvoiceDetail = new List<InvoiceDetailsEntity>();
                 grwCTBan.Rows.Clear();
+                btnThanhToan.Enabled = false;
             }
         }
 
