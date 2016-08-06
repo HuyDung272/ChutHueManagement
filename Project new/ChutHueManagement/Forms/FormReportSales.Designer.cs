@@ -615,7 +615,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "FormReportSales";
             this.Text = "MetroForm";
             this.Load += new System.EventHandler(this.FormReportSales_Load);
