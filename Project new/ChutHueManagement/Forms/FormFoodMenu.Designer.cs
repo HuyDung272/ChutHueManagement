@@ -118,7 +118,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_Load.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Load.EnableHeadersVisualStyles = false;
@@ -150,6 +150,7 @@
             // 
             // thêmToolStripMenuItem
             // 
+            this.thêmToolStripMenuItem.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.add;
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
             this.thêmToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.thêmToolStripMenuItem.Text = "Thêm";
@@ -157,6 +158,7 @@
             // 
             // xóaToolStripMenuItem
             // 
+            this.xóaToolStripMenuItem.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Delete;
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
             this.xóaToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.xóaToolStripMenuItem.Text = "Xóa";
@@ -164,6 +166,7 @@
             // 
             // cậpNhậtToolStripMenuItem
             // 
+            this.cậpNhậtToolStripMenuItem.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Update;
             this.cậpNhậtToolStripMenuItem.Name = "cậpNhậtToolStripMenuItem";
             this.cậpNhậtToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cậpNhậtToolStripMenuItem.Text = "Cập Nhật";

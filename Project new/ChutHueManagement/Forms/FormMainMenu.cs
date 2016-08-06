@@ -14,6 +14,9 @@ namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormMainMenu : DevComponents.DotNetBar.Metro.MetroForm
     {
+
+        LogSystemEntity logsystem = new LogSystemEntity();
+
         public FormMainMenu()
         {
             InitializeComponent();
@@ -147,6 +150,15 @@ namespace ChutHueManagement.ChutHueManagement
                         LoadListView();
                         return;
                     }
+
+                    logsystem = new LogSystemEntity()
+                    {
+                        IDAccount = account.ID,
+                        Event = account.UserName + " đã xóa loại thực đơn " + entity.NameEntryMenu,
+                        Date = DateTime.Now,
+                    };
+
+                    LogSystemManager.Insert(logsystem);
 
                     MessageBox.Show("Xóa thành công Loại thực đơn " + entity.NameEntryMenu);
 

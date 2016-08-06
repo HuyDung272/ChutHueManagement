@@ -111,7 +111,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewLoad.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewLoad.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -144,6 +144,7 @@
             // 
             // thêmToolStripMenuItem
             // 
+            this.thêmToolStripMenuItem.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.add;
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
             this.thêmToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.thêmToolStripMenuItem.Text = "Thêm";
@@ -151,6 +152,7 @@
             // 
             // xóaToolStripMenuItem
             // 
+            this.xóaToolStripMenuItem.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Delete;
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
             this.xóaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.xóaToolStripMenuItem.Text = "Xóa";
@@ -158,6 +160,7 @@
             // 
             // sửaToolStripMenuItem
             // 
+            this.sửaToolStripMenuItem.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Update;
             this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
             this.sửaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.sửaToolStripMenuItem.Text = "Cập nhật";

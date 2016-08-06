@@ -164,6 +164,7 @@ namespace ChutHueManagement.ChutHueManagement
             }
         }
 
+        LogSystemEntity logsystem = new LogSystemEntity();
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             if (dataGridView_Load.SelectedRows.Count > 0)
@@ -194,6 +195,15 @@ namespace ChutHueManagement.ChutHueManagement
                         LoadListView(mainMenuEntity.ID);
                         return;
                     }
+
+                    logsystem = new LogSystemEntity()
+                    {
+                        IDAccount = account.ID,
+                        Event = account.UserName + " đã xóa loại thực đơn " + entity.NameFood,
+                        Date = DateTime.Now,
+                    };
+
+                    LogSystemManager.Insert(logsystem);
 
                     MessageBox.Show("Xóa thành công thực đơn " + entity.NameFood);
 
