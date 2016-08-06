@@ -86,7 +86,7 @@ namespace ChutHueManagement.ChutHueManagement
         {
             if ((Application.OpenForms["FormMainMenu"] as FormMainMenu) == null)
             {
-                FormMainMenu frm = new FormMainMenu();
+                FormMainMenu frm = new FormMainMenu(this.account);
                 frm.MdiParent = this;
                 frm.Show();
                 frm.WindowState = FormWindowState.Maximized;
@@ -210,7 +210,7 @@ namespace ChutHueManagement.ChutHueManagement
         {
             if ((Application.OpenForms["FormFoodMenu"] as FormFoodMenu) == null)
             {
-                FormFoodMenu frm = new FormFoodMenu();
+                FormFoodMenu frm = new FormFoodMenu(this.account);
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Show();

@@ -14,21 +14,25 @@ namespace ChutHueManagement.ChutHueManagement
 {
     public partial class FormMainMenu_Add : DevComponents.DotNetBar.Metro.MetroForm
     {
+        LogSystemEntity logsystem = new LogSystemEntity();
+
+        AccountEntity account = new AccountEntity();
 
         private string errorMessage = string.Empty;
 
         private MainMenuEntity entity;
 
-        public FormMainMenu_Add()
+        public FormMainMenu_Add(AccountEntity account)
         {
             InitializeComponent();
             btn_Add.Text = "Thêm";
             this.Text = "Thêm mới Loại thực đơn";
             //this.radioBtn_IsDelete.Enabled = false;
             this.cb_IsDelete.Enabled = false;
+            this.account = account;
         }
 
-        public FormMainMenu_Add(MainMenuEntity entity)
+        public FormMainMenu_Add(MainMenuEntity entity, AccountEntity account)
         {
             InitializeComponent();
             btn_Add.Text = "Cập nhật";
@@ -41,6 +45,7 @@ namespace ChutHueManagement.ChutHueManagement
             txt_Description.Text = entity.Description;
             //radioBtn_IsDelete.Checked = entity.IsDelete;
             cb_IsDelete.Checked = entity.IsDelete;
+            this.account = account;
         }
 
         private void FormMainMenu_Add_Load(object sender, EventArgs e)
@@ -99,6 +104,15 @@ namespace ChutHueManagement.ChutHueManagement
                     MainMenuEntity mainMenuEntity = GetEntity();
                     if (MainMenuManager.Insert(mainMenuEntity, ref errorMessage) > 0)
                     {
+                        logsystem = new LogSystemEntity()
+                        {
+                            IDAccount = account.ID,
+                            Event = account.UserName + " đã thêm mới loại thực đơn "  + mainMenuEntity.NameEntryMenu,
+                            Date = DateTime.Now,
+                        };
+
+                        LogSystemManager.Insert(logsystem);
+
                         MessageBox.Show("Thêm thành công");
                         DialogResult = DialogResult.OK;
                     }
@@ -114,6 +128,16 @@ namespace ChutHueManagement.ChutHueManagement
                     //mainMenuEntity.IsDelete = this.entity.IsDelete;
                     if (MainMenuManager.UpDate(mainMenuEntity, ref errorMessage))
                     {
+                        logsystem = new LogSystemEntity()
+                        {
+                            IDAccount = account.ID,
+                            Event = account.UserName + " đã cập nhật loại thực đơn " + entity.NameEntryMenu + "[" + "NameEntryMenu:" + mainMenuEntity.NameEntryMenu 
+                            + ", ID:" + mainMenuEntity.ID + ", IsDelete:" + mainMenuEntity.IsDelete + "]",
+                            Date = DateTime.Now,
+                        };
+
+                        LogSystemManager.Insert(logsystem);
+
                         MessageBox.Show("Cập nhật thành công!");
                         DialogResult = DialogResult.OK;
                     }

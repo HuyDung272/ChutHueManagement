@@ -18,7 +18,15 @@ namespace ChutHueManagement.ChutHueManagement
         {
             InitializeComponent();
         }
+
+        public FormMainMenu(AccountEntity account)
+        {
+            this.account = account;
+            InitializeComponent();
+        }
         public DataTable Table { get; set; }
+
+        AccountEntity account = new AccountEntity();
 
         string errormessage = string.Empty;
 
@@ -73,7 +81,7 @@ namespace ChutHueManagement.ChutHueManagement
         }
         private void toolStripBtn_Add_Click(object sender, EventArgs e)
         {
-            var formMainMenu_Add = new FormMainMenu_Add();
+            var formMainMenu_Add = new FormMainMenu_Add(this.account);
             if (formMainMenu_Add.ShowDialog() == DialogResult.OK)
                 LoadListView();
         }
@@ -95,7 +103,7 @@ namespace ChutHueManagement.ChutHueManagement
                     IsDelete = (bool)row.Cells[2].Value,
                     Description = (string)row.Cells[3].Value,
                 };
-                FormMainMenu_Add formMainMenu_Add = new FormMainMenu_Add(entity);
+                FormMainMenu_Add formMainMenu_Add = new FormMainMenu_Add(entity, this.account);
                 if (formMainMenu_Add.ShowDialog() == DialogResult.OK)
                     LoadListView();
             }

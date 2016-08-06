@@ -29,6 +29,10 @@ namespace ChutHueManagement.ChutHueManagement
             ///
             //txt_Total.BackColor = Color.Transparent;
             lbl_Summary.Text = "";
+
+            groupPanel1.BackColor = Color.Transparent;
+            groupPanel2.BackColor = Color.Transparent;
+            groupPanel3.BackColor = Color.Transparent;
             ///
             PriceTotal = 0.0;
             string money = double.Parse(PriceTotal.ToString()).ToString("#,###", cul.NumberFormat);

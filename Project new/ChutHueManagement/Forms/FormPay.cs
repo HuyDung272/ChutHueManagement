@@ -30,10 +30,10 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void FoemPay_Load(object sender, EventArgs e)
         {
-
+            //
             TableEntity tb = TablesManager.ConvertToList(TablesManager.GetByID(int.Parse(_table.ID)))[0];
             lbSoBan.Text = tb.TableName;
-            lbTGD.Text = _table.TGDen.ToString();
+            lbTGD.Text = _table.TGDen.ToString("dd/MM/yyyy HH:mm:ss");
             LoadGRV();
             txtTienKhachDua.Text = "0";
         }

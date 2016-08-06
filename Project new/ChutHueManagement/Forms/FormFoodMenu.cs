@@ -15,6 +15,8 @@ namespace ChutHueManagement.ChutHueManagement
     public partial class FormFoodMenu : DevComponents.DotNetBar.Metro.MetroForm
     {
 
+        AccountEntity account = new AccountEntity();
+
         MainMenuEntity mainMenuEntity = new MainMenuEntity();
 
         List<MainMenuEntity> listmainMenuEntity = new List<MainMenuEntity>();
@@ -23,10 +25,11 @@ namespace ChutHueManagement.ChutHueManagement
 
         string errormessage = string.Empty;
 
-        public FormFoodMenu()
+        public FormFoodMenu(AccountEntity account)
         {
             InitializeComponent();
             LoadToComboBox();
+            this.account = account;
         }
 
         private void FormFoodMenu_Load(object sender, EventArgs e)
@@ -111,7 +114,7 @@ namespace ChutHueManagement.ChutHueManagement
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            var FoodMenu_add = new FormFoodMenu_Add(mainMenuEntity);
+            var FoodMenu_add = new FormFoodMenu_Add(mainMenuEntity, this.account);
             if (FoodMenu_add.ShowDialog() == DialogResult.OK)
                 LoadListView(mainMenuEntity.ID);
         }
@@ -130,7 +133,7 @@ namespace ChutHueManagement.ChutHueManagement
                     IsDelete = (bool)row.Cells[4].Value,
                     Description = (string)row.Cells[5].Value,
                 };
-                FormFoodMenu_Add FoodMenu_add = new FormFoodMenu_Add(mainMenuEntity, entity);
+                FormFoodMenu_Add FoodMenu_add = new FormFoodMenu_Add(mainMenuEntity, entity, this.account);
                 if (FoodMenu_add.ShowDialog() == DialogResult.OK)
                     LoadListView(mainMenuEntity.ID);
             }
@@ -155,7 +158,7 @@ namespace ChutHueManagement.ChutHueManagement
                     IsDelete = (bool)row.Cells[4].Value,
                     Description = (string)row.Cells[5].Value,
                 };
-                FormFoodMenu_Add FoodMenu_add = new FormFoodMenu_Add(mainMenuEntity, entity);
+                FormFoodMenu_Add FoodMenu_add = new FormFoodMenu_Add(mainMenuEntity, entity, this.account);
                 if (FoodMenu_add.ShowDialog() == DialogResult.OK)
                     LoadListView(mainMenuEntity.ID);
             }

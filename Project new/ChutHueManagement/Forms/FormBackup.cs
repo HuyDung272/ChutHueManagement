@@ -53,7 +53,7 @@ namespace ChutHueManagement.ChutHueManagement
                 }
                 if (BackupRestoreManager.Backup(FileName))
                 {
-                    MessageBox.Show("Sao lưu giữ liệu thành công");
+                    MessageBox.Show("Sao lưu dữ liệu thành công");
                     //btn_themNhanh.Enabled = true;
                     LoadListView();
                 }

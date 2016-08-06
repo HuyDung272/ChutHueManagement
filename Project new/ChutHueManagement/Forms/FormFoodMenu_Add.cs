@@ -18,6 +18,10 @@ namespace ChutHueManagement.ChutHueManagement
 
         FoodMenuEntity foodMenuEntity;
 
+        LogSystemEntity logsystem = new LogSystemEntity();
+
+        AccountEntity account = new AccountEntity();
+
         string errorMessage = string.Empty;
 
         public FormFoodMenu_Add()
@@ -25,16 +29,17 @@ namespace ChutHueManagement.ChutHueManagement
             InitializeComponent();
         }
 
-        public FormFoodMenu_Add(MainMenuEntity mainMenuEntity)
+        public FormFoodMenu_Add(MainMenuEntity mainMenuEntity, AccountEntity account)
         {
             InitializeComponent();
             this.mainMenuEntity = mainMenuEntity;
             Clear();
             cb_IsDelete.Enabled = false;
             foodMenuEntity = null;
+            this.account = account;
         }
 
-        public FormFoodMenu_Add(MainMenuEntity mainMenuEntity, FoodMenuEntity foodMenuEntity)
+        public FormFoodMenu_Add(MainMenuEntity mainMenuEntity, FoodMenuEntity foodMenuEntity, AccountEntity account)
         {
             InitializeComponent();
             this.mainMenuEntity = mainMenuEntity;
@@ -43,6 +48,7 @@ namespace ChutHueManagement.ChutHueManagement
             labelX1.Text = "Cập nhật loại thực đơn";
             btn_Add.Text = "Cập nhật";
             this.TitleText = "Cập nhật";
+            this.account = account;
             //foodMenuEntity = null;
         }
 
@@ -98,6 +104,15 @@ namespace ChutHueManagement.ChutHueManagement
                     FoodMenuEntity entity = GetEntity();
                     if (FoodMenuManager.Insert(entity, ref errorMessage) > 0)
                     {
+                        logsystem = new LogSystemEntity()
+                        {
+                            IDAccount = account.ID,
+                            Event = account.UserName + " đã thêm mới thực đơn " + entity.NameFood,
+                            Date = DateTime.Now,
+                        };
+
+                        LogSystemManager.Insert(logsystem);
+
                         MessageBox.Show("Thêm thành công");
                         DialogResult = DialogResult.OK;
                     }
@@ -114,6 +129,18 @@ namespace ChutHueManagement.ChutHueManagement
                     //mainMenuEntity.IsDelete = this.entity.IsDelete;
                     if (FoodMenuManager.UpDate(entity, ref errorMessage))
                     {
+
+                        logsystem = new LogSystemEntity()
+                        {
+                            IDAccount = account.ID,
+                            Event = account.UserName + " đã cập nhật thực đơn " + foodMenuEntity.NameFood + "[ NameFood: " + entity.NameFood 
+                            + ", ID: " + entity.ID + ", IsDelete: " + entity.IsDelete + ", IdMainMenu: " + entity.IdMainMenu + ", Price: " + entity.Price
+                            + "]",
+                            Date = DateTime.Now,
+                        };
+
+                        LogSystemManager.Insert(logsystem);
+
                         MessageBox.Show("Cập nhật thành công!");
                         DialogResult = DialogResult.OK;
                     }

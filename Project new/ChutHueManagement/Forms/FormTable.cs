@@ -55,6 +55,7 @@ namespace ChutHueManagement.ChutHueManagement
         }
         private void FormTable_Load(object sender, EventArgs e)
         {
+            lbTGD.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             LoadPanelTables();
             LoadGrvThucDon();
         }
@@ -108,7 +109,8 @@ namespace ChutHueManagement.ChutHueManagement
                     btnThanhToan.Enabled = true;
                 }
                 lbSoBan.Text = button.Text;
-                lbTGD.Text = listTable[index].TGDen.ToString();
+                //listTable[index].TGDen. = "";
+                lbTGD.Text = listTable[index].TGDen.ToString("dd/MM/yyyy HH:mm:ss");
                 LoadGridview(listTable[index].ListInvoiceDetail);
                 ResetActived();
                 listTable[index].IsActived = true;
@@ -203,7 +205,8 @@ namespace ChutHueManagement.ChutHueManagement
                 if (listTable[index].ListInvoiceDetail.Count == 0)
                 {
                     listTable[index].TGDen = DateTime.Now;
-                    lbTGD.Text = DateTime.Now.ToString();
+                    //lbTGD.Text = listTable[index].TGDen.ToString("dd/MM/yyyy HH:mm:ss");
+                    lbTGD.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
                 }
                 int total = int.Parse(txtSoLuong.Text);
                 double priceTotal = total * double.Parse(txtDonGia.Text);
