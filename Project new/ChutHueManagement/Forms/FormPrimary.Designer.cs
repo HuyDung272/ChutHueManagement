@@ -97,7 +97,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.qatCustomizeItem1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1274, 154);
+            this.ribbonControl1.Size = new System.Drawing.Size(1324, 154);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -126,7 +126,7 @@
             this.ribbonPanel4.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1274, 101);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1324, 101);
             // 
             // 
             // 
@@ -574,10 +574,10 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel_Time});
-            this.statusStrip1.Location = new System.Drawing.Point(5, 705);
+            this.statusStrip1.Location = new System.Drawing.Point(5, 744);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip1.Size = new System.Drawing.Size(1274, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1324, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -628,11 +628,12 @@
             // 
             // FormPrimary
             // 
-            this.ClientSize = new System.Drawing.Size(1284, 729);
+            this.ClientSize = new System.Drawing.Size(1334, 768);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "FormPrimary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chương trình quản lý quán ăn Chút Huế";

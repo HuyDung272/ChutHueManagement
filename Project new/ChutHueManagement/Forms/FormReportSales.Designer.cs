@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.btn_Report = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.cbox_FoodMenu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -46,15 +44,20 @@
             this.cbox_ReportFor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.dataGridView_Load = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.lbl_Summary2 = new DevComponents.DotNetBar.LabelX();
             this.txt_PriceTotal = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lbl_Total = new DevComponents.DotNetBar.LabelX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.txt_Total = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lbl_Summary = new DevComponents.DotNetBar.LabelX();
+            this.lbl_Total = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_End)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).BeginInit();
+            this.groupPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -62,11 +65,6 @@
             this.groupPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel1.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.txt_Total);
-            this.groupPanel1.Controls.Add(this.lbl_Total);
-            this.groupPanel1.Controls.Add(this.txt_PriceTotal);
-            this.groupPanel1.Controls.Add(this.labelX4);
-            this.groupPanel1.Controls.Add(this.buttonX2);
             this.groupPanel1.Controls.Add(this.btn_Report);
             this.groupPanel1.Controls.Add(this.groupPanel3);
             this.groupPanel1.Controls.Add(this.groupPanel2);
@@ -106,38 +104,13 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 0;
             // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Location = new System.Drawing.Point(3, 516);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(119, 23);
-            this.labelX4.TabIndex = 5;
-            this.labelX4.Text = "Tổng doanh thu:";
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(3, 398);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(258, 50);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 3;
-            this.buttonX2.Text = "Xuất Excel";
-            // 
             // btn_Report
             // 
             this.btn_Report.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Report.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_Report.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.Image = global::ChutHueManagement.ChutHueManagement.Properties.Resources._1470480009_8;
+            this.btn_Report.ImageFixedSize = new System.Drawing.Size(100, 60);
             this.btn_Report.Location = new System.Drawing.Point(3, 340);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Size = new System.Drawing.Size(258, 50);
@@ -383,6 +356,7 @@
             this.dateTimeInput_Start.Size = new System.Drawing.Size(242, 25);
             this.dateTimeInput_Start.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimeInput_Start.TabIndex = 2;
+            this.dateTimeInput_Start.ValueChanged += new System.EventHandler(this.dateTimeInput_Start_ValueChanged);
             // 
             // labelX2
             // 
@@ -436,47 +410,113 @@
             // 
             this.dataGridView_Load.AllowUserToAddRows = false;
             this.dataGridView_Load.AllowUserToDeleteRows = false;
+            this.dataGridView_Load.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_Load.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Load.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Load.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Load.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Load.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_Load.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_Load.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Load.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_Load.EnableHeadersVisualStyles = false;
             this.dataGridView_Load.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridView_Load.Location = new System.Drawing.Point(270, 0);
             this.dataGridView_Load.MultiSelect = false;
             this.dataGridView_Load.Name = "dataGridView_Load";
             this.dataGridView_Load.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Load.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Load.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_Load.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Load.Size = new System.Drawing.Size(738, 729);
+            this.dataGridView_Load.Size = new System.Drawing.Size(738, 564);
             this.dataGridView_Load.TabIndex = 1;
+            // 
+            // groupPanel4
+            // 
+            this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupPanel4.BackColor = System.Drawing.Color.White;
+            this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel4.Controls.Add(this.lbl_Summary2);
+            this.groupPanel4.Controls.Add(this.txt_PriceTotal);
+            this.groupPanel4.Controls.Add(this.labelX4);
+            this.groupPanel4.Controls.Add(this.txt_Total);
+            this.groupPanel4.Controls.Add(this.lbl_Summary);
+            this.groupPanel4.Controls.Add(this.lbl_Total);
+            this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel4.Location = new System.Drawing.Point(270, 570);
+            this.groupPanel4.Name = "groupPanel4";
+            this.groupPanel4.Size = new System.Drawing.Size(738, 159);
+            // 
+            // 
+            // 
+            this.groupPanel4.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel4.Style.BackColorGradientAngle = 90;
+            this.groupPanel4.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel4.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderBottomWidth = 1;
+            this.groupPanel4.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel4.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderLeftWidth = 1;
+            this.groupPanel4.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderRightWidth = 1;
+            this.groupPanel4.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderTopWidth = 1;
+            this.groupPanel4.Style.CornerDiameter = 4;
+            this.groupPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel4.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel4.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel4.TabIndex = 2;
+            // 
+            // lbl_Summary2
+            // 
+            this.lbl_Summary2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lbl_Summary2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbl_Summary2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_Summary2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Summary2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Summary2.Location = new System.Drawing.Point(0, 24);
+            this.lbl_Summary2.Name = "lbl_Summary2";
+            this.lbl_Summary2.Size = new System.Drawing.Size(732, 24);
+            this.lbl_Summary2.TabIndex = 13;
             // 
             // txt_PriceTotal
             // 
-            this.txt_PriceTotal.BackColor = System.Drawing.Color.White;
+            this.txt_PriceTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_PriceTotal.BackColor = System.Drawing.SystemColors.Control;
             // 
             // 
             // 
@@ -485,32 +525,36 @@
             this.txt_PriceTotal.DisabledBackColor = System.Drawing.Color.White;
             this.txt_PriceTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PriceTotal.ForeColor = System.Drawing.Color.Black;
-            this.txt_PriceTotal.Location = new System.Drawing.Point(120, 516);
+            this.txt_PriceTotal.Location = new System.Drawing.Point(129, 85);
             this.txt_PriceTotal.Name = "txt_PriceTotal";
             this.txt_PriceTotal.PreventEnterBeep = true;
             this.txt_PriceTotal.ReadOnly = true;
-            this.txt_PriceTotal.Size = new System.Drawing.Size(141, 25);
-            this.txt_PriceTotal.TabIndex = 6;
+            this.txt_PriceTotal.Size = new System.Drawing.Size(265, 25);
+            this.txt_PriceTotal.TabIndex = 12;
             this.txt_PriceTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lbl_Total
+            // labelX4
             // 
-            this.lbl_Total.BackColor = System.Drawing.Color.Transparent;
+            this.labelX4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.lbl_Total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbl_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Total.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Total.Location = new System.Drawing.Point(3, 473);
-            this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(119, 23);
-            this.lbl_Total.TabIndex = 7;
-            this.lbl_Total.Text = "Tổng doanh thu:";
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.ForeColor = System.Drawing.Color.Black;
+            this.labelX4.Location = new System.Drawing.Point(0, 82);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(119, 23);
+            this.labelX4.TabIndex = 11;
+            this.labelX4.Text = "Tổng doanh thu:";
             // 
             // txt_Total
             // 
-            this.txt_Total.BackColor = System.Drawing.Color.White;
+            this.txt_Total.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_Total.BackColor = System.Drawing.SystemColors.Control;
             // 
             // 
             // 
@@ -519,23 +563,57 @@
             this.txt_Total.DisabledBackColor = System.Drawing.Color.White;
             this.txt_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Total.ForeColor = System.Drawing.Color.Black;
-            this.txt_Total.Location = new System.Drawing.Point(120, 473);
+            this.txt_Total.Location = new System.Drawing.Point(129, 54);
             this.txt_Total.Name = "txt_Total";
             this.txt_Total.PreventEnterBeep = true;
             this.txt_Total.ReadOnly = true;
-            this.txt_Total.Size = new System.Drawing.Size(141, 25);
-            this.txt_Total.TabIndex = 8;
+            this.txt_Total.Size = new System.Drawing.Size(265, 25);
+            this.txt_Total.TabIndex = 10;
             this.txt_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbl_Summary
+            // 
+            this.lbl_Summary.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lbl_Summary.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbl_Summary.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_Summary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Summary.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Summary.Location = new System.Drawing.Point(0, 0);
+            this.lbl_Summary.Name = "lbl_Summary";
+            this.lbl_Summary.Size = new System.Drawing.Size(732, 24);
+            this.lbl_Summary.TabIndex = 9;
+            // 
+            // lbl_Total
+            // 
+            this.lbl_Total.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Total.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lbl_Total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbl_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Total.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Total.Location = new System.Drawing.Point(3, 53);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.Size = new System.Drawing.Size(119, 23);
+            this.lbl_Total.TabIndex = 9;
+            this.lbl_Total.Text = "Số hóa đơn:";
             // 
             // FormReportSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.groupPanel4);
             this.Controls.Add(this.dataGridView_Load);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1024, 768);
@@ -548,6 +626,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_End)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).EndInit();
+            this.groupPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -566,11 +645,13 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbox_MainFood;
         private DevComponents.DotNetBar.ButtonX btn_Report;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbox_FoodMenu;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX txt_PriceTotal;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_Total;
         private DevComponents.DotNetBar.LabelX lbl_Total;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_PriceTotal;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.LabelX lbl_Summary;
+        private DevComponents.DotNetBar.LabelX lbl_Summary2;
     }
 }

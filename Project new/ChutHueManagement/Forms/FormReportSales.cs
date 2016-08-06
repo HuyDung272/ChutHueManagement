@@ -26,6 +26,10 @@ namespace ChutHueManagement.ChutHueManagement
         private void FormReportSales_Load(object sender, EventArgs e)
         {
             //http://stackoverflow.com/questions/20327129/datagridview-with-money-format
+            ///
+            //txt_Total.BackColor = Color.Transparent;
+            lbl_Summary.Text = "";
+            ///
             PriceTotal = 0.0;
             string money = double.Parse(PriceTotal.ToString()).ToString("#,###", cul.NumberFormat);
             //lbl_PriceTotal.Text = money + " đồng";
@@ -81,14 +85,16 @@ namespace ChutHueManagement.ChutHueManagement
             }
             if (indexReportFor == 2)
             {
-                dateTimeInput_End.Enabled = true;
+                //dateTimeInput_End.Enabled = true;
+                dateTimeInput_End.Enabled = false;
                 dateTimeInput_Start.CustomFormat = "MM/yyyy";
                 dateTimeInput_End.CustomFormat = "MM/yyyy";
                 return;
             }
             if (indexReportFor == 3)
             {
-                dateTimeInput_End.Enabled = true;
+                //dateTimeInput_End.Enabled = true;
+                dateTimeInput_End.Enabled = false;
                 dateTimeInput_Start.CustomFormat = "yyyy";
                 dateTimeInput_End.CustomFormat = "yyyy";
                 return;
@@ -120,11 +126,13 @@ namespace ChutHueManagement.ChutHueManagement
             cbox_FoodMenu.DropDownHeight = 200;
         }
 
+        string namefood = "";
         private void cbox_FoodMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             indexFoodMenu = cbox_FoodMenu.SelectedIndex;
             DataRow dr = listFoodMenu.Rows[indexFoodMenu];
             indexFoodMenu = (int)dr[0];
+            namefood = (string)dr[1];
             //MessageBox.Show(indexFoodMenu.ToString());
         }
 
@@ -177,6 +185,36 @@ namespace ChutHueManagement.ChutHueManagement
                 lbl_Total.Text = "Tổng hóa đơn:";
                 txt_Total.Text = tables.Rows.Count.ToString();
 
+                lbl_Summary2.Text = "";
+
+                if (indexReportFor == 0)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu theo ngày " + start.Day + "/" + start.Month + "/" + start.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
+                if (indexReportFor == 1)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu từ ngày " + start.Day + "/" + start.Month + "/" + start.Year + " đến ngày " + end.Day + "/" + end.Month + "/" + end.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
+                if (indexReportFor == 2)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu theo tháng " + start.Month + "/" + start.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
+                if (indexReportFor == 3)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu theo năm " + start.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
             }
             else
             {
@@ -196,6 +234,9 @@ namespace ChutHueManagement.ChutHueManagement
                 //tables.Columns[3].DataType = typeof(decimal);
                 dataGridView_Load.DataSource = tables;
                 dataGridView_Load.Columns[2].Visible = false;
+                dataGridView_Load.Columns["Số lượng"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dataGridView_Load.Columns["Tổng tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dataGridView_Load.Columns["Tổng tiền"].DefaultCellStyle.Format = "#,##00 đồng";
                 //header giữa
                 foreach (DataGridViewColumn col in dataGridView_Load.Columns)
                 {
@@ -218,12 +259,49 @@ namespace ChutHueManagement.ChutHueManagement
 
                 lbl_Total.Text = "Tổng số:";
                 txt_Total.Text = Total.ToString();
+
+                lbl_Summary2.Text = "Thực đơn: " + namefood;
+                lbl_Summary2.ForeColor = Color.Red;
+
+                if (indexReportFor == 0)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu theo ngày " + start.Day + "/" + start.Month + "/" + start.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
+                if (indexReportFor == 1)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu từ ngày " + start.Day + "/" + start.Month + "/" + start.Year + " đến ngày " + end.Day + "/" + end.Month + "/" + end.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
+                if (indexReportFor == 2)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu theo tháng " + start.Month + "/" + start.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
+                if (indexReportFor == 3)
+                {
+                    lbl_Summary.Text = "Báo cáo doanh thu theo năm " + start.Year;
+                    lbl_Summary.ForeColor = Color.Blue;
+                    return;
+                }
+
             }
         }
 
         private void btn_Report_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void dateTimeInput_Start_ValueChanged(object sender, EventArgs e)
+        {
+            //this.dateTimeInput_End.Value = dateTimeInput_Start.Value;
         }
     }
 }

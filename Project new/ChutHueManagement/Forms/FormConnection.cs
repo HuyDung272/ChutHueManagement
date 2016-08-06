@@ -361,6 +361,7 @@ namespace ChutHueManagement.ChutHueManagement
             if (Connection(connect))
             {
                 UpdateSetting("DbPassport", connect);
+                //UpdateSetting("LocalSqlServer", connect);
                 MessageBox.Show("Connection thành công");
                 btn_Lưu.Enabled = false;
             }
