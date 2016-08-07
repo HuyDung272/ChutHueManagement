@@ -123,6 +123,16 @@ namespace ChutHueManagement.ChutHueManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ban2 {
+            get {
+                object obj = ResourceManager.GetObject("Ban2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChangePass {
             get {
                 object obj = ResourceManager.GetObject("ChangePass", resourceCulture);

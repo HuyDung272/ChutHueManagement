@@ -109,6 +109,7 @@ namespace ChutHueManagement.ChutHueManagement
                     btnThanhToan.Enabled = true;
                 }
                 lbSoBan.Text = button.Text;
+               // button.BackgroundImage = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Ban2;
                 //listTable[index].TGDen. = "";
                 lbTGD.Text = listTable[index].TGDen.ToString("dd/MM/yyyy HH:mm:ss");
                 LoadGridview(listTable[index].ListInvoiceDetail);
@@ -168,6 +169,10 @@ namespace ChutHueManagement.ChutHueManagement
                 TableEntity tb = TablesManager.ConvertToList(TablesManager.GetByID(int.Parse(listTable[i].ID)))[0];
                 ButtonX _button = CovnertToButton(tb, x, y, i.ToString());
                 _button.Click += new EventHandler(Button_Click);
+                if(listTable[i].ListInvoiceDetail.Count>0)
+                {
+                    _button.BackgroundImage = global::ChutHueManagement.ChutHueManagement.Properties.Resources.Ban2;
+                }
                 if (listTable[i].IsActived)
                 {
                     ok = true;
@@ -214,6 +219,7 @@ namespace ChutHueManagement.ChutHueManagement
                 //listTable[index].ListInvoiceDetail.Add(new InvoiceDetailsEntity(0, fooMenu.ID, total, priceTotal));
                 LoadGridview(listTable[index].ListInvoiceDetail);
                 btnThanhToan.Enabled = true;
+                LoadPanelTables();
             }
             catch { }
         }
@@ -294,6 +300,7 @@ namespace ChutHueManagement.ChutHueManagement
                 listTable[index].ListInvoiceDetail = new List<InvoiceDetailsEntity>();
                 grwCTBan.Rows.Clear();
                 btnThanhToan.Enabled = false;
+                LoadPanelTables();
             }
         }
 
