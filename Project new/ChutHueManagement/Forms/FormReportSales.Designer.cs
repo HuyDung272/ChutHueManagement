@@ -51,6 +51,7 @@
             this.txt_Total = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lbl_Summary = new DevComponents.DotNetBar.LabelX();
             this.lbl_Total = new DevComponents.DotNetBar.LabelX();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -58,6 +59,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).BeginInit();
             this.groupPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -410,8 +415,6 @@
             // 
             this.dataGridView_Load.AllowUserToAddRows = false;
             this.dataGridView_Load.AllowUserToDeleteRows = false;
-            this.dataGridView_Load.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_Load.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Load.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -431,9 +434,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_Load.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_Load.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_Load.EnableHeadersVisualStyles = false;
             this.dataGridView_Load.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dataGridView_Load.Location = new System.Drawing.Point(270, 0);
+            this.dataGridView_Load.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_Load.MultiSelect = false;
             this.dataGridView_Load.Name = "dataGridView_Load";
             this.dataGridView_Load.ReadOnly = true;
@@ -446,13 +450,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_Load.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Load.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Load.Size = new System.Drawing.Size(738, 564);
+            this.dataGridView_Load.Size = new System.Drawing.Size(738, 553);
             this.dataGridView_Load.TabIndex = 1;
             // 
             // groupPanel4
             // 
-            this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupPanel4.BackColor = System.Drawing.Color.White;
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -463,9 +465,10 @@
             this.groupPanel4.Controls.Add(this.lbl_Summary);
             this.groupPanel4.Controls.Add(this.lbl_Total);
             this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel4.Location = new System.Drawing.Point(270, 570);
+            this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanel4.Location = new System.Drawing.Point(0, 0);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(738, 159);
+            this.groupPanel4.Size = new System.Drawing.Size(738, 172);
             // 
             // 
             // 
@@ -545,7 +548,7 @@
             this.labelX4.ForeColor = System.Drawing.Color.Black;
             this.labelX4.Location = new System.Drawing.Point(0, 82);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(119, 23);
+            this.labelX4.Size = new System.Drawing.Size(119, 42);
             this.labelX4.TabIndex = 11;
             this.labelX4.Text = "Tổng doanh thu:";
             // 
@@ -598,17 +601,36 @@
             this.lbl_Total.ForeColor = System.Drawing.Color.Black;
             this.lbl_Total.Location = new System.Drawing.Point(3, 53);
             this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(119, 23);
+            this.lbl_Total.Size = new System.Drawing.Size(119, 42);
             this.lbl_Total.TabIndex = 9;
             this.lbl_Total.Text = "Số hóa đơn:";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(270, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.dataGridView_Load);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.groupPanel4);
+            this.splitContainer1.Size = new System.Drawing.Size(738, 729);
+            this.splitContainer1.SplitterDistance = 553;
+            this.splitContainer1.TabIndex = 2;
             // 
             // FormReportSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.groupPanel4);
-            this.Controls.Add(this.dataGridView_Load);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -616,7 +638,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormReportSales";
-            this.Text = "MetroForm";
+            this.Text = "Báo cáo doanh thu";
             this.Load += new System.EventHandler(this.FormReportSales_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
@@ -625,6 +647,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_Start)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Load)).EndInit();
             this.groupPanel4.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -651,5 +677,6 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX lbl_Summary;
         private DevComponents.DotNetBar.LabelX lbl_Summary2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
